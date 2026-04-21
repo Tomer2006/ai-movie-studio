@@ -1,35 +1,35 @@
 {
-  "title": "Plankton's Greatest Triumph",
-  "logline": "After countless failed attempts, Plankton finally obtains the secret formula - and what he reads shocks even him.",
+  "title": "Best Friends Forever",
+  "logline": "SpongeBob and Squidward finally become best friends after an unexpected act of kindness.",
   "aspect_ratio": "9:16",
-  "fps": 30,
-  "tone": "funny, triumphant, secretly heartfelt",
+  "fps": 24,
+  "tone": "lighthearted, comedic, heartwarming",
   "era": "present day - SpongeBob universe",
   "characters": [
     {
-      "id": "plankton",
-      "name": "Plankton",
-      "description": "Tiny green single-celled organism, big ambitions, tiny body, large ego, evil eyebrow, determined expression",
-      "wardrobe": "small black business suit, tiny bowtie, one giant eye"
+      "id": "spongebob",
+      "name": "SpongeBob",
+      "description": "Yellow square sponge with big expressive eyes, iconic holes, cheerful smile, optimistic personality",
+      "wardrobe": "brown shorts, white shirt"
     },
     {
-      "id": "karen",
-      "name": "Karen",
-      "description": "Plankton's intelligent computer wife, sassy and sarcastic",
-      "wardrobe": "screen face, metallic body"
+      "id": "squidward",
+      "name": "Squidward",
+      "description": "Purple octopus with large eyes, cynical expression but secretly kind heart, plays clarinet",
+      "wardrobe": "brown shirt, beige pants"
     }
   ],
   "locations": [
     {
-      "id": "chum_bucket",
-      "name": "The Chum Bucket",
-      "description": "Lab/factory interior with bubbling vats, metal catwalks, chaos of failed formulas, the vault in the center"
+      "id": "bikini_bottom",
+      "name": "Bikini Bottom",
+      "description": "Underwater town with coral reefs, bubbles, colorful sea life, Squidward's Easter Island head house"
     }
   ],
   "visual_rules": {
-    "do": ["bright underwater colors", "cartoon animation style", "comedic close-ups", "wacky visual gags", "dynamic lighting"],
-    "dont": ["realistic CGI", "text overlays", "modern tech anachronisms"],
-    "color_palette": ["#00b894", "#e17055", "#0984e3", "#fdcb6e", "#6c5ce7"]
+    "do": ["bright underwater colors", "cartoon animation style", "comedic close-ups", "heartwarming two-shots", "bubbles and coral"],
+    "dont": ["text overlays", "realistic CGI", "modern tech anachronisms"],
+    "color_palette": ["#f1c40f", "#9b59b6", "#3498db", "#1abc9c", "#e74c3c"]
   },
-  "reference_notes": "Plankton's eye widens dramatically when he finally reads the formula. The key visual payoff is his reaction - shock, then a hint of something deeper."
+  "reference_notes": "Squidward's character arc: from annoyed neighbor to grateful friend. Key moment is his subtle genuine smile - earn it through comedy."
 }

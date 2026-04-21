@@ -31,6 +31,25 @@ def _resolve_config_path(raw: str) -> Path | None:
     return None
 
 
+def configured_provider_raw() -> str:
+    """Return the configured VIDEO_PROVIDER value after loading .env."""
+    load_dotenv()
+    return os.environ.get("VIDEO_PROVIDER", "mock").strip()
+
+
+def describe_provider(provider: VideoProvider) -> str:
+    """Return a short user-facing description of the resolved provider."""
+    if isinstance(provider, MockVideoProvider):
+        return "mock"
+    if isinstance(provider, ReplicateVideoProvider):
+        return f"replicate ({provider.model})"
+    if isinstance(provider, XaiVideoProvider):
+        return f"xai ({provider.model})"
+    if isinstance(provider, ConfigurableHttpProvider):
+        return f"custom ({provider.source})"
+    return type(provider).__name__
+
+
 def get_provider() -> VideoProvider:
     """
     Resolve video provider from env.

@@ -16,23 +16,35 @@ class ShotRef:
     reference_image_url: str | None
 
 
+def _make_shot_ref(scene_id: str, shot: dict[str, Any]) -> ShotRef:
+    return ShotRef(
+        scene_id=scene_id,
+        shot_id=shot["id"],
+        duration_sec=float(shot["duration_sec"]),
+        prompt=shot["prompt"],
+        negative_prompt=shot.get("negative_prompt"),
+        seed=shot.get("seed"),
+        reference_image_url=shot.get("reference_image_url"),
+    )
+
+
 def iter_shots(scenes_doc: dict[str, Any]) -> list[ShotRef]:
     out: list[ShotRef] = []
     for scene in scenes_doc["scenes"]:
         sid = scene["id"]
         for shot in scene["shots"]:
-            out.append(
-                ShotRef(
-                    scene_id=sid,
-                    shot_id=shot["id"],
-                    duration_sec=float(shot["duration_sec"]),
-                    prompt=shot["prompt"],
-                    negative_prompt=shot.get("negative_prompt"),
-                    seed=shot.get("seed"),
-                    reference_image_url=shot.get("reference_image_url"),
-                )
-            )
+            out.append(_make_shot_ref(sid, shot))
     return out
+
+
+def find_shot(scenes_doc: dict[str, Any], scene_id: str, shot_id: str) -> ShotRef | None:
+    for scene in scenes_doc["scenes"]:
+        if scene["id"] != scene_id:
+            continue
+        for shot in scene["shots"]:
+            if shot["id"] == shot_id:
+                return _make_shot_ref(scene_id, shot)
+    return None
 
 
 def clip_path(clips_dir: Path, scene_id: str, shot_id: str) -> Path:

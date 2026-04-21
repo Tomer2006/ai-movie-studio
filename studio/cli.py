@@ -8,10 +8,11 @@ import typer
 
 from studio.assemble import assemble as run_assemble
 from studio.paths import load_dotenv, repo_root
-from studio.providers import get_provider
+from studio.providers import configured_provider_raw, describe_provider, get_provider
 from studio.providers.configurable import ConfigurableHttpProvider
 from studio.providers.mock import MockVideoProvider
-from studio.scenes_io import clip_path, iter_shots
+from studio.review_sheet import render_review_sheet, review_sheet_path
+from studio.scenes_io import clip_path, find_shot, iter_shots
 from studio.validate import (
     load_and_validate_bible,
     load_and_validate_scenes,
@@ -27,6 +28,25 @@ def _warn_if_mock(provider: object) -> None:
             "Set VIDEO_PROVIDER=xai or replicate (+ API key in .env) for real video."
         )
         typer.echo(typer.style(msg, fg=typer.colors.YELLOW, bold=True))
+
+
+@app.command("provider")
+def provider_cmd() -> None:
+    """Show which video provider is configured and resolved."""
+    configured = configured_provider_raw()
+    typer.echo(f"Configured VIDEO_PROVIDER={configured!r}")
+    try:
+        provider = get_provider()
+    except Exception as exc:
+        msg = f"Provider error: {exc}"
+        typer.echo(typer.style(msg, fg=typer.colors.RED, bold=True), err=True)
+        raise typer.Exit(code=1)
+
+    typer.echo(f"Resolved provider: {describe_provider(provider)}")
+    if isinstance(provider, MockVideoProvider):
+        typer.echo("Mode: mock placeholder / ffmpeg test pattern")
+    else:
+        typer.echo("Mode: non-mock provider")
 
 
 @app.command("plan")
@@ -64,30 +84,70 @@ def render_cmd(
     provider = get_provider()
     _warn_if_mock(provider)
 
-    shot_data = None
-    for sc in scenes_doc["scenes"]:
-        if sc["id"] != scene:
-            continue
-        for sh in sc["shots"]:
-            if sh["id"] == shot:
-                shot_data = sh
-                break
-    if shot_data is None:
+    shot_ref = find_shot(scenes_doc, scene, shot)
+    if shot_ref is None:
         raise typer.BadParameter(f"Shot not found: scene={scene!r} shot={shot!r}")
 
     out = clip_path(cdir, scene, shot)
     typer.echo(f"Rendering {out} ...")
     provider.render_shot(
         output_path=out,
-        prompt=shot_data["prompt"],
-        duration_sec=float(shot_data["duration_sec"]),
-        negative_prompt=shot_data.get("negative_prompt"),
+        prompt=shot_ref.prompt,
+        duration_sec=shot_ref.duration_sec,
+        negative_prompt=shot_ref.negative_prompt,
         aspect_ratio=bible_doc["aspect_ratio"],
         fps=int(bible_doc["fps"]),
-        seed=shot_data.get("seed"),
-        reference_image_url=shot_data.get("reference_image_url"),
+        seed=shot_ref.seed,
+        reference_image_url=shot_ref.reference_image_url,
     )
     typer.echo(f"Wrote {out}")
+
+
+@app.command("review-sheet")
+def review_sheet_cmd(
+    scene: Annotated[str, typer.Option("--scene", help="Scene id")],
+    shot: Annotated[str, typer.Option("--shot", help="Shot id")],
+    scenes: Annotated[Optional[Path], typer.Option("--scenes")] = None,
+    clips_dir: Annotated[Optional[Path], typer.Option("--clips-dir")] = None,
+    review_dir: Annotated[Optional[Path], typer.Option("--review-dir")] = None,
+    output: Annotated[Optional[Path], typer.Option("--output")] = None,
+    attempt: Annotated[int, typer.Option("--attempt", help="1-based attempt number")] = 1,
+    samples: Annotated[int, typer.Option("--samples", help="Frames to sample into the sheet")] = 6,
+    columns: Annotated[int, typer.Option("--columns", help="Tile columns in the sheet")] = 3,
+    cell_size: Annotated[int, typer.Option("--cell-size", help="Per-frame square tile size in pixels")] = 320,
+) -> None:
+    """Generate a PNG contact sheet for one rendered shot."""
+    if attempt < 1:
+        raise typer.BadParameter("--attempt must be >= 1")
+    if samples < 1:
+        raise typer.BadParameter("--samples must be >= 1")
+    if columns < 1:
+        raise typer.BadParameter("--columns must be >= 1")
+    if cell_size < 64:
+        raise typer.BadParameter("--cell-size must be >= 64")
+
+    root = repo_root()
+    sp = scenes or (root / "scenes.json")
+    scenes_doc = load_and_validate_scenes(sp)
+    shot_ref = find_shot(scenes_doc, scene, shot)
+    if shot_ref is None:
+        raise typer.BadParameter(f"Shot not found: scene={scene!r} shot={shot!r}")
+
+    cdir = clips_dir or (root / "clips")
+    clip = clip_path(cdir, scene, shot)
+    rdir = review_dir or (root / "dist" / "review")
+    out = output or review_sheet_path(rdir, scene, shot, attempt)
+
+    typer.echo(f"Building review sheet for {clip} ...")
+    path = render_review_sheet(
+        clip_path=clip,
+        output_path=out,
+        duration_sec=shot_ref.duration_sec,
+        sample_count=samples,
+        columns=columns,
+        cell_size=cell_size,
+    )
+    typer.echo(f"Wrote {path}")
 
 
 @app.command("render-all")

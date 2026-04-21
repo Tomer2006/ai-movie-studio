@@ -34,12 +34,14 @@ Copy examples: `continuity_bible.example.json` → `continuity_bible.json`, `sce
 
 ```text
 studio plan --bible continuity_bible.json --scenes scenes.json
+studio provider
 studio render --scene scene_01 --shot s01_sh01
 studio render-all
 studio assemble --output dist/final.mp4
 ```
 
 - `**plan**`: Validate JSON files against schemas.
+- `**provider**`: Show the resolved video provider from `.env`.
 - `**render` / `render-all**`: Generate clips — built-ins `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.
 - `**assemble`**: Concat clips in scene order with stream copy (video + embedded audio from each shot).

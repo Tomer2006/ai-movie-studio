@@ -3,35 +3,37 @@
   "scenes": [
     {
       "id": "scene_01",
-      "title": "The Triumphant Moment",
-      "summary": "Plankton finally retrieves the secret formula from the vault",
+      "title": "The Annoyed Neighbor",
+      "summary": "Squidward sits grumbling about SpongeBob's constant singing next door. He groans dramatically as SpongeBob's cheerful voice drifts through.",
       "shots": [
         {
           "id": "s01_sh01",
-          "duration_sec": 5,
-          "prompt": "Wide shot of Plankton's chaotic lab The Chum Bucket, bubbling green vats, metal catwalks, tiny Plankton standing before a glowing vault, triumphant music undertone, cartoon animation style"
-        },
-        {
-          "id": "s01_sh02",
-          "duration_sec": 4,
-          "prompt": "Close-up of Plankton's tiny hands trembling with excitement as he holds the tiny scroll containing the secret formula, dramatic magnifying glass effect, comedic intensity"
+          "duration_sec": 7,
+          "prompt": "Vertical 9:16 underwater scene in Bikini Bottom, SpongeBob the yellow square sponge with big expressive eyes and a cheerful smile skips toward Squidward's Easter Island head house while humming a cheerful tune, purple coral and bubbles in background, cartoon animation style, bright underwater colors."
         }
       ]
     },
     {
       "id": "scene_02",
-      "title": "The Revelation",
-      "summary": "Plankton unrolls the formula and reads what's inside",
+      "title": "The Chase",
+      "summary": "A strong current rips Squidward's beloved clarinet away! SpongeBob springs into action, chasing it down the street with boundless enthusiasm.",
       "shots": [
         {
           "id": "s02_sh01",
-          "duration_sec": 5,
-          "prompt": "Extreme close-up of the tiny scroll unrolling, reveal of actual formula text, Plankton's giant eye widening in shock, cartoon zoom effect"
-        },
+          "duration_sec": 7,
+          "prompt": "Vertical 9:16 medium shot, SpongeBob the yellow sponge chasing a flying purple clarinet underwater, determined expression, bubbles streaking behind him for motion blur effect, coral reef rushing by, comedic chase scene, cartoon style."
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "title": "The Beginning of Friendship",
+      "summary": "SpongeBob returns, battered but triumphant, holding the rescued clarinet. Squidward hesitates, then offers his lawn chair to SpongeBob. They sit together - the beginning of a beautiful friendship.",
+      "shots": [
         {
-          "id": "s02_sh02",
-          "duration_sec": 4,
-          "prompt": "Medium shot Plankton processing what he just read, stunned silence, then slight grin of defeat mixed with respect, heartfelt moment hidden in comedy"
+          "id": "s03_sh01",
+          "duration_sec": 10,
+          "prompt": "Vertical 9:16 two-shot from behind, SpongeBob and Squidward sitting together on rocks outside Squidward's house, SpongeBob holding the rescued clarinet with a big smile, Squidward sporting a subtle genuine smile, blue underwater sky with floating jellyfish, heartwarming sunset lighting, cartoon animation style."
         }
       ]
     }

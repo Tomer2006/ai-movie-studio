@@ -1,6 +1,6 @@
 # AI Movie Studio (OpenCode skill)
 
-End-to-end workflow for **long-form AI-assembled video**: continuity JSON → scene/shot JSON → `studio` render → ffmpeg assemble (final file uses video and embedded audio from each clip).
+End-to-end workflow for **long-form AI-assembled video**: continuity JSON → scene/shot JSON → `studio` render → automatic visual QC rerenders → ffmpeg assemble (final file uses video and embedded audio from each clip).
 
 ## Model choice (OpenCode vs video API)
 
@@ -21,7 +21,7 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 | Director         | Primary agent | May **edit only** `continuity_bible.json`, `scenes.json`, `providers/*.json`. May run `**python -m studio …`** / `**py -m studio …`** only; other shell commands are **denied** (no approval UI). |
 | @screenwriter    | Subagent      | Dialogue + scene summaries — **cannot edit files** (output in chat for director to paste)                                                                                                         |
 | @shotboard       | Subagent      | Shot `prompt` + `duration_sec` drafts — **cannot edit files**                                                                                                                                     |
-| @quality-control | Subagent      | Quality Control — post-render review — **cannot edit files**                                                                                                                                      |
+| @quality-control | Subagent      | Quality Control — machine-readable visual rerender verdicts — **cannot edit files**                                                                                                               |
 
 
 Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide permission defaults live in `[opencode.json](../../opencode.json)`. This repo sets **allow** / **deny** only (no `ask`) for the movie agents; merged rules follow OpenCode’s **last matching rule wins** (see [permissions](https://opencode.ai/docs/agents#permissions)). OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
@@ -53,7 +53,18 @@ Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) liv
     }
   ]
   ```
-- **@quality-control** — return fixed markdown sections: `## Keep`, `## Rerender`, `## Prompt tweaks`, `## Duration tweaks`, `## Audio issues`, `## Commands`.
+- **@quality-control** — return **JSON only**:
+  ```json
+  {
+    "decision": "keep",
+    "confidence": "high",
+    "issues": [],
+    "issue_signature": "acceptable",
+    "updated_prompt": null,
+    "updated_duration_sec": null,
+    "rationale": "Short explanation of the verdict."
+  }
+  ```
 
 The **director** should merge subagent output into repo JSON itself and keep everything schema-valid.
 
@@ -65,7 +76,9 @@ PowerShell (replace nothing if you use venv at `.venv`):
 cd C:\Users\tomer\ai-movie-studio
 .\.venv\Scripts\Activate.ps1
 python -m studio plan
-python -m studio render-all
+python -m studio provider
+python -m studio render --scene scene_01 --shot s01_sh01
+python -m studio review-sheet --scene scene_01 --shot s01_sh01 --attempt 1
 python -m studio assemble -o dist\final.mp4
 ```
 
@@ -81,31 +94,40 @@ python -m studio validate-provider providers\my_provider.json
 2. **Continuity bible** — Edit `continuity_bible.json` (see `continuity_bible.example.json` + `schemas/`).
 3. **Scenes** — Edit `scenes.json` with `"version": 1`.
 4. **Plan** — `python -m studio plan` until OK.
-5. **Render** — `python -m studio render-all`. **Mock** output intentionally looks like test bars + “MOCK” overlay — not a renderer bug. For real AI video set `VIDEO_PROVIDER=xai` or `replicate` (or `custom`) **and** API keys in `.env`.
-6. **Assemble** — `python -m studio assemble -o dist/final.mp4` (concat clips; audio comes from each clip’s muxed stream).
+5. **Provider check** — Run `python -m studio provider` before choosing the render path.
+6. **Mock path** — If the provider resolves to `mock`, skip automatic visual QC and use `python -m studio render-all` only as a cheap pipeline validation run.
+7. **Auto-QC path (default for non-mock)** — Render one shot at a time with `python -m studio render --scene ... --shot ...`, then build a visual proof sheet with `python -m studio review-sheet --scene ... --shot ... --attempt ...`, then send the clip path, review-sheet path, current prompt, duration, provider mode, and attempt number to `@quality-control`.
+8. **Automatic rerender rules** — If Quality Control returns `rerender`, update `scenes.json` with the full replacement prompt and/or `duration_sec`, run `python -m studio plan`, and rerender that shot. Stop after 3 total attempts, repeated `issue_signature`, no material prompt/duration change, or confidence too low to justify another automatic retry.
+9. **Assemble** — `python -m studio assemble -o dist/final.mp4` (concat clips; audio comes from each clip’s muxed stream).
 
-## Human Quality Control loop (required for quality)
+## Automatic Quality Control loop (default)
 
-1. Watch `**dist/final.mp4`** (or individual clips under `clips/`).
-2. For one bad take: tweak that shot’s `prompt` in `scenes.json`, then rerender **only** that shot:
+1. Start with `python -m studio provider`.
+2. If the provider is `mock`, skip visual QC and use `render-all`.
+3. For a non-mock provider, for each shot attempt:
   ```powershell
-   python -m studio render --scene scene_01 --shot s01_sh01
+  python -m studio render --scene scene_01 --shot s01_sh01
+  python -m studio review-sheet --scene scene_01 --shot s01_sh01 --attempt 1
   ```
-3. Reassemble:
+4. Ask `@quality-control` for a JSON verdict. If it returns `rerender`, patch `scenes.json`, re-run `python -m studio plan`, and retry the shot.
+5. Reassemble when all shots are either kept or unresolved:
   ```powershell
-   python -m studio assemble -o dist\final.mp4
+  python -m studio assemble -o dist\final.mp4
   ```
-4. Optionally invoke **@quality-control** (Quality Control) with notes (“faces drift on s01_sh02”) for a structured fix list.
+6. End by reporting kept shots, rerendered shots, and unresolved shots.
 
-Long projects: render **by scene** mentally (batch validation) to limit cost and failure blast radius.
+## Manual fallback
+
+If the automatic loop stops with unresolved shots, inspect `dist/review/...` and `clips/...` yourself, then refine prompts manually and rerun only those shots.
 
 ## Definition of done
 
 - `python -m studio plan` exits successfully (bible + scenes valid).
 - Intended `VIDEO_PROVIDER` and keys in `.env` (unless intentionally mock for layout tests).
-- `render-all` completes; clips exist under `clips/` with expected naming `scene_id__shot_id.mp4`.
+- Each rendered shot either passed automatic QC, was intentionally skipped because the provider is mock, or was reported unresolved after the retry guardrails fired.
+- Clips exist under `clips/` with expected naming `scene_id__shot_id.mp4`.
 - `assemble` writes `dist/final.mp4` (or chosen `-o` path).
-- User has been told mock vs real video; Quality Control loop documented if they want polish.
+- User has been told how to verify mock vs real video with `python -m studio provider`; automatic QC guardrails are documented.
 
 ## Format presets (continuity bible)
 
@@ -126,8 +148,10 @@ Provider-specific generation knobs: Replicate → `REPLICATE_EXTRA_INPUT`; custo
 | `python -m studio init-examples`              | Seed example JSON files         |
 | `python -m studio plan`                       | Validate bible + scenes schemas |
 | `python -m studio validate-provider [file]`   | Validate HTTP provider JSON     |
-| `python -m studio render-all`                 | All shots                       |
+| `python -m studio provider`                   | Show resolved video provider    |
+| `python -m studio render-all`                 | All shots (no per-shot auto-QC) |
 | `python -m studio render --scene X --shot Y`  | One shot                        |
+| `python -m studio review-sheet --scene X --shot Y --attempt N` | Build a shot review PNG |
 | `python -m studio assemble -o dist/final.mp4` | Concat clips (copy streams)     |
 
 
