@@ -24,7 +24,7 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 | @quality-control | Subagent      | Quality Control — post-render review — **cannot edit files**                                                                                                                                      |
 
 
-Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide deny rules (e.g. `external_directory`) live in `[opencode.json](../../opencode.json)`. OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
+Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide permission defaults live in `[opencode.json](../../opencode.json)`. This repo sets **`allow` / `deny` only** (no `ask`) for the movie agents; merged rules follow OpenCode’s **last matching rule wins** (see [permissions](https://opencode.ai/docs/agents#permissions)). OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
 
 ## One-shot command block (repo root)
 

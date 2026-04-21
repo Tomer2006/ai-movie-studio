@@ -4,6 +4,8 @@
   "default_agent": "director",
   // All OpenCode agent knobs: built-in toggles, director permissions, subagent permissions (optional hidden/temperature per agent).
   // Prompt text lives in `.opencode/agents/*.md`; keep this file for JSON-configurable behavior only.
+  // Permissions use only "allow" or "deny" (never "ask"); see https://opencode.ai/docs/agents#permissions (last matching rule wins).
+  // Project `opencode.json` also sets global permission defaults (merged with this file).
   "agent": {
     "plan": {
       "disable": true
@@ -13,14 +15,60 @@
     },
     "general": {
       "mode": "subagent",
-      "hidden": true
+      "hidden": true,
+      "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow"
+      }
     },
     "explore": {
       "mode": "subagent",
-      "hidden": true
+      "hidden": true,
+      "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow"
+      }
     },
     "director": {
       "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow",
         "task": {
           "*": "deny",
           "screenwriter": "allow",
@@ -43,18 +91,60 @@
     },
     "screenwriter": {
       "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow",
         "edit": "deny",
         "bash": "deny"
       }
     },
     "shotboard": {
       "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow",
         "edit": "deny",
         "bash": "deny"
       }
     },
     "quality-control": {
       "permission": {
+        "doom_loop": "deny",
+        "question": "deny",
+        "external_directory": "deny",
+        "read": {
+          "*": "allow",
+          "*.env.example": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "codesearch": "allow",
+        "todowrite": "allow",
+        "skill": "allow",
         "edit": "deny",
         "bash": "deny"
       }

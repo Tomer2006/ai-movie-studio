@@ -43,7 +43,7 @@ You can use **only the CLI** without OpenCode; the agent is optional but helps w
 | What                                                             | Where                                                                                                                                                                                                                                  |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Video** (Replicate, xAI, or custom HTTP)                       | `**.env`** in this project: `VIDEO_PROVIDER`, `REPLICATE_API_TOKEN` or `XAI_API_KEY`, etc.                                                                                                                                             |
-| **Chat / planning LLM** (OpenRouter, Anthropic, OpenCode Zen, …) | **OpenCode**: run `**/connect`** or `**/models**`, or edit your global `opencode.json` under your user config. **Do not** put the chat LLM key in `.env` unless you also use it for TTS (`OPENAI_API_KEY` when `TTS_PROVIDER=openai`). |
+| **Chat / planning LLM** (OpenRouter, Anthropic, OpenCode Zen, …) | **OpenCode**: run `**/connect`** or `**/models`**, or edit your global `opencode.json` under your user config. **Do not** put the chat LLM key in `.env` unless you also use it for TTS (`OPENAI_API_KEY` when `TTS_PROVIDER=openai`). |
 
 
 ---
@@ -88,7 +88,7 @@ Edit `.env` in the project root.
 
 ## Choose the **director** agent
 
-This project’s **[`opencode.jsonc`](opencode.jsonc)** (merged with [`opencode.json`](opencode.json)) **disables** OpenCode’s built-in **Plan** and **Build** agents and **hides** the **general** and **explore** subagents from the `@` menu so the movie workflow stays focused. Use **director** as your main agent.
+This project’s `**[opencode.jsonc](opencode.jsonc)`** (merged with `[opencode.json](opencode.json)`) **disables** OpenCode’s built-in **Plan** and **Build** agents and **hides** the **general** and **explore** subagents from the `@` menu so the movie workflow stays focused. Use **director** as your main agent.
 
 - Press **Tab** (or your configured key) until the active agent is **director**.
 - The director is tuned for this repo: continuity bible, `scenes.json`, and running `python -m studio …`.
@@ -125,10 +125,10 @@ If the venv is activated, `python -m studio` is enough; otherwise use the full p
 You can **mention** these in chat; the director can also invoke them via the Task tool where allowed:
 
 
-| Mention           | Use when                                                                     |
-| ----------------- | ---------------------------------------------------------------------------- |
-| **@screenwriter** | Dialogue, narration, scene summaries (text only; director pastes into JSON). |
-| **@shotboard**    | Shot-level prompts and durations (drafts for `scenes.json`).                 |
+| Mention              | Use when                                                                        |
+| -------------------- | ------------------------------------------------------------------------------- |
+| **@screenwriter**    | Dialogue, narration, scene summaries (text only; director pastes into JSON).    |
+| **@shotboard**       | Shot-level prompts and durations (drafts for `scenes.json`).                    |
 | **@quality-control** | Quality Control — after a render: what looks wrong, which shot ids to rerender. |
 
 
@@ -138,7 +138,7 @@ Subagents **do not edit files**; they reply in chat.
 
 ## What the director is allowed to do (permissions)
 
-Configured in [`opencode.jsonc`](opencode.jsonc) (agent permissions and `default_agent`; merges with [`opencode.json`](opencode.json)):
+Configured in `[opencode.jsonc](opencode.jsonc)` (agent permissions and `default_agent`; merges with `[opencode.json](opencode.json)`):
 
 - **Edit only:** `continuity_bible.json`, `scenes.json`, and `providers/*.json`.
 - **Shell:** only `python -m studio …` / `py -m studio …` style commands are **allowed**. Other commands are **denied** (no approval dialogs).
