@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "Sync API — video URL returned in the first response (no polling)",
+  "start": {
+    "url": "https://api.example.com/v1/videos/sync",
+    "method": "POST",
+    "headers": {
+      "Authorization": "Bearer ${MY_VIDEO_API_KEY}",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "prompt": "{prompt}",
+      "seconds": "{duration_int}"
+    }
+  },
+  "job": {
+    "mode": "immediate",
+    "video_url": {
+      "path": ["data", "video", "url"]
+    }
+  }
+}

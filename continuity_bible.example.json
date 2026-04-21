@@ -1,0 +1,28 @@
+{
+  "title": "Example Film",
+  "logline": "A character discovers something unexpected.",
+  "aspect_ratio": "16:9",
+  "fps": 24,
+  "tone": "hopeful",
+  "era": "present day",
+  "characters": [
+    {
+      "id": "hero",
+      "name": "Alex",
+      "description": "Curious young adult, short dark hair",
+      "wardrobe": "blue jacket, gray shirt"
+    }
+  ],
+  "locations": [
+    {
+      "id": "rooftop",
+      "name": "City rooftop at dusk",
+      "description": "Open sky, warm city lights below"
+    }
+  ],
+  "visual_rules": {
+    "do": ["cinematic lighting", "shallow depth of field"],
+    "dont": ["text overlays", "watermarks"],
+    "color_palette": ["#1a1a2e", "#e94560", "#f4f4f4"]
+  }
+}

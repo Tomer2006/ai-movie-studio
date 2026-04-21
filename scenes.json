@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "scenes": [
+    {
+      "id": "scene_01",
+      "title": "The Triumphant Moment",
+      "summary": "Plankton finally retrieves the secret formula from the vault",
+      "narration": "After a thousand attempts... I finally did it.",
+      "shots": [
+        {
+          "id": "s01_sh01",
+          "duration_sec": 5,
+          "prompt": "Wide shot of Plankton's chaotic lab The Chum Bucket, bubbling green vats, metal catwalks, tiny Plankton standing before a glowing vault, triumphant music undertone, cartoon animation style"
+        },
+        {
+          "id": "s01_sh02",
+          "duration_sec": 4,
+          "prompt": "Close-up of Plankton's tiny hands trembling with excitement as he holds the tiny scroll containing the secret formula, dramatic magnifying glass effect, comedic intensity"
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "title": "The Revelation",
+      "summary": "Plankton unrolls the formula and reads what's inside",
+      "narration": "Actually... it's just a recipe for Krabby Patties.",
+      "shots": [
+        {
+          "id": "s02_sh01",
+          "duration_sec": 5,
+          "prompt": "Extreme close-up of the tiny scroll unrolling, reveal of actual formula text, Plankton's giant eye widening in shock, cartoon zoom effect"
+        },
+        {
+          "id": "s02_sh02",
+          "duration_sec": 4,
+          "prompt": "Medium shot Plankton processing what he just read, stunned silence, then slight grin of defeat mixed with respect, heartfelt moment hidden in comedy"
+        }
+      ]
+    }
+  ]
+}

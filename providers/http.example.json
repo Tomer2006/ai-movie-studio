@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "description": "Template — replace URLs, JSON paths, and ${ENV} vars for your API",
+  "start": {
+    "url": "https://api.example.com/v1/videos",
+    "method": "POST",
+    "headers": {
+      "Authorization": "Bearer ${MY_VIDEO_API_KEY}",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "prompt": "{prompt}",
+      "duration_seconds": "{duration_int}",
+      "aspect_ratio": "{aspect_ratio}"
+    }
+  },
+  "job": {
+    "mode": "poll",
+    "request_id": { "path": ["job_id"] },
+    "poll": {
+      "url_template": "https://api.example.com/v1/videos/{request_id}",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer ${MY_VIDEO_API_KEY}"
+      },
+      "interval_sec": 5,
+      "max_sec": 900
+    },
+    "status": {
+      "path": ["state"],
+      "done_values": ["completed", "done", "succeeded"],
+      "failed_values": ["failed", "error", "canceled"]
+    },
+    "video_url": {
+      "path": ["assets", "mp4_url"]
+    }
+  }
+}

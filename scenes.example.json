@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "scenes": [
+    {
+      "id": "scene_01",
+      "title": "Opening",
+      "summary": "Establish mood",
+      "narration": "Sometimes the quietest moments change everything.",
+      "shots": [
+        {
+          "id": "s01_sh01",
+          "duration_sec": 4,
+          "prompt": "Cinematic wide shot of a city rooftop at golden hour, slow push in, film grain, 35mm"
+        },
+        {
+          "id": "s01_sh02",
+          "duration_sec": 3,
+          "prompt": "Medium shot silhouette against sunset sky, emotional, anamorphic lens flare"
+        }
+      ]
+    }
+  ]
+}

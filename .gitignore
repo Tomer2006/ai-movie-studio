@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+clips/*.mp4
+dist/*.mp4
+*.wav
+*.aac
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-movie-studio.local/schemas/continuity_bible.schema.json",
+  "title": "ContinuityBible",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "aspect_ratio", "fps", "characters", "locations", "visual_rules"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "logline": { "type": "string" },
+    "aspect_ratio": {
+      "type": "string",
+      "enum": ["16:9", "9:16", "1:1", "4:3", "21:9"]
+    },
+    "fps": { "type": "integer", "minimum": 12, "maximum": 60 },
+    "tone": { "type": "string" },
+    "era": { "type": "string" },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "wardrobe": { "type": "string" }
+        }
+      }
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "visual_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "do": { "type": "array", "items": { "type": "string" } },
+        "dont": { "type": "array", "items": { "type": "string" } },
+        "color_palette": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "reference_notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Plankton's Greatest Triumph",
+  "logline": "After countless failed attempts, Plankton finally obtains the secret formula - and what he reads shocks even him.",
+  "aspect_ratio": "9:16",
+  "fps": 30,
+  "tone": "funny, triumphant, secretly heartfelt",
+  "era": "present day - SpongeBob universe",
+  "characters": [
+    {
+      "id": "plankton",
+      "name": "Plankton",
+      "description": "Tiny green single-celled organism, big ambitions, tiny body, large ego, evil eyebrow, determined expression",
+      "wardrobe": "small black business suit, tiny bowtie, one giant eye"
+    },
+    {
+      "id": "karen",
+      "name": "Karen",
+      "description": "Plankton's intelligent computer wife, sassy and sarcastic",
+      "wardrobe": "screen face, metallic body"
+    }
+  ],
+  "locations": [
+    {
+      "id": "chum_bucket",
+      "name": "The Chum Bucket",
+      "description": "Lab/factory interior with bubbling vats, metal catwalks, chaos of failed formulas, the vault in the center"
+    }
+  ],
+  "visual_rules": {
+    "do": ["bright underwater colors", "cartoon animation style", "comedic close-ups", "wacky visual gags", "dynamic lighting"],
+    "dont": ["realistic CGI", "text overlays", "modern tech anachronisms"],
+    "color_palette": ["#00b894", "#e17055", "#0984e3", "#fdcb6e", "#6c5ce7"]
+  },
+  "reference_notes": "Plankton's eye widens dramatically when he finally reads the formula. The key visual payoff is his reaction - shock, then a hint of something deeper."
+}
