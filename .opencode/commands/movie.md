@@ -12,7 +12,7 @@ $ARGUMENTS
 **Steps you should cover:**
 
 1. Summarize constraints (length, tone, aspect ratio).  
-2. Use **@screenwriter** for narration/dialogue/summaries and **@shotboard** for shot prompts/durations when it reduces errors; merge into JSON yourself.  
+2. Use **@screenwriter** for dialogue/summaries and **@shotboard** for shot prompts/durations when it reduces errors; merge into JSON yourself.  
 3. Keep `continuity_bible.json` and `scenes.json` schema-valid; run `python -m studio plan` after edits.  
 4. Remind the user: **mock** video = test-pattern placeholders; **real** video needs `VIDEO_PROVIDER` + keys in `.env`.  
 5. When ready: `python -m studio render-all` then `python -m studio assemble -o dist/final.mp4`.  

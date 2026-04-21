@@ -19,7 +19,6 @@
           "title": { "type": "string" },
           "summary": { "type": "string" },
           "dialogue": { "type": "string" },
-          "narration": { "type": "string" },
           "shots": {
             "type": "array",
             "minItems": 1,

@@ -20,7 +20,7 @@ def _ratio_to_size(aspect_ratio: str) -> tuple[int, int]:
 class MockVideoProvider(VideoProvider):
     """Generate a placeholder clip with ffmpeg testsrc (no cloud API).
 
-    This is **not** AI video — it is colored test bars so you can test concat/TTS
+    This is **not** AI video — it is colored test bars so you can test concat/assembly
     without spending API credits. Real video requires VIDEO_PROVIDER=xai|replicate|custom.
     """
 

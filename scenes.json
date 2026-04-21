@@ -5,7 +5,6 @@
       "id": "scene_01",
       "title": "The Triumphant Moment",
       "summary": "Plankton finally retrieves the secret formula from the vault",
-      "narration": "After a thousand attempts... I finally did it.",
       "shots": [
         {
           "id": "s01_sh01",
@@ -23,7 +22,6 @@
       "id": "scene_02",
       "title": "The Revelation",
       "summary": "Plankton unrolls the formula and reads what's inside",
-      "narration": "Actually... it's just a recipe for Krabby Patties.",
       "shots": [
         {
           "id": "s02_sh01",

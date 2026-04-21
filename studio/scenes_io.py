@@ -39,12 +39,3 @@ def clip_path(clips_dir: Path, scene_id: str, shot_id: str) -> Path:
     safe_scene = scene_id.replace("/", "_")
     safe_shot = shot_id.replace("/", "_")
     return clips_dir / f"{safe_scene}__{safe_shot}.mp4"
-
-
-def full_narration_text(scenes_doc: dict[str, Any]) -> str:
-    parts: list[str] = []
-    for scene in scenes_doc["scenes"]:
-        n = (scene.get("narration") or "").strip()
-        if n:
-            parts.append(n)
-    return "\n\n".join(parts)

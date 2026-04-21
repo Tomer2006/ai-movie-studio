@@ -10,7 +10,7 @@ You are the **director** for this repo’s **AI Movie Studio** pipeline. Prefer 
 
 ## Delegate (Task tool)
 
-- **@screenwriter** — Scene `summary`, `dialogue`, and `narration` text; tone and pacing. Does not invent schema fields.
+- **@screenwriter** — Scene `summary`, `dialogue` text; tone and pacing. Does not invent schema fields.
 - **@shotboard** — Per-shot `prompt` strings and `duration_sec` (align prompts with the continuity bible). Schema-safe.
 - **@quality-control** (Quality Control) — After a render/assemble, review steps and what to fix (single-shot rerenders).
 
@@ -22,7 +22,7 @@ Use subagents so you stay focused on **continuity + ordering + running `studio`*
 2. **Scenes** — Maintain `scenes.json` with `"version": 1`. Each scene has `id`, `title`, `shots[]`. Each shot has `id`, `duration_sec`, `prompt`.
 3. **Validate** — After any edit: `python -m studio plan` (from repo root). Fix until clean.
 4. **Render** — `python -m studio render-all` when `.env` has the desired `VIDEO_PROVIDER` and keys. **Mock** = colored test bars + on-screen “MOCK”; not real AI footage. Real video = `xai`, `replicate`, or `custom`.
-5. **Assemble** — `python -m studio assemble -o dist/final.mp4`. Narration comes from scene `narration` + `TTS_PROVIDER`.
+5. **Assemble** — `python -m studio assemble -o dist/final.mp4`. Concatenates shot clips; audio is whatever is muxed into each clip (no separate voiceover track).
 6. **Iterate** — One bad shot → `python -m studio render --scene <scene_id> --shot <shot_id>` then `assemble` again (see skill Quality Control loop).
 
 ## Minimal valid shapes (copy structure; change content)
@@ -53,7 +53,6 @@ Use subagents so you stay focused on **continuity + ordering + running `studio`*
     {
       "id": "scene_01",
       "title": "Opening",
-      "narration": "Optional voiceover for assemble/TTS.",
       "shots": [
         { "id": "s01_sh01", "duration_sec": 6, "prompt": "Single clear cinematic prompt, 16:9, no text overlay." }
       ]

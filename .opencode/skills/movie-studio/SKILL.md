@@ -1,6 +1,6 @@
 # AI Movie Studio (OpenCode skill)
 
-End-to-end workflow for **long-form AI-assembled video**: continuity JSON → scene/shot JSON → `studio` render → ffmpeg assemble → optional TTS.
+End-to-end workflow for **long-form AI-assembled video**: continuity JSON → scene/shot JSON → `studio` render → ffmpeg assemble (final file uses video and embedded audio from each clip).
 
 ## Model choice (OpenCode vs video API)
 
@@ -19,12 +19,12 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 | Role             | Who           | Focus                                                                                                                                                                                             |
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Director         | Primary agent | May **edit only** `continuity_bible.json`, `scenes.json`, `providers/*.json`. May run `**python -m studio …`** / `**py -m studio …`** only; other shell commands are **denied** (no approval UI). |
-| @screenwriter    | Subagent      | Dialogue + narration + summaries — **cannot edit files** (output in chat for director to paste)                                                                                                   |
+| @screenwriter    | Subagent      | Dialogue + scene summaries — **cannot edit files** (output in chat for director to paste)                                                                                                         |
 | @shotboard       | Subagent      | Shot `prompt` + `duration_sec` drafts — **cannot edit files**                                                                                                                                     |
 | @quality-control | Subagent      | Quality Control — post-render review — **cannot edit files**                                                                                                                                      |
 
 
-Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide permission defaults live in `[opencode.json](../../opencode.json)`. This repo sets **`allow` / `deny` only** (no `ask`) for the movie agents; merged rules follow OpenCode’s **last matching rule wins** (see [permissions](https://opencode.ai/docs/agents#permissions)). OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
+Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide permission defaults live in `[opencode.json](../../opencode.json)`. This repo sets **allow** / **deny** only (no `ask`) for the movie agents; merged rules follow OpenCode’s **last matching rule wins** (see [permissions](https://opencode.ai/docs/agents#permissions)). OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
 
 ## One-shot command block (repo root)
 
@@ -51,7 +51,7 @@ python -m studio validate-provider providers\my_provider.json
 3. **Scenes** — Edit `scenes.json` with `"version": 1`.
 4. **Plan** — `python -m studio plan` until OK.
 5. **Render** — `python -m studio render-all`. **Mock** output intentionally looks like test bars + “MOCK” overlay — not a renderer bug. For real AI video set `VIDEO_PROVIDER=xai` or `replicate` (or `custom`) **and** API keys in `.env`.
-6. **Assemble** — `python -m studio assemble -o dist/final.mp4` (narration from scene `narration` + `TTS_PROVIDER`).
+6. **Assemble** — `python -m studio assemble -o dist/final.mp4` (concat clips; audio comes from each clip’s muxed stream).
 
 ## Human Quality Control loop (required for quality)
 
@@ -97,6 +97,6 @@ Provider-specific generation knobs: Replicate → `REPLICATE_EXTRA_INPUT`; custo
 | `python -m studio validate-provider [file]`   | Validate HTTP provider JSON     |
 | `python -m studio render-all`                 | All shots                       |
 | `python -m studio render --scene X --shot Y`  | One shot                        |
-| `python -m studio assemble -o dist/final.mp4` | Concat + TTS                    |
+| `python -m studio assemble -o dist/final.mp4` | Concat clips (copy streams)   |
 
 

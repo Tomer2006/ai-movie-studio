@@ -130,8 +130,7 @@ def assemble_cmd(
     clips_dir: Annotated[Optional[Path], typer.Option("--clips-dir")] = None,
     output: Annotated[Optional[Path], typer.Option("--output", "-o")] = None,
 ) -> None:
-    """Concatenate clips and mux narration (TTS)."""
-    load_dotenv()
+    """Concatenate rendered clips (video + embedded audio from each clip)."""
     root = repo_root()
     sp = scenes or (root / "scenes.json")
     scenes_doc = load_and_validate_scenes(sp)
