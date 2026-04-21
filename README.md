@@ -42,7 +42,7 @@ studio assemble --output dist/final.mp4
 - `**plan**`: Validate JSON files against schemas.
 - `**render` / `render-all**`: Generate clips — built-ins `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.
-- `**assemble**`: Concat clips in scene order with stream copy (video + embedded audio from each shot).
+- `**assemble`**: Concat clips in scene order with stream copy (video + embedded audio from each shot).
 
 ## Format presets
 
@@ -59,10 +59,10 @@ Shot `duration_sec` is per cloud model limits (often keep 5–15s per shot unles
 
 ## OpenCode
 
-Open this repo root in a terminal and run `opencode`. [`opencode.json`](opencode.json) and [`opencode.jsonc`](opencode.jsonc) merge: **`opencode.jsonc`** holds all **agent** settings (including disabling **Plan** / **Build**, hiding **general** / **explore**, `default_agent`, subagent knobs). Switch to the **director** agent (Tab), then run **`/movie`** with your brief.
+Open this repo root in a terminal and run `opencode`. `[opencode.json](opencode.json)` and `[opencode.jsonc](opencode.jsonc)` merge: `**opencode.jsonc`** holds all **agent** settings (including disabling **Plan** / **Build**, hiding **general** / **explore**, `default_agent`, subagent knobs). Switch to the **director** agent (Tab), then run `**/movie`** with your brief.
 
 - **Director** — owns `continuity_bible.json`, `scenes.json`, and running `python -m studio …`.
-- **Subagents** — `@screenwriter` (dialogue/summaries), `@shotboard` (shot prompts/durations), `@quality-control` (Quality Control / post-render fixes). Prompts: `[.opencode/agents/](.opencode/agents/)`; JSON agent config: **[`opencode.jsonc`](opencode.jsonc)**.
+- **Subagents** — `@screenwriter` (dialogue/summaries), `@shotboard` (shot prompts/durations), `@quality-control` (Quality Control / post-render fixes). Prompts: `[.opencode/agents/](.opencode/agents/)`; JSON agent config: `**[opencode.jsonc](opencode.jsonc)`**.
 - Full workflow and Quality Control loop: `[.opencode/skills/movie-studio/SKILL.md](.opencode/skills/movie-studio/SKILL.md)`.
 
 LLM provider (OpenRouter, etc.) is configured in **OpenCode** (`/connect`, `/models`), not in `.env`. **Video** keys stay in `.env`.

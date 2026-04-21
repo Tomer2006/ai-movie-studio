@@ -40,9 +40,9 @@ You can use **only the CLI** without OpenCode; the agent is optional but helps w
 ## Keys: two different places
 
 
-| What                                                             | Where                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Video** (Replicate, xAI, or custom HTTP)                       | `**.env`** in this project: `VIDEO_PROVIDER`, `REPLICATE_API_TOKEN` or `XAI_API_KEY`, etc.                                                                                                                                             |
+| What                                                             | Where                                                                                                                                                                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Video** (Replicate, xAI, or custom HTTP)                       | `**.env`** in this project: `VIDEO_PROVIDER`, `REPLICATE_API_TOKEN` or `XAI_API_KEY`, etc.                                                                                                                 |
 | **Chat / planning LLM** (OpenRouter, Anthropic, OpenCode Zen, …) | **OpenCode**: run `**/connect`** or `**/models`**, or edit your global `opencode.json` under your user config. **Do not** put the chat LLM key in `.env` — it belongs in OpenCode / your provider tooling. |
 
 
@@ -127,7 +127,7 @@ You can **mention** these in chat; the director can also invoke them via the Tas
 
 | Mention              | Use when                                                                        |
 | -------------------- | ------------------------------------------------------------------------------- |
-| **@screenwriter**    | Dialogue and scene summaries (text only; director pastes into JSON).           |
+| **@screenwriter**    | Dialogue and scene summaries (text only; director pastes into JSON).            |
 | **@shotboard**       | Shot-level prompts and durations (drafts for `scenes.json`).                    |
 | **@quality-control** | Quality Control — after a render: what looks wrong, which shot ids to rerender. |
 
@@ -171,12 +171,12 @@ python -m studio assemble -o dist\final.mp4
 ## Troubleshooting
 
 
-| Symptom                      | Likely cause                                                                                                        |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Color bars / “MOCK” on video | `VIDEO_PROVIDER=mock`. Set `xai` or `replicate` (or custom) **and** the matching key in `.env`.                     |
-| `studio` not found           | Use `python -m studio` from the repo root, or activate `.venv` and reinstall `pip install -e .`.                    |
-| Validation errors            | Run `python -m studio plan` and match `[schemas/](schemas/)` and `[*.example.json](continuity_bible.example.json)`. |
-| No audio in final file      | `assemble` copies streams from each clip; ensure your **video provider** or source clips include the audio you want muxed in each shot. |
+| Symptom                      | Likely cause                                                                                                                            |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Color bars / “MOCK” on video | `VIDEO_PROVIDER=mock`. Set `xai` or `replicate` (or custom) **and** the matching key in `.env`.                                         |
+| `studio` not found           | Use `python -m studio` from the repo root, or activate `.venv` and reinstall `pip install -e .`.                                        |
+| Validation errors            | Run `python -m studio plan` and match `[schemas/](schemas/)` and `[*.example.json](continuity_bible.example.json)`.                     |
+| No audio in final file       | `assemble` copies streams from each clip; ensure your **video provider** or source clips include the audio you want muxed in each shot. |
 
 
 ---

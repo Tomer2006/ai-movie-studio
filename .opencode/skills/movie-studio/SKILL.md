@@ -26,6 +26,37 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 
 Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide permission defaults live in `[opencode.json](../../opencode.json)`. This repo sets **allow** / **deny** only (no `ask`) for the movie agents; merged rules follow OpenCode’s **last matching rule wins** (see [permissions](https://opencode.ai/docs/agents#permissions)). OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
 
+## Subagent output contracts
+
+- **@screenwriter** — return **JSON only**:
+  ```json
+  [
+    {
+      "scene_id": "scene_01",
+      "summary": "1-3 sentence scene summary.",
+      "dialogue": "Optional spoken lines."
+    }
+  ]
+  ```
+- **@shotboard** — return **JSON only**:
+  ```json
+  [
+    {
+      "scene_id": "scene_01",
+      "shots": [
+        {
+          "id": "s01_sh01",
+          "duration_sec": 6,
+          "prompt": "Single strong cinematic prompt."
+        }
+      ]
+    }
+  ]
+  ```
+- **@quality-control** — return fixed markdown sections: `## Keep`, `## Rerender`, `## Prompt tweaks`, `## Duration tweaks`, `## Audio issues`, `## Commands`.
+
+The **director** should merge subagent output into repo JSON itself and keep everything schema-valid.
+
 ## One-shot command block (repo root)
 
 PowerShell (replace nothing if you use venv at `.venv`):
@@ -97,6 +128,6 @@ Provider-specific generation knobs: Replicate → `REPLICATE_EXTRA_INPUT`; custo
 | `python -m studio validate-provider [file]`   | Validate HTTP provider JSON     |
 | `python -m studio render-all`                 | All shots                       |
 | `python -m studio render --scene X --shot Y`  | One shot                        |
-| `python -m studio assemble -o dist/final.mp4` | Concat clips (copy streams)   |
+| `python -m studio assemble -o dist/final.mp4` | Concat clips (copy streams)     |
 
 
