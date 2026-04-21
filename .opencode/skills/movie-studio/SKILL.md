@@ -21,7 +21,7 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 | Director      | Primary agent | May **edit only** `continuity_bible.json`, `scenes.json`, `providers/*.json`. May run `**python -m studio …*`* / `**py -m studio …**` only; other shell commands are **denied** (no approval UI). |
 | @screenwriter | Subagent      | Dialogue + narration + summaries — **cannot edit files** (output in chat for director to paste)                                                                                                   |
 | @shotboard    | Subagent      | Shot `prompt` + `duration_sec` drafts — **cannot edit files**                                                                                                                                     |
-| @qc           | Subagent      | Post-render review — **cannot edit files**                                                                                                                                                        |
+| @quality-control | Subagent   | Quality Control — post-render review — **cannot edit files**                                                                                                                                     |
 
 
 Permissions live in `[opencode.json](../../opencode.json)` (OpenCode merges with agent markdown).
@@ -53,7 +53,7 @@ python -m studio validate-provider providers\my_provider.json
 5. **Render** — `python -m studio render-all`. **Mock** output intentionally looks like test bars + “MOCK” overlay — not a renderer bug. For real AI video set `VIDEO_PROVIDER=xai` or `replicate` (or `custom`) **and** API keys in `.env`.
 6. **Assemble** — `python -m studio assemble -o dist/final.mp4` (narration from scene `narration` + `TTS_PROVIDER`).
 
-## Human QC loop (required for quality)
+## Human Quality Control loop (required for quality)
 
 1. Watch `**dist/final.mp4`** (or individual clips under `clips/`).
 2. For one bad take: tweak that shot’s `prompt` in `scenes.json`, then rerender **only** that shot:
@@ -64,7 +64,7 @@ python -m studio validate-provider providers\my_provider.json
   ```powershell
    python -m studio assemble -o dist\final.mp4
   ```
-4. Optionally invoke **@qc** with notes (“faces drift on s01_sh02”) for a structured fix list.
+4. Optionally invoke **@quality-control** (Quality Control) with notes (“faces drift on s01_sh02”) for a structured fix list.
 
 Long projects: render **by scene** mentally (batch validation) to limit cost and failure blast radius.
 
@@ -74,7 +74,7 @@ Long projects: render **by scene** mentally (batch validation) to limit cost and
 - Intended `VIDEO_PROVIDER` and keys in `.env` (unless intentionally mock for layout tests).
 - `render-all` completes; clips exist under `clips/` with expected naming `scene_id__shot_id.mp4`.
 - `assemble` writes `dist/final.mp4` (or chosen `-o` path).
-- User has been told mock vs real video; QC loop documented if they want polish.
+- User has been told mock vs real video; Quality Control loop documented if they want polish.
 
 ## Format presets (continuity bible)
 

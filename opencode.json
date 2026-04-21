@@ -24,7 +24,7 @@
           "*": "deny",
           "screenwriter": "allow",
           "shotboard": "allow",
-          "qc": "allow"
+          "quality-control": "allow"
         },
         "edit": {
           "*": "deny",
@@ -54,7 +54,7 @@
         "bash": "deny"
       }
     },
-    "qc": {
+    "quality-control": {
       "temperature": 0.3,
       "permission": {
         "edit": "deny",
