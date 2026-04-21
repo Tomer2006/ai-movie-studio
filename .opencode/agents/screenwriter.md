@@ -3,7 +3,6 @@
 ## description: Writes scene summaries, dialogue, and narration text. Keeps schema-safe; outputs copy for director to paste into scenes.json.
 
 mode: subagent
-temperature: 0.65
 permission:
   edit: deny
   bash: deny

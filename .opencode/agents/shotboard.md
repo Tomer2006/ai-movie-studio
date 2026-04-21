@@ -3,7 +3,6 @@
 ## description: Drafts per-shot video prompts and durations aligned with the continuity bible (visual consistency).
 
 mode: subagent
-temperature: 0.55
 permission:
   edit: deny
   bash: deny

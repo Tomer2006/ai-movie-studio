@@ -59,10 +59,10 @@ Shot `duration_sec` is per cloud model limits (often keep 5–15s per shot unles
 
 ## OpenCode
 
-Open this repo root in a terminal and run `opencode`. [`opencode.json`](opencode.json) disables **Plan** and **Build** and hides **general** / **explore** subagents; switch to the **director** agent (Tab), then run **`/movie`** with your brief.
+Open this repo root in a terminal and run `opencode`. [`opencode.json`](opencode.json) and [`opencode.jsonc`](opencode.jsonc) merge: **`opencode.jsonc`** holds all **agent** settings (including disabling **Plan** / **Build**, hiding **general** / **explore**, `default_agent`, subagent knobs). Switch to the **director** agent (Tab), then run **`/movie`** with your brief.
 
 - **Director** — owns `continuity_bible.json`, `scenes.json`, and running `python -m studio …`.
-- **Subagents** — `@screenwriter` (dialogue/narration), `@shotboard` (shot prompts/durations), `@quality-control` (Quality Control / post-render fixes). Config: `[.opencode/agents/](.opencode/agents/)` and `[opencode.json](opencode.json)`.
+- **Subagents** — `@screenwriter` (dialogue/narration), `@shotboard` (shot prompts/durations), `@quality-control` (Quality Control / post-render fixes). Prompts: `[.opencode/agents/](.opencode/agents/)`; JSON agent config: **[`opencode.jsonc`](opencode.jsonc)**.
 - Full workflow and Quality Control loop: `[.opencode/skills/movie-studio/SKILL.md](.opencode/skills/movie-studio/SKILL.md)`.
 
 LLM provider (OpenRouter, etc.) is configured in **OpenCode** (`/connect`, `/models`), not in `.env`. **Video** keys stay in `.env`.

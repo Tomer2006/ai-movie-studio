@@ -16,15 +16,15 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 ## Roles (delegation)
 
 
-| Role          | Who           | Focus                                                                                                                                                                                             |
-| ------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Director      | Primary agent | May **edit only** `continuity_bible.json`, `scenes.json`, `providers/*.json`. May run `**python -m studio …*`* / `**py -m studio …**` only; other shell commands are **denied** (no approval UI). |
-| @screenwriter | Subagent      | Dialogue + narration + summaries — **cannot edit files** (output in chat for director to paste)                                                                                                   |
-| @shotboard    | Subagent      | Shot `prompt` + `duration_sec` drafts — **cannot edit files**                                                                                                                                     |
-| @quality-control | Subagent   | Quality Control — post-render review — **cannot edit files**                                                                                                                                     |
+| Role             | Who           | Focus                                                                                                                                                                                             |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Director         | Primary agent | May **edit only** `continuity_bible.json`, `scenes.json`, `providers/*.json`. May run `**python -m studio …`** / `**py -m studio …`** only; other shell commands are **denied** (no approval UI). |
+| @screenwriter    | Subagent      | Dialogue + narration + summaries — **cannot edit files** (output in chat for director to paste)                                                                                                   |
+| @shotboard       | Subagent      | Shot `prompt` + `duration_sec` drafts — **cannot edit files**                                                                                                                                     |
+| @quality-control | Subagent      | Quality Control — post-render review — **cannot edit files**                                                                                                                                      |
 
 
-Permissions live in `[opencode.json](../../opencode.json)` (OpenCode merges with agent markdown).
+Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) lives in `[opencode.jsonc](../../opencode.jsonc)`. Project-wide deny rules (e.g. `external_directory`) live in `[opencode.json](../../opencode.json)`. OpenCode merges these with agent markdown under `[.opencode/agents/](../../.opencode/agents/)`.
 
 ## One-shot command block (repo root)
 

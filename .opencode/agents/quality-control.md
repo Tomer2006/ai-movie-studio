@@ -1,7 +1,6 @@
 ---
 description: Quality Control — post-render checklist; what to fix, which shots to rerender, when to reassemble.
 mode: subagent
-temperature: 0.3
 permission:
   edit: deny
   bash: deny

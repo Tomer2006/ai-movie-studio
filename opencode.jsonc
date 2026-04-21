@@ -1,0 +1,63 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Primary agent when starting a session (must be a primary agent, not a subagent).
+  "default_agent": "director",
+  // All OpenCode agent knobs: built-in toggles, director permissions, subagent permissions (optional hidden/temperature per agent).
+  // Prompt text lives in `.opencode/agents/*.md`; keep this file for JSON-configurable behavior only.
+  "agent": {
+    "plan": {
+      "disable": true
+    },
+    "build": {
+      "disable": true
+    },
+    "general": {
+      "mode": "subagent",
+      "hidden": true
+    },
+    "explore": {
+      "mode": "subagent",
+      "hidden": true
+    },
+    "director": {
+      "permission": {
+        "task": {
+          "*": "deny",
+          "screenwriter": "allow",
+          "shotboard": "allow",
+          "quality-control": "allow"
+        },
+        "edit": {
+          "*": "deny",
+          "continuity_bible.json": "allow",
+          "scenes.json": "allow",
+          "providers/*.json": "allow"
+        },
+        "bash": {
+          "*": "deny",
+          "python -m studio *": "allow",
+          "py -m studio *": "allow",
+          "py -3 -m studio *": "allow"
+        }
+      }
+    },
+    "screenwriter": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "shotboard": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "quality-control": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    }
+  }
+}

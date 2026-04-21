@@ -88,7 +88,7 @@ Edit `.env` in the project root.
 
 ## Choose the **director** agent
 
-This project’s `[opencode.json](opencode.json)` **disables** OpenCode’s built-in **Plan** and **Build** agents and **hides** the **general** and **explore** subagents from the `@` menu so the movie workflow stays focused. Use **director** as your main agent.
+This project’s **[`opencode.jsonc`](opencode.jsonc)** (merged with [`opencode.json`](opencode.json)) **disables** OpenCode’s built-in **Plan** and **Build** agents and **hides** the **general** and **explore** subagents from the `@` menu so the movie workflow stays focused. Use **director** as your main agent.
 
 - Press **Tab** (or your configured key) until the active agent is **director**.
 - The director is tuned for this repo: continuity bible, `scenes.json`, and running `python -m studio …`.
@@ -138,7 +138,7 @@ Subagents **do not edit files**; they reply in chat.
 
 ## What the director is allowed to do (permissions)
 
-Configured in `[opencode.json](opencode.json)`:
+Configured in [`opencode.jsonc`](opencode.jsonc) (agent permissions and `default_agent`; merges with [`opencode.json`](opencode.json)):
 
 - **Edit only:** `continuity_bible.json`, `scenes.json`, and `providers/*.json`.
 - **Shell:** only `python -m studio …` / `py -m studio …` style commands are **allowed**. Other commands are **denied** (no approval dialogs).
