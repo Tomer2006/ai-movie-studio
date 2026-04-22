@@ -51,7 +51,7 @@ Optional `download` block: if the video URL needs extra headers (rare), set `dow
 
 ## Built-in providers
 
-For common APIs, the repo still ships **mock**, **openrouter**, **replicate**, and **xai** — no JSON file required.
+For common APIs, the repo still ships **mock**, **openrouter**, **fal** (fal.ai queue), **replicate**, and **xai** — no JSON file required. Set `VIDEO_PROVIDER=fal` and `FAL_KEY` (see `.env.example`).
 
 ## Limits
 

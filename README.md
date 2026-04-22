@@ -12,7 +12,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
 copy .env.example .env
-# Edit .env — video: OPENROUTER_API_KEY + VIDEO_PROVIDER=openrouter, or REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, or XAI_API_KEY + VIDEO_PROVIDER=xai, or mock
+# Edit .env — video: OPENROUTER_API_KEY + VIDEO_PROVIDER=openrouter, FAL_KEY + VIDEO_PROVIDER=fal, REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, XAI_API_KEY + VIDEO_PROVIDER=xai, or mock
 ```
 
 Requires **ffmpeg** on your PATH for assembly and mock clips.
@@ -42,7 +42,7 @@ studio assemble --output dist/final.mp4
 
 - `**plan**`: Validate JSON files against schemas.
 - `**provider**`: Show the resolved video provider from `.env`.
-- `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
+- `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `fal`, `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.
 - `**assemble`**: Concat clips in scene order with stream copy (video + embedded audio from each shot).
 

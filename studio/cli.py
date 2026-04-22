@@ -25,7 +25,7 @@ def _warn_if_mock(provider: object) -> None:
     if isinstance(provider, MockVideoProvider):
         msg = (
             "Using MOCK video (ffmpeg test pattern) - not AI-generated footage. "
-            "Set VIDEO_PROVIDER=openrouter, xai, or replicate (+ API key in .env) "
+            "Set VIDEO_PROVIDER=openrouter, fal, xai, or replicate (+ API key in .env) "
             "for real video."
         )
         typer.echo(typer.style(msg, fg=typer.colors.YELLOW, bold=True))
@@ -33,7 +33,7 @@ def _warn_if_mock(provider: object) -> None:
 
 @app.command("provider")
 def provider_cmd() -> None:
-    """Show which video provider is configured and resolved (mock, openrouter, xai, replicate, custom)."""
+    """Show which video provider is configured and resolved (mock, openrouter, fal, xai, replicate, custom)."""
     configured = configured_provider_raw()
     typer.echo(f"Configured VIDEO_PROVIDER={configured!r}")
     try:

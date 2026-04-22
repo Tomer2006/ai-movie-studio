@@ -15,7 +15,7 @@
       "prompt": "{prompt}",
       "aspect_ratio": "{aspect_ratio}",
       "duration": "{duration_int}",
-      "resolution": "480p"
+      "resolution": "720p"
     }
   },
   "job": {

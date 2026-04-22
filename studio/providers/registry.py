@@ -7,11 +7,12 @@ from studio.paths import load_dotenv, repo_root
 from studio.providers.base import VideoProvider
 from studio.providers.configurable import ConfigurableHttpProvider, load_configurable_provider
 from studio.providers.mock import MockVideoProvider
+from studio.providers.fal import FalVideoProvider
 from studio.providers.openrouter import OpenRouterVideoProvider
 from studio.providers.replicate import ReplicateVideoProvider
 from studio.providers.xai import XaiVideoProvider
 
-_BUILTIN = frozenset({"mock", "replicate", "xai", "openrouter", "custom"})
+_BUILTIN = frozenset({"mock", "replicate", "xai", "openrouter", "fal", "custom"})
 
 
 def _resolve_config_path(raw: str) -> Path | None:
@@ -48,6 +49,8 @@ def describe_provider(provider: VideoProvider) -> str:
         return f"xai ({provider.model})"
     if isinstance(provider, OpenRouterVideoProvider):
         return f"openrouter ({provider.model})"
+    if isinstance(provider, FalVideoProvider):
+        return f"fal ({provider.model})"
     if isinstance(provider, ConfigurableHttpProvider):
         return f"custom ({provider.source})"
     return type(provider).__name__
@@ -57,7 +60,7 @@ def get_provider() -> VideoProvider:
     """
     Resolve video provider from env.
 
-    Built-ins: mock, replicate, xai, openrouter, custom
+    Built-ins: mock, replicate, xai, openrouter, fal, custom
 
     - ``custom``: requires ``STUDIO_PROVIDER_CONFIG`` (path under repo root to JSON).
     - Alternatively set ``VIDEO_PROVIDER`` to ``file:./providers/foo.json`` or a path
@@ -79,12 +82,14 @@ def get_provider() -> VideoProvider:
             return XaiVideoProvider()
         if key == "openrouter":
             return OpenRouterVideoProvider()
+        if key == "fal":
+            return FalVideoProvider()
 
     path = _resolve_config_path(raw)
     if path is not None:
         return ConfigurableHttpProvider.from_file(path)
 
     raise ValueError(
-        f"Unknown VIDEO_PROVIDER={raw!r}. Use mock, replicate, xai, openrouter, custom "
+        f"Unknown VIDEO_PROVIDER={raw!r}. Use mock, replicate, xai, openrouter, fal, custom "
         f"(with STUDIO_PROVIDER_CONFIG), or file:path/to/provider.json — see providers/README.md"
     )
