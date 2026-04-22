@@ -59,3 +59,4 @@ Rules for fields:
 - If the evidence is ambiguous, prefer `unresolved` over an unearned `keep`.
 - If the issue is the same as before, keep `issue_signature` stable so the director can detect repeated failures.
 - Never return markdown, bullet lists, or code fences outside the single JSON object.
+

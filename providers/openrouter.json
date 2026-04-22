@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "description": "OpenRouter /videos API (model and resolution in body; poll until completed).",
+  "start": {
+    "url": "https://openrouter.ai/api/v1/videos",
+    "method": "POST",
+    "headers": {
+      "Authorization": "Bearer ${OPENROUTER_API_KEY}",
+      "Content-Type": "application/json",
+      "HTTP-Referer": "${OPENROUTER_HTTP_REFERER}",
+      "X-Title": "AI Movie Studio"
+    },
+    "body": {
+      "model": "alibaba/wan-2.6",
+      "prompt": "{prompt}",
+      "aspect_ratio": "{aspect_ratio}",
+      "duration": "{duration_int}",
+      "resolution": "480p"
+    }
+  },
+  "job": {
+    "mode": "poll",
+    "request_id": { "path": ["id"] },
+    "poll": {
+      "url_template": "https://openrouter.ai/api/v1/videos/{request_id}",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer ${OPENROUTER_API_KEY}"
+      },
+      "interval_sec": 5,
+      "max_sec": 900
+    },
+    "status": {
+      "path": ["status"],
+      "done_values": ["completed"],
+      "failed_values": ["failed", "cancelled", "expired"]
+    },
+    "video_url": {
+      "path": ["url"]
+    }
+  }
+}

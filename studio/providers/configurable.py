@@ -5,7 +5,7 @@ import os
 import re
 import time
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 import httpx
 import jsonschema
@@ -37,7 +37,54 @@ def _get_path(data: Any, path: list[str]) -> Any:
     return cur
 
 
-def _format_recursive(obj: Any, ctx: dict[str, str]) -> Any:
+# After str.format, numeric placeholders become JSON strings; many HTTP APIs require numbers.
+_INT_JSON_KEYS = frozenset(
+    {
+        "duration",
+        "seed",
+        "fps",
+        "width",
+        "height",
+        "index",
+        "n",
+        "count",
+        "max_tokens",
+        "num_frames",
+        "num_inference_steps",
+    }
+)
+_FLOAT_JSON_KEYS = frozenset({"temperature", "top_p", "presence_penalty", "frequency_penalty"})
+_BOOL_JSON_KEYS = frozenset({"generate_audio"})
+
+
+def _coerce_templated_json(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        out: dict[str, Any] = {}
+        for k, v in obj.items():
+            v2 = _coerce_templated_json(v)
+            if k in _INT_JSON_KEYS and isinstance(v2, str) and v2.strip() != "":
+                try:
+                    v2 = int(v2, 10)
+                except ValueError:
+                    pass
+            elif k in _FLOAT_JSON_KEYS and isinstance(v2, str) and v2.strip() != "":
+                try:
+                    v2 = float(v2)
+                except ValueError:
+                    pass
+            elif k in _BOOL_JSON_KEYS and isinstance(v2, str) and v2.lower() in (
+                "true",
+                "false",
+            ):
+                v2 = v2.lower() == "true"
+            out[k] = v2
+        return out
+    if isinstance(obj, list):
+        return [_coerce_templated_json(v) for v in obj]
+    return obj
+
+
+def _format_recursive(obj: Any, ctx: Mapping[str, Any]) -> Any:
     if isinstance(obj, str):
         s = _expand_env(obj)
         return s.format(**ctx)
@@ -65,7 +112,7 @@ def _ctx_for_shot(
     aspect_ratio: str,
     seed: int | None,
     reference_image_url: str | None,
-) -> dict[str, str]:
+) -> dict[str, Any]:
     dur_int = max(1, min(120, int(round(duration_sec))))
     return {
         "prompt": prompt,
@@ -118,7 +165,7 @@ class ConfigurableHttpProvider(VideoProvider):
         return out
 
     def _start(
-        self, client: httpx.Client, ctx: dict[str, str]
+        self, client: httpx.Client, ctx: dict[str, Any]
     ) -> tuple[int, dict[str, Any]]:
         st = self.cfg["start"]
         url = _format_recursive(st["url"], ctx)
@@ -126,7 +173,7 @@ class ConfigurableHttpProvider(VideoProvider):
         headers = self._merge_headers(st.get("headers"))
         body: Any = None
         if "body" in st:
-            body = _format_recursive(st["body"], ctx)
+            body = _coerce_templated_json(_format_recursive(st["body"], ctx))
         r = client.request(method, url, headers=headers, json=body if body is not None else None)
         try:
             data = r.json()
@@ -143,7 +190,7 @@ class ConfigurableHttpProvider(VideoProvider):
         client: httpx.Client,
         *,
         request_id: str,
-        ctx: dict[str, str],
+        ctx: dict[str, Any],
     ) -> dict[str, Any]:
         job = self.cfg["job"]
         poll = job["poll"]
@@ -156,7 +203,9 @@ class ConfigurableHttpProvider(VideoProvider):
         poll_headers = self._merge_headers(poll.get("headers"))
         poll_body = poll.get("body")
         if poll_body is not None:
-            poll_body = _format_recursive(poll_body, {**ctx, "request_id": request_id})
+            poll_body = _coerce_templated_json(
+                _format_recursive(poll_body, {**ctx, "request_id": request_id})
+            )
 
         interval = float(poll.get("interval_sec") or 5)
         max_sec = float(poll.get("max_sec") or 900)

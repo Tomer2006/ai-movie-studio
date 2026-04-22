@@ -144,15 +144,15 @@ Provider-specific generation knobs: Replicate → `REPLICATE_EXTRA_INPUT`; custo
 ## Command reference
 
 
-| Command                                       | Purpose                         |
-| --------------------------------------------- | ------------------------------- |
-| `python -m studio init-examples`              | Seed example JSON files         |
-| `python -m studio plan`                       | Validate bible + scenes schemas |
-| `python -m studio validate-provider [file]`   | Validate HTTP provider JSON     |
-| `python -m studio provider`                   | Show resolved video provider    |
-| `python -m studio render-all`                 | All shots (no per-shot auto-QC) |
-| `python -m studio render --scene X --shot Y`  | One shot                        |
-| `python -m studio review-sheet --scene X --shot Y --attempt N` | Build a shot review PNG |
-| `python -m studio assemble -o dist/final.mp4` | Concat clips (copy streams)     |
+| Command                                                        | Purpose                         |
+| -------------------------------------------------------------- | ------------------------------- |
+| `python -m studio init-examples`                               | Seed example JSON files         |
+| `python -m studio plan`                                        | Validate bible + scenes schemas |
+| `python -m studio validate-provider [file]`                    | Validate HTTP provider JSON     |
+| `python -m studio provider`                                    | Show resolved video provider    |
+| `python -m studio render-all`                                  | All shots (no per-shot auto-QC) |
+| `python -m studio render --scene X --shot Y`                   | One shot                        |
+| `python -m studio review-sheet --scene X --shot Y --attempt N` | Build a shot review PNG         |
+| `python -m studio assemble -o dist/final.mp4`                  | Concat clips (copy streams)     |
 
 

@@ -1,14 +1,14 @@
 # Custom video providers (HTTP)
 
-Any provider that exposes **JSON over HTTP** can be integrated without Python code by adding a config file validated against [`schemas/http_provider.schema.json`](../schemas/http_provider.schema.json).
+Any provider that exposes **JSON over HTTP** can be integrated without Python code by adding a config file validated against `[schemas/http_provider.schema.json](../schemas/http_provider.schema.json)`.
 
 ## Enable
 
-1. Copy [`http.example.json`](http.example.json) (async + poll) or [`http.immediate.example.json`](http.immediate.example.json) (sync URL in first response) to e.g. `providers/my_api.json` and edit it.
+1. Copy `[http.example.json](http.example.json)` (async + poll) or `[http.immediate.example.json](http.immediate.example.json)` (sync URL in first response) to e.g. `providers/my_api.json` and edit it.
 2. Put secrets in `.env` and reference them as `${ENV_NAME}` in the JSON (headers, URLs).
 3. Either:
-   - Set `VIDEO_PROVIDER=custom` and `STUDIO_PROVIDER_CONFIG=providers/my_api.json`, or
-   - Set `VIDEO_PROVIDER=file:providers/my_api.json` (or `config:...`).
+  - Set `VIDEO_PROVIDER=custom` and `STUDIO_PROVIDER_CONFIG=providers/my_api.json`, or
+  - Set `VIDEO_PROVIDER=file:providers/my_api.json` (or `config:...`).
 
 Validate before rendering:
 
@@ -18,16 +18,18 @@ studio validate-provider providers/my_api.json
 
 ## Placeholders
 
-| Placeholder | Meaning |
-|-------------|---------|
-| `{prompt}` | Shot prompt |
-| `{duration_sec}` | Duration as string (float ok) |
-| `{duration_int}` | Rounded integer (clamped 1–120 for the template) |
-| `{aspect_ratio}` | From continuity bible, e.g. `16:9` |
-| `{negative_prompt}` | Empty string if omitted |
-| `{reference_image_url}` | Empty string if omitted |
-| `{seed}` | Empty string if omitted |
-| `{request_id}` | Only in `poll.url_template` / poll `body` after start |
+
+| Placeholder             | Meaning                                               |
+| ----------------------- | ----------------------------------------------------- |
+| `{prompt}`              | Shot prompt                                           |
+| `{duration_sec}`        | Duration as string (float ok)                         |
+| `{duration_int}`        | Rounded integer (clamped 1–120 for the template)      |
+| `{aspect_ratio}`        | From continuity bible, e.g. `16:9`                    |
+| `{negative_prompt}`     | Empty string if omitted                               |
+| `{reference_image_url}` | Empty string if omitted                               |
+| `{seed}`                | Empty string if omitted                               |
+| `{request_id}`          | Only in `poll.url_template` / poll `body` after start |
+
 
 Environment: `${MY_KEY}` is replaced from the process environment (`.env` loaded by the CLI).
 

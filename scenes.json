@@ -3,67 +3,93 @@
   "scenes": [
     {
       "id": "scene_01",
-      "title": "The Discovery",
-      "summary": "A trio of feathered Tyrannosaurus rex emerge from the prehistoric foliage, their amber eyes fixing on a massive Argentinosaurus drinking at a sun-drenched watering hole. The three-ton sauropod stands oblivious, its long neck sweeping low as water ripples across the mud-flat.",
+      "title": "The Failing Tea Shop",
+      "summary": "Establish Maya's struggling tea shop in Portland - rain outside, empty inside, she's exhausted and cynical.",
       "shots": [
         {
           "id": "s01_sh01",
-          "duration_sec": 7,
-          "prompt": "Wide establishing shot of a dusty Cretaceous watering hole at golden hour, morning sun casting long amber shadows across shallow muddy banks, distant volcanic peaks on horizon, dust particles floating in thick atmospheric haze, camera slowly pans across the serene landscape revealing ancient ferns and cycads lining the water's edge."
+          "duration_sec": 5,
+          "prompt": "Establishing shot of a cozy but neglected tea shop in Portland, rain pattering against large front windows, worn wooden floors, dusty teapots on shelves, only two customers sit at mismatched tables, grey afternoon light filters through. Warm but melancholic atmosphere."
         },
         {
           "id": "s01_sh02",
-          "duration_sec": 6,
-          "prompt": "Low tracking shot following three juvenile Tyrannosaurus rex moving through tall vegetation, scientific accuracy visible in feathered plumage along head and neck, muscular legs with correct digitigrade stance, forwards-facing binocular vision evident in head movement, scaly textured skin catching the warm directional light, dust kicked up with each powerful footfall."
-        },
-        {
-          "id": "s01_sh03",
-          "duration_sec": 8,
-          "prompt": "Medium shot as the T. rex pack freezes, heads turn simultaneously toward the watering hole, forward-facing eyes with precise depth perception visible, one rex emits a low frequency infrasound rumble, camera cuts to reveal massive Argentinosaurus emerging from dust clouds, barrel-shaped body with correct sauropod proportions, long muscular neck supporting massive head, four columnar legs supporting enormous weight, sunlight catches the ridged texture of its huge body."
+          "duration_sec": 5,
+          "prompt": "Medium shot of Maya, tired early-40s woman with messy bun, wearing tea-stained apron over cream sweater, wiping a counter with a worn rag. She sighs heavily, no smile, exhaustion evident in her posture. A CLOSED sign hangs in the window behind her."
         }
       ]
     },
     {
       "id": "scene_02",
-      "title": "The Stalk",
-      "summary": "The pack coordinates with calculated precision—one T. rex advances through the brush while the other two circle wide on either flank, their muscular tails swinging for balance. The lead predator's forward-facing binocular vision tracks the prey's every tremor, feathers bristling along its skull and neck as tension builds.",
+      "title": "Lab Escape",
+      "summary": "A quick, exciting but not scary sequence of Rexi escaping from a shady biotech lab.",
       "shots": [
         {
           "id": "s02_sh01",
-          "duration_sec": 6,
-          "prompt": "Overhead drone-style shot showing the tactical positioning, three T. rex spread into flanking arc around the watering hole, dust swirls around their moving legs, scientific muscular builds visible in shoulder structure, camera orbits slowly revealing the calculated spacing between predators, heavy atmospheric dust creates dramatic volumetric lighting effects."
-        },
-        {
-          "id": "s02_sh02",
-          "duration_sec": 7,
-          "prompt": "Ground-level extreme close-up of T. rex footprints pressed into muddy earth, each print showing precise three-toed digitigrade track with claw marks, dust particles settle around the fresh impressions, camera pulls back to show the tracks leading toward the Argentinosaurus position, morning backlight casting dusty god rays through the scene."
-        },
-        {
-          "id": "s02_sh03",
-          "duration_sec": 8,
-          "prompt": "Side tracking shot of two T. rex moving in synchronized flanking maneuvers, feathered neck plumage ruffling with each step, muscular tails counterbalancing their bodies with proper biomechanical motion, forward-facing eyes scanning constantly, dust kicked up in controlled bursts, dramatic side lighting emphasizing muscle definition and textured scales, intense focus visible in their predatory gaze."
+          "duration_sec": 5,
+          "prompt": "Quick shot of a shadowy high-tech biotech laboratory at night, glowing equipment, cages. A flash of iridescent green feathers - Rexi the Velociraptor bursts through a broken containment door, feathers catching the emergency lights, elegant and fast, NOT scary, more like an elegant dancer escaping."
         }
       ]
     },
     {
       "id": "scene_03",
-      "title": "The Hunt",
-      "summary": "The hunt erupts in violent motion—the pack surges forward in synchronized assault, jaws snapping at the Argentinosaurus's thick hind legs as it heaves its enormous body skyward. The lead T. rex locks onto the sauropod's flank with crushing bite force while the others press the assault, their three-fingered claws gouging for purchase on the panicked giant.",
+      "title": "Finding Home",
+      "summary": "Rexi arrives at the tea shop and hides in the back room.",
       "shots": [
         {
           "id": "s03_sh01",
-          "duration_sec": 6,
-          "prompt": "Wide shot of the attack initiation, lead T. rex breaks from cover in explosive burst, dust cloud erupts from powerful hind legs_propelling massive body forward, camera shakes with the impact of each thundering footfall, morning sun behind casting dramatic rim lighting on muscular scaly frame, jaws open showing correct dental arrangement, prey drive clearly visible in forward-focused eyes."
+          "duration_sec": 5,
+          "prompt": "Rain-dampened Portland street at night, Rexi the elegant Velociraptor with iridescent green-copper feathers slips through an alley, her large amber eyes reflecting streetlights, long tail graceful behind her. She approaches the back door of Willow & Leaf Tea Co."
         },
         {
           "id": "s03_sh02",
-          "duration_sec": 8,
-          "prompt": "Medium tracking shot of coordinated pack attack, two T. rex at flank positions as third makes direct approach, Argentinosaurus responds with massive neck swing turning huge body, dust erupts in chaotic clouds, camera captures the sheer scale difference between predators, muscular T. rex bodies with correct proportions visible in action, feathered plumage whipping with rapid movement, dramatic backlighting creating silhouettes through dense dust atmosphere."
+          "duration_sec": 5,
+          "prompt": "Inside the tea shop's back room, cluttered with tea boxes, Rexi emerges from shadows. Her feathered plumage glows in dim light, she sniffs the air delicately with her beak-like snout, large amber eyes full of curiosity and intelligence. She discovers containers of rare tea leaves and leans in to smell them with apparent delight."
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "title": "The Tea Sommelier",
+      "summary": "The magical moment - Rexi uses her incredible sense of smell to create perfect tea blends.",
+      "shots": [
+        {
+          "id": "s04_sh01",
+          "duration_sec": 5,
+          "prompt": "Close-up of Rexi's elegant bird-like hands - three long fingers - delicately picking and mixing tea leaves with surprising dexterity. Her amber eyes half-closed in concentration, feathers ruffled slightly. She sniffs the blend and makes a small satisfied sound."
         },
         {
-          "id": "s03_sh03",
-          "duration_sec": 10,
-          "prompt": "Ground-level intense close-up as T. rex delivers precise biting attack to Argentinosaurus hind leg, scaly skin texture visible in extreme detail, muscular jaw structure with correct dental placement clamping down, camera captures the impact shudder through massive bodies, dust and debris exploding outward, Argentinosaurus massive foot stamps creating ground震动 visible in camera shake, dynamic angle showing the hunt's raw biological intensity, dust particles catching dramatic golden hour light in thick atmospheric haze."
+          "id": "s04_sh02",
+          "duration_sec": 5,
+          "prompt": "Maya discovers Rexi in the back room, frozen in disbelief. Rexi turns slowly, large amber eyes blinking gently, holding a tin of premium oolong. Instead of fear, wonder spreads across Maya's face. This is NOT scary - it's magical."
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "title": "Transformation",
+      "summary": "The tea shop transforms - customers flock in, Maya smiles for the first time.",
+      "shots": [
+        {
+          "id": "s05_sh01",
+          "duration_sec": 5,
+          "prompt": "The tea shop now bustling with customers, warm golden light, people sipping tea and chatting enthusiastically. Maya moves between tables with renewed energy, a genuine smile on her face for the first time. Through the window, Portland sunshine breaks through clouds."
+        },
+        {
+          "id": "s05_sh02",
+          "duration_sec": 5,
+          "prompt": "Heartwarming close-up: Maya and Rexi side by side behind the counter. Rexi's elegant feathered head reaches just above Maya's shoulder. Maya reaches up to gently scratch under Rexi's chin feathers - Rexi's eyes close in contentment, a soft rumbling purr-like sound. Pure warmth and connection."
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "title": "Teaser Closing",
+      "summary": "Playful closing shot that captures the film's tone.",
+      "shots": [
+        {
+          "id": "s06_sh01",
+          "duration_sec": 5,
+          "prompt": "Playful medium shot: Rexi sits at one of the tea tables, awkwardly but charmingly trying to sip from a tiny teacup with her beak-like snout, one feathered hand holding the handle. Maya watches, laughing genuinely. Warm golden hour light, cozy shop atmosphere. Amélie meets Paddington vibes."
         }
       ]
     }

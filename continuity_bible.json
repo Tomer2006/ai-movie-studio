@@ -1,35 +1,45 @@
 {
-  "title": "Ancient Predators",
-  "logline": "A pack of scientifically accurate Tyrannosaurus rex hunt a massive Argentinosaurus in a dramatic prehistoric encounter.",
-  "aspect_ratio": "9:16",
+  "title": "Tea with a Raptor",
+  "logline": "A genetically engineered Velociraptor escapes a shady biotech lab and hides in the back room of a failing artisanal tea shop in Portland, where its incredible sense of smell creates the most incredible tea blends the city has ever tasted.",
+  "aspect_ratio": "16:9",
   "fps": 24,
-  "tone": " primal, intense, educational",
-  "era": "Late Cretaceous (70 million years ago)",
+  "tone": "heartwarming, whimsical, comedic, Amélie meets Paddington",
+  "era": "present day",
   "characters": [
     {
-      "id": "trex_pack",
-      "name": "Tyrannosaurus Rex Pack",
-      "description": "Three scientifically accurate T. rex with feathers on head/neck, accurate proportions with muscular body, relatively large arms, forward-facing eyes, detailed scaly skin texture, not the oversized head movie trope",
-      "wardrobe": "natural feathered and scaly skin in brown-green tones"
+      "id": "velociraptor",
+      "name": "Rexi",
+      "description": "A 7-foot-tall genetically engineered Velociraptor with iridescent feathered plumage in deep greens and copper tones, large amber eyes with slit pupils, long expressive tail, three-fingered hands with delicate dexterity, beak-like snout. Not scary - elegant, curious, gentle, with an air of refined sophistication. Moves with surprising grace and quiet elegance.",
+      "wardrobe": "natural feathered plumage - iridescent green and copper tones"
     },
     {
-      "id": "argentinosaurus",
-      "name": "Argentinosaurus",
-      "description": "Massive sauropod with long neck, barrel-shaped body, four columnar legs, small head relative to body, rough skin texture, one of the largest known land animals",
-      "wardrobe": "natural gray-brown skin"
+      "id": "maya",
+      "name": "Maya Chen",
+      "description": "Sarcastic, burnt-out widow in her early 40s, tired eyes but warm heart underneath. Wears practical clothes - dark jeans, worn sweater, apron stained with tea. Originally cynical but slowly thaws. Hasn't truly smiled since her husband passed.",
+      "wardrobe": "dark jeans, worn cream sweater, tea-stained apron, messy bun"
     }
   ],
   "locations": [
     {
-      "id": "cretaceous_plains",
-      "name": "Cretaceous Plains",
-      "description": "Lush prehistoric vegetation with ferns, cycads, conifers, muddy ground near ancient water source, dramatic sky with volcanic mountains in distance"
+      "id": "tea_shop",
+      "name": "Willow & Leaf Tea Co.",
+      "description": "Failing artisanal tea shop in Portland - worn wooden floors, dusty teapots on shelves, a few mismatched tables, large front window with afternoon light. Cozy but neglected. Smells of old tea leaves and melancholy."
+    },
+    {
+      "id": "back_room",
+      "name": "Tea Shop Back Room",
+      "description": "Small cluttered storage room behind the shop where Rexi hides. Boxes of tea supplies, aged oolongs, jasmine, rare leaves. Dim lighting, warm and safe."
+    },
+    {
+      "id": "portland_street",
+      "name": "Portland Street",
+      "description": "Rain-dampened Portland street outside the tea shop, hipster cafes, coffee shops, gentle grey skies"
     }
   ],
   "visual_rules": {
-    "do": ["accurate dinosaur anatomy", "feathered T. rex", "realistic body proportions", "intense action cinematography", "tracking shots", "dust and debris for atmosphere"],
-    "dont": ["text overlays", "movie-style monster exaggeration", "bright green lizards", "incorrect tiny T. rex arms", "incorrect upright posture"],
-    "color_palette": ["#8b7355", "#4a5d23", "#6b8e23", "#a0522d", "#556b2f"]
+    "do": ["warm cinematic lighting", "cozy intimate framing", "shallow depth of field on characters", "playful camera movements", "quintessential Portland atmosphere", "emphasize Rexi's elegance and beauty"],
+    "dont": ["scary lighting or angles", "jump scares", "tense horror cinematography", "text overlays", "watermarks"],
+    "color_palette": ["#f5e6d3", "#8b4513", "#556b2f", "#d4a574", "#2f4f4f"]
   },
-  "reference_notes": "Based on current paleontological evidence: T. rex had feathers (at least partial), correct eye placement for binocular vision, powerful jaws, muscular arms. Argentinosaurus - massive but realistic proportions. No roaring - dinosaurs likely made low sounds. Hunt should show pack coordination."
+  "reference_notes": "This is a HEARTWARMING comedy - NOT scary. The raptor should be charming, elegant, and lovable - like a Michelin-star sommelier who's also a 7-foot tall murder chicken. Think Amélie's whimsy + Paddington's sweetness. No horror elements whatsoever."
 }
