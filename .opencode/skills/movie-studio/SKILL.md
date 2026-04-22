@@ -56,15 +56,16 @@ Agent JSON (`default_agent`, optional `hidden` / `temperature`, permissions) liv
 - **@quality-control** — return **JSON only**:
   ```json
   {
-    "decision": "keep",
-    "confidence": "high",
-    "issues": [],
-    "issue_signature": "acceptable",
+    "decision": "<keep|rerender|unresolved>",
+    "confidence": "<high|medium|low>",
+    "issues": ["<short_issue_if_any>"],
+    "issue_signature": "<acceptable_or_primary_issue>",
     "updated_prompt": null,
     "updated_duration_sec": null,
     "rationale": "Short explanation of the verdict."
   }
   ```
+  Treat the placeholder values above as schema markers only, not defaults. Quality Control should choose `keep` only when the evidence clearly supports shipping the shot; if the evidence is ambiguous, prefer `unresolved`.
 
 The **director** should merge subagent output into repo JSON itself and keep everything schema-valid.
 

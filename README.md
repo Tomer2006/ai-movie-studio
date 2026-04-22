@@ -12,7 +12,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
 copy .env.example .env
-# Edit .env — video: REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, or XAI_API_KEY + VIDEO_PROVIDER=xai, or mock
+# Edit .env — video: OPENROUTER_API_KEY + VIDEO_PROVIDER=openrouter, or REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, or XAI_API_KEY + VIDEO_PROVIDER=xai, or mock
 ```
 
 Requires **ffmpeg** on your PATH for assembly and mock clips.
@@ -42,7 +42,7 @@ studio assemble --output dist/final.mp4
 
 - `**plan**`: Validate JSON files against schemas.
 - `**provider**`: Show the resolved video provider from `.env`.
-- `**render` / `render-all**`: Generate clips — built-ins `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
+- `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.
 - `**assemble`**: Concat clips in scene order with stream copy (video + embedded audio from each shot).
 
@@ -67,7 +67,7 @@ Open this repo root in a terminal and run `opencode`. `[opencode.json](opencode.
 - **Subagents** — `@screenwriter` (dialogue/summaries), `@shotboard` (shot prompts/durations), `@quality-control` (Quality Control / post-render fixes). Prompts: `[.opencode/agents/](.opencode/agents/)`; JSON agent config: `**[opencode.jsonc](opencode.jsonc)`**.
 - Full workflow and Quality Control loop: `[.opencode/skills/movie-studio/SKILL.md](.opencode/skills/movie-studio/SKILL.md)`.
 
-LLM provider (OpenRouter, etc.) is configured in **OpenCode** (`/connect`, `/models`), not in `.env`. **Video** keys stay in `.env`.
+Chat LLM provider (OpenRouter, etc.) is configured in **OpenCode** (`/connect`, `/models`), not in `.env`. **Video** providers, including `VIDEO_PROVIDER=openrouter`, stay in `.env`.
 
 ## Pilot (local smoke test)
 

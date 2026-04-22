@@ -21,10 +21,10 @@ Return **JSON only** with exactly this shape:
 
 ```json
 {
-  "decision": "keep",
-  "confidence": "high",
-  "issues": [],
-  "issue_signature": "acceptable",
+  "decision": "<keep|rerender|unresolved>",
+  "confidence": "<high|medium|low>",
+  "issues": ["<short_issue_if_any>"],
+  "issue_signature": "<acceptable_or_primary_issue>",
   "updated_prompt": null,
   "updated_duration_sec": null,
   "rationale": "Short explanation of the verdict."
@@ -40,6 +40,7 @@ Rules for fields:
 - `updated_prompt`: full replacement prompt when `decision` is `rerender`, otherwise `null`
 - `updated_duration_sec`: number only when a duration change is necessary, otherwise `null`
 - `rationale`: one short sentence
+- The placeholder values in the schema are not defaults. Choose values strictly from the evidence.
 
 ## Review focus
 
@@ -54,5 +55,7 @@ Rules for fields:
 - Use `keep` when the shot is good enough to ship.
 - Use `rerender` only when you can suggest a concrete, materially different full replacement prompt or a clear duration fix.
 - Use `unresolved` when the evidence is weak, the issue is repeated but no better prompt is obvious, or confidence is too low to justify another automatic rerender.
+- Do not default to `keep` just because it appears in examples. A `keep` verdict requires affirmative visual evidence that the shot works.
+- If the evidence is ambiguous, prefer `unresolved` over an unearned `keep`.
 - If the issue is the same as before, keep `issue_signature` stable so the director can detect repeated failures.
 - Never return markdown, bullet lists, or code fences outside the single JSON object.

@@ -1,35 +1,35 @@
 {
-  "title": "Best Friends Forever",
-  "logline": "SpongeBob and Squidward finally become best friends after an unexpected act of kindness.",
+  "title": "Ancient Predators",
+  "logline": "A pack of scientifically accurate Tyrannosaurus rex hunt a massive Argentinosaurus in a dramatic prehistoric encounter.",
   "aspect_ratio": "9:16",
   "fps": 24,
-  "tone": "lighthearted, comedic, heartwarming",
-  "era": "present day - SpongeBob universe",
+  "tone": " primal, intense, educational",
+  "era": "Late Cretaceous (70 million years ago)",
   "characters": [
     {
-      "id": "spongebob",
-      "name": "SpongeBob",
-      "description": "Yellow square sponge with big expressive eyes, iconic holes, cheerful smile, optimistic personality",
-      "wardrobe": "brown shorts, white shirt"
+      "id": "trex_pack",
+      "name": "Tyrannosaurus Rex Pack",
+      "description": "Three scientifically accurate T. rex with feathers on head/neck, accurate proportions with muscular body, relatively large arms, forward-facing eyes, detailed scaly skin texture, not the oversized head movie trope",
+      "wardrobe": "natural feathered and scaly skin in brown-green tones"
     },
     {
-      "id": "squidward",
-      "name": "Squidward",
-      "description": "Purple octopus with large eyes, cynical expression but secretly kind heart, plays clarinet",
-      "wardrobe": "brown shirt, beige pants"
+      "id": "argentinosaurus",
+      "name": "Argentinosaurus",
+      "description": "Massive sauropod with long neck, barrel-shaped body, four columnar legs, small head relative to body, rough skin texture, one of the largest known land animals",
+      "wardrobe": "natural gray-brown skin"
     }
   ],
   "locations": [
     {
-      "id": "bikini_bottom",
-      "name": "Bikini Bottom",
-      "description": "Underwater town with coral reefs, bubbles, colorful sea life, Squidward's Easter Island head house"
+      "id": "cretaceous_plains",
+      "name": "Cretaceous Plains",
+      "description": "Lush prehistoric vegetation with ferns, cycads, conifers, muddy ground near ancient water source, dramatic sky with volcanic mountains in distance"
     }
   ],
   "visual_rules": {
-    "do": ["bright underwater colors", "cartoon animation style", "comedic close-ups", "heartwarming two-shots", "bubbles and coral"],
-    "dont": ["text overlays", "realistic CGI", "modern tech anachronisms"],
-    "color_palette": ["#f1c40f", "#9b59b6", "#3498db", "#1abc9c", "#e74c3c"]
+    "do": ["accurate dinosaur anatomy", "feathered T. rex", "realistic body proportions", "intense action cinematography", "tracking shots", "dust and debris for atmosphere"],
+    "dont": ["text overlays", "movie-style monster exaggeration", "bright green lizards", "incorrect tiny T. rex arms", "incorrect upright posture"],
+    "color_palette": ["#8b7355", "#4a5d23", "#6b8e23", "#a0522d", "#556b2f"]
   },
-  "reference_notes": "Squidward's character arc: from annoyed neighbor to grateful friend. Key moment is his subtle genuine smile - earn it through comedy."
+  "reference_notes": "Based on current paleontological evidence: T. rex had feathers (at least partial), correct eye placement for binocular vision, powerful jaws, muscular arms. Argentinosaurus - massive but realistic proportions. No roaring - dinosaurs likely made low sounds. Hunt should show pack coordination."
 }

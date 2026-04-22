@@ -49,7 +49,7 @@ Optional `download` block: if the video URL needs extra headers (rare), set `dow
 
 ## Built-in providers
 
-For common APIs, the repo still ships **mock**, **replicate**, and **xai** — no JSON file required.
+For common APIs, the repo still ships **mock**, **openrouter**, **replicate**, and **xai** — no JSON file required.
 
 ## Limits
 
