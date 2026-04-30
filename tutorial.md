@@ -116,14 +116,9 @@ Example:
 /movie A 5-minute quiet sci-fi short: a repair drone wakes up alone on a derelict station. Hopeful ending.
 ```
 
-OpenCode loads the workflow from `[.opencode/skills/movie-studio/SKILL.md](.opencode/skills/movie-studio/SKILL.md)`. The director should:
+OpenCode loads the workflow from `[.opencode/skills/movie-studio/SKILL.md](.opencode/skills/movie-studio/SKILL.md)`. The director aligns `continuity_bible.json` and `scenes.json`, validates with `python -m studio plan`, renders, and assembles the final file.
 
-1. Align `**continuity_bible.json**` and `**scenes.json**` with your brief.
-2. Run `**python -m studio plan**` until validation passes.
-3. Run `**python -m studio render-all**` when `.env` is set for the provider you want.
-4. Run `**python -m studio assemble -o dist/final.mp4**` to build the final file.
-
-For character consistency, put recurring character details in each character's `profile` object inside `continuity_bible.json`. The render commands automatically inject those locked `CharacterProfile` details into every shot prompt, so the agent can write shorter shot prompts without losing face, wardrobe, body, voice, or personality consistency.
+For character consistency, put recurring details in `characters[].profile`; render commands inject matching `CharacterProfile` details only when a shot mentions that character.
 
 If the venv is activated, `python -m studio` is enough; otherwise use the full path to `python` inside `.venv`.
 

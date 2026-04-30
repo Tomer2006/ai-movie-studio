@@ -83,16 +83,26 @@ def build_character_profiles(bible_doc: dict[str, Any]) -> list[CharacterProfile
     ]
 
 
-def build_character_profile_block(bible_doc: dict[str, Any]) -> str:
+def matched_character_profiles(
+    bible_doc: dict[str, Any], prompt: str | None = None
+) -> list[CharacterProfile]:
     profiles = build_character_profiles(bible_doc)
+    if prompt is None:
+        return profiles
+    return [profile for profile in profiles if profile.is_mentioned_in(prompt)]
+
+
+def build_character_profile_block(
+    bible_doc: dict[str, Any], prompt: str | None = None
+) -> str:
+    profiles = matched_character_profiles(bible_doc, prompt)
     if not profiles:
         return ""
 
     lines = [
         "Character consistency profiles (locked):",
-        "Use these exact profiles whenever the shot mentions a character by name or id. "
-        "Do not change face, age, species, body shape, signature colors, wardrobe, or personality "
-        "unless the shot explicitly overrides it. Do not add characters that the shot does not call for.",
+        "Use these exact profiles for the named character(s). Do not change face, age, species, "
+        "body shape, signature colors, wardrobe, or personality unless the shot explicitly overrides it.",
     ]
     for profile in profiles:
         lines.extend(profile.prompt_lines())
@@ -100,7 +110,7 @@ def build_character_profile_block(bible_doc: dict[str, Any]) -> str:
 
 
 def apply_character_profiles_to_prompt(prompt: str, bible_doc: dict[str, Any]) -> str:
-    block = build_character_profile_block(bible_doc)
+    block = build_character_profile_block(bible_doc, prompt)
     if not block:
         return prompt
     return f"{prompt.strip()}\n\n{block}"

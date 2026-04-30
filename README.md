@@ -32,9 +32,7 @@ Copy examples: `continuity_bible.example.json` → `continuity_bible.json`, `sce
 
 ## Character Consistency
 
-Each entry in `continuity_bible.json` can include a `profile` object with locked traits such as face, hair, eyes, body, movement, personality, voice, negative prompt, reference image, and seed.
-
-When you run `studio render` or `studio render-all`, the CLI automatically appends all `CharacterProfile` blocks to the shot prompt. The video provider still receives your shot-specific action/camera prompt, plus the locked character descriptions, so recurring characters keep the same face, wardrobe, body shape, and personality across shots.
+Each `continuity_bible.json` character can include a `profile` with locked traits such as face, body, movement, voice, negative prompt, reference image, and seed. Render commands append only the `CharacterProfile` blocks for characters mentioned in each shot prompt.
 
 ## CLI
 

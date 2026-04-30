@@ -9,7 +9,7 @@
     {
       "id": "velociraptor",
       "name": "Rexi",
-      "description": "A 7-foot-tall genetically engineered Velociraptor with iridescent feathered plumage in deep greens and copper tones, large amber eyes with slit pupils, long expressive tail, three-fingered hands with delicate dexterity, beak-like snout. Not scary - elegant, curious, gentle, with an air of refined sophistication. Moves with surprising grace and quiet elegance.",
+      "description": "Gentle, elegant genetically engineered Velociraptor tea savant.",
       "wardrobe": "natural feathered plumage - iridescent green and copper tones",
       "profile": {
         "physical_signature": "Tall feathered raptor silhouette, copper-green iridescent plumage, elegant long tail, amber slit-pupil eyes, delicate three-fingered hands, refined non-horror presence.",
@@ -26,7 +26,7 @@
     {
       "id": "maya",
       "name": "Maya Chen",
-      "description": "Sarcastic, burnt-out widow in her early 40s, tired eyes but warm heart underneath. Wears practical clothes - dark jeans, worn sweater, apron stained with tea. Originally cynical but slowly thaws. Hasn't truly smiled since her husband passed.",
+      "description": "Sarcastic, grief-worn tea shop owner in her early 40s.",
       "wardrobe": "dark jeans, worn cream sweater, tea-stained apron, messy bun",
       "profile": {
         "physical_signature": "Early-40s Chinese American woman with tired expressive eyes, practical posture, guarded warmth, and a lived-in tea shop owner look.",
@@ -64,5 +64,5 @@
     "dont": ["scary lighting or angles", "jump scares", "tense horror cinematography", "text overlays", "watermarks"],
     "color_palette": ["#f5e6d3", "#8b4513", "#556b2f", "#d4a574", "#2f4f4f"]
   },
-  "reference_notes": "This is a HEARTWARMING comedy - NOT scary. The raptor should be charming, elegant, and lovable - like a Michelin-star sommelier who's also a 7-foot tall murder chicken. Think Amélie's whimsy + Paddington's sweetness. No horror elements whatsoever."
+  "reference_notes": "Heartwarming comedy, not horror. Rexi should feel charming and elegant, like Amélie whimsy plus Paddington sweetness."
 }
