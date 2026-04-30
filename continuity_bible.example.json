@@ -10,7 +10,20 @@
       "id": "hero",
       "name": "Alex",
       "description": "Curious young adult, short dark hair",
-      "wardrobe": "blue jacket, gray shirt"
+      "wardrobe": "blue jacket, gray shirt",
+      "profile": {
+        "physical_signature": "Curious young adult with a compact silhouette, short dark hair, and an alert, thoughtful presence.",
+        "face": "Soft angular face, natural skin texture, expressive eyebrows, focused but approachable.",
+        "hair": "Short dark hair, slightly tousled, consistent length in every shot.",
+        "eyes": "Dark attentive eyes that scan the environment with curiosity.",
+        "body": "Average height and build, relaxed shoulders, practical posture.",
+        "movement": "Careful, observant movements; pauses before acting.",
+        "personality": "Curious, quietly brave, thoughtful under pressure.",
+        "voice": "Warm, concise, slightly cautious.",
+        "consistency_notes": "Keep the same age range, hair length, blue jacket, gray shirt, and curious expression across all shots.",
+        "negative_prompt": "different hairstyle, different jacket color, child, elderly, formal suit, heavy makeup",
+        "seed": 18422
+      }
     }
   ],
   "locations": [

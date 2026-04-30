@@ -92,14 +92,15 @@ python -m studio validate-provider providers\my_provider.json
 ## Workflow
 
 1. **Brief** — Genre, tone, target length, aspect ratio / fps (`16:9` / `24` by default).
-2. **Continuity bible** — Edit `continuity_bible.json` (see `continuity_bible.example.json` + `schemas/`).
+2. **Continuity bible** — Edit `continuity_bible.json` (see `continuity_bible.example.json` + `schemas/`). For recurring characters, fill the `profile` object with locked face, hair/eyes, body, wardrobe, movement, personality, voice, consistency notes, and negative prompt traits.
 3. **Scenes** — Edit `scenes.json` with `"version": 1`.
 4. **Plan** — `python -m studio plan` until OK.
 5. **Provider check** — Run `python -m studio provider` before choosing the render path.
-6. **Mock path** — If the provider resolves to `mock`, skip automatic visual QC and use `python -m studio render-all` only as a cheap pipeline validation run.
-7. **Auto-QC path (default for non-mock)** — Render one shot at a time with `python -m studio render --scene ... --shot ...`, then build a visual proof sheet with `python -m studio review-sheet --scene ... --shot ... --attempt ...`, then send the clip path, review-sheet path, current prompt, duration, provider mode, and attempt number to `@quality-control`.
-8. **Automatic rerender rules** — If Quality Control returns `rerender`, update `scenes.json` with the full replacement prompt and/or `duration_sec`, run `python -m studio plan`, and rerender that shot. Stop after 3 total attempts, repeated `issue_signature`, no material prompt/duration change, or confidence too low to justify another automatic retry.
-9. **Assemble** — `python -m studio assemble -o dist/final.mp4` (concat clips; audio comes from each clip’s muxed stream).
+6. **Character consistency** — `studio render` and `studio render-all` automatically append `CharacterProfile` blocks from the continuity bible to every shot prompt. Keep shot prompts focused on camera/action/location and avoid contradicting the locked profile.
+7. **Mock path** — If the provider resolves to `mock`, skip automatic visual QC and use `python -m studio render-all` only as a cheap pipeline validation run.
+8. **Auto-QC path (default for non-mock)** — Render one shot at a time with `python -m studio render --scene ... --shot ...`, then build a visual proof sheet with `python -m studio review-sheet --scene ... --shot ... --attempt ...`, then send the clip path, review-sheet path, current prompt, duration, provider mode, and attempt number to `@quality-control`.
+9. **Automatic rerender rules** — If Quality Control returns `rerender`, update `scenes.json` with the full replacement prompt and/or `duration_sec`, run `python -m studio plan`, and rerender that shot. Stop after 3 total attempts, repeated `issue_signature`, no material prompt/duration change, or confidence too low to justify another automatic retry.
+10. **Assemble** — `python -m studio assemble -o dist/final.mp4` (concat clips; audio comes from each clip’s muxed stream).
 
 ## Automatic Quality Control loop (default)
 

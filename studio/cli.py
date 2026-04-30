@@ -2,17 +2,23 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Annotated, Optional
+from typing import Annotated, Any, Optional
 
 import typer
 
 from studio.assemble import assemble as run_assemble
+from studio.character_profile import (
+    apply_character_profiles_to_negative_prompt,
+    apply_character_profiles_to_prompt,
+    resolve_character_reference_image_url,
+    resolve_character_seed,
+)
 from studio.paths import load_dotenv, repo_root
 from studio.providers import configured_provider_raw, describe_provider, get_provider
 from studio.providers.configurable import ConfigurableHttpProvider
 from studio.providers.mock import MockVideoProvider
 from studio.review_sheet import render_review_sheet, review_sheet_path
-from studio.scenes_io import clip_path, find_shot, iter_shots
+from studio.scenes_io import ShotRef, clip_path, find_shot, iter_shots
 from studio.validate import (
     load_and_validate_bible,
     load_and_validate_scenes,
@@ -29,6 +35,20 @@ def _warn_if_mock(provider: object) -> None:
             "for real video."
         )
         typer.echo(typer.style(msg, fg=typer.colors.YELLOW, bold=True))
+
+
+def _render_kwargs_for_shot(shot_ref: ShotRef, bible_doc: dict[str, Any]) -> dict[str, Any]:
+    prompt = shot_ref.prompt
+    return {
+        "prompt": apply_character_profiles_to_prompt(prompt, bible_doc),
+        "negative_prompt": apply_character_profiles_to_negative_prompt(
+            shot_ref.negative_prompt, bible_doc, prompt
+        ),
+        "seed": resolve_character_seed(prompt, bible_doc, shot_ref.seed),
+        "reference_image_url": resolve_character_reference_image_url(
+            prompt, bible_doc, shot_ref.reference_image_url
+        ),
+    }
 
 
 @app.command("provider")
@@ -90,16 +110,17 @@ def render_cmd(
         raise typer.BadParameter(f"Shot not found: scene={scene!r} shot={shot!r}")
 
     out = clip_path(cdir, scene, shot)
+    render_kwargs = _render_kwargs_for_shot(shot_ref, bible_doc)
     typer.echo(f"Rendering {out} ...")
     provider.render_shot(
         output_path=out,
-        prompt=shot_ref.prompt,
+        prompt=render_kwargs["prompt"],
         duration_sec=shot_ref.duration_sec,
-        negative_prompt=shot_ref.negative_prompt,
+        negative_prompt=render_kwargs["negative_prompt"],
         aspect_ratio=bible_doc["aspect_ratio"],
         fps=int(bible_doc["fps"]),
-        seed=shot_ref.seed,
-        reference_image_url=shot_ref.reference_image_url,
+        seed=render_kwargs["seed"],
+        reference_image_url=render_kwargs["reference_image_url"],
     )
     typer.echo(f"Wrote {out}")
 
@@ -170,16 +191,17 @@ def render_all_cmd(
 
     for ref in iter_shots(scenes_doc):
         out = clip_path(cdir, ref.scene_id, ref.shot_id)
+        render_kwargs = _render_kwargs_for_shot(ref, bible_doc)
         typer.echo(f"Rendering {ref.scene_id}/{ref.shot_id} -> {out}")
         provider.render_shot(
             output_path=out,
-            prompt=ref.prompt,
+            prompt=render_kwargs["prompt"],
             duration_sec=ref.duration_sec,
-            negative_prompt=ref.negative_prompt,
+            negative_prompt=render_kwargs["negative_prompt"],
             aspect_ratio=bible_doc["aspect_ratio"],
             fps=int(bible_doc["fps"]),
-            seed=ref.seed,
-            reference_image_url=ref.reference_image_url,
+            seed=render_kwargs["seed"],
+            reference_image_url=render_kwargs["reference_image_url"],
         )
     typer.echo("Done.")
 

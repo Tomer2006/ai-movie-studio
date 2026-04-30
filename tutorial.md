@@ -123,6 +123,8 @@ OpenCode loads the workflow from `[.opencode/skills/movie-studio/SKILL.md](.open
 3. Run `**python -m studio render-all**` when `.env` is set for the provider you want.
 4. Run `**python -m studio assemble -o dist/final.mp4**` to build the final file.
 
+For character consistency, put recurring character details in each character's `profile` object inside `continuity_bible.json`. The render commands automatically inject those locked `CharacterProfile` details into every shot prompt, so the agent can write shorter shot prompts without losing face, wardrobe, body, voice, or personality consistency.
+
 If the venv is activated, `python -m studio` is enough; otherwise use the full path to `python` inside `.venv`.
 
 ---

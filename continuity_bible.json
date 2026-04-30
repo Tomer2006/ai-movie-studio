@@ -10,13 +10,36 @@
       "id": "velociraptor",
       "name": "Rexi",
       "description": "A 7-foot-tall genetically engineered Velociraptor with iridescent feathered plumage in deep greens and copper tones, large amber eyes with slit pupils, long expressive tail, three-fingered hands with delicate dexterity, beak-like snout. Not scary - elegant, curious, gentle, with an air of refined sophistication. Moves with surprising grace and quiet elegance.",
-      "wardrobe": "natural feathered plumage - iridescent green and copper tones"
+      "wardrobe": "natural feathered plumage - iridescent green and copper tones",
+      "profile": {
+        "physical_signature": "Tall feathered raptor silhouette, copper-green iridescent plumage, elegant long tail, amber slit-pupil eyes, delicate three-fingered hands, refined non-horror presence.",
+        "face": "Beak-like snout with expressive brow ridges, intelligent gentle gaze, no monstrous snarling unless a shot explicitly asks for comedy.",
+        "eyes": "Large amber eyes with vertical slit pupils, curious and emotionally readable.",
+        "body": "Seven feet tall, lean athletic dinosaur build, graceful neck, feathered limbs, long balancing tail.",
+        "movement": "Quiet, precise, balletic movements; handles objects carefully like a trained tea sommelier.",
+        "personality": "Gentle, curious, elegant, polite, quietly delighted by rare tea leaves.",
+        "voice": "Soft rumbling purrs, delicate chirps, refined nonverbal reactions; never horror roars.",
+        "consistency_notes": "Always charming and lovable, never frightening. Keep the same feather colors, amber eyes, body scale, and graceful demeanor across every shot.",
+        "negative_prompt": "scary monster design, horror raptor, blood, gore, aggressive snarling, reptile-only skin with no feathers"
+      }
     },
     {
       "id": "maya",
       "name": "Maya Chen",
       "description": "Sarcastic, burnt-out widow in her early 40s, tired eyes but warm heart underneath. Wears practical clothes - dark jeans, worn sweater, apron stained with tea. Originally cynical but slowly thaws. Hasn't truly smiled since her husband passed.",
-      "wardrobe": "dark jeans, worn cream sweater, tea-stained apron, messy bun"
+      "wardrobe": "dark jeans, worn cream sweater, tea-stained apron, messy bun",
+      "profile": {
+        "physical_signature": "Early-40s Chinese American woman with tired expressive eyes, practical posture, guarded warmth, and a lived-in tea shop owner look.",
+        "face": "Oval face, subtle under-eye shadows, natural skin texture, restrained expressions that soften into genuine warmth over the story.",
+        "hair": "Dark hair in a loose messy bun with a few escaped strands around her face.",
+        "eyes": "Dark brown tired eyes, observant and dryly skeptical, warmer when she connects with Rexi.",
+        "body": "Average height and build, slightly slouched from exhaustion early on, more open and relaxed after the shop transforms.",
+        "movement": "Efficient practical movements, wiping counters and serving tea with muscle memory; later lighter and more playful.",
+        "personality": "Sarcastic, grief-worn, cynical on the surface, compassionate underneath.",
+        "voice": "Dry, low-key humor with clipped practical phrasing; emotional moments are quiet rather than melodramatic.",
+        "consistency_notes": "Keep her age, ethnicity, messy bun, cream sweater, tea-stained apron, tired eyes, and gradual emotional thaw consistent.",
+        "negative_prompt": "teenager, glamorous fashion model, perfect makeup, different ethnicity, bright new clothing, exaggerated melodrama"
+      }
     }
   ],
   "locations": [

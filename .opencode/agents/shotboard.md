@@ -47,6 +47,8 @@ Inside each `shots` array, use only:
 - No watermarks or on-screen text unless the user asks.
 - Prefer **5-15 seconds** per shot unless the user or provider requires something else.
 - Reference character/location **by visual description** from the bible, not by meta instructions like "see bible".
+- When a character appears, use the same name or id from `continuity_bible.json`; the CLI automatically injects the locked `CharacterProfile` block during render.
+- Do not invent conflicting age, face, hair, body, wardrobe, voice, or personality details outside the character profile.
 - Use stable shot IDs: `s01_sh01`, `s01_sh02`, etc., matching the director's scene IDs.
 - For cloud video APIs, avoid very short durations (under ~3s) unless necessary.
 

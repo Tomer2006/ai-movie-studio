@@ -18,7 +18,7 @@ Use subagents so you stay focused on **continuity + ordering + running `studio`*
 
 ## Your core duties
 
-1. **Continuity first** — Maintain `continuity_bible.json`: `characters`, `locations`, `aspect_ratio`, `fps`, `visual_rules`. IDs must be **snake_case** (`^[a-z0-9_]+$`).
+1. **Continuity first** — Maintain `continuity_bible.json`: `characters`, character `profile` consistency locks, `locations`, `aspect_ratio`, `fps`, `visual_rules`. IDs must be **snake_case** (`^[a-z0-9_]+$`).
 2. **Scenes** — Maintain `scenes.json` with `"version": 1`. Each scene has `id`, `title`, `shots[]`. Each shot has `id`, `duration_sec`, `prompt`.
 3. **Validate** — After any edit: `python -m studio plan` (from repo root). Fix until clean.
 4. **Provider check** — Run `python -m studio provider` before render decisions. Only call a run **mock** when that command resolves to `mock`, the render log prints the mock warning, or footage visibly shows colored test bars / on-screen `MOCK`.
@@ -43,7 +43,24 @@ Use subagents so you stay focused on **continuity + ordering + running `studio`*
   "aspect_ratio": "16:9",
   "fps": 24,
   "characters": [
-    { "id": "hero", "name": "Name", "description": "Short visual description", "wardrobe": "optional" }
+    {
+      "id": "hero",
+      "name": "Name",
+      "description": "Short visual description",
+      "wardrobe": "optional",
+      "profile": {
+        "physical_signature": "Locked silhouette, age, ethnicity/species, and signature visual traits",
+        "face": "Specific facial structure and expression range",
+        "hair": "Specific hair style/color or equivalent creature trait",
+        "eyes": "Specific eye color/shape/expression",
+        "body": "Specific body type, scale, posture",
+        "movement": "How the character moves",
+        "personality": "Stable personality traits",
+        "voice": "Dialogue or vocal style",
+        "consistency_notes": "What must never drift across shots",
+        "negative_prompt": "Traits to avoid for this character"
+      }
+    }
   ],
   "locations": [
     { "id": "main_loc", "name": "Place name", "description": "Look and mood" }

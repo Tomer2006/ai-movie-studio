@@ -25,7 +25,25 @@
           "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
           "name": { "type": "string" },
           "description": { "type": "string" },
-          "wardrobe": { "type": "string" }
+          "wardrobe": { "type": "string" },
+          "profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "physical_signature": { "type": "string" },
+              "face": { "type": "string" },
+              "hair": { "type": "string" },
+              "eyes": { "type": "string" },
+              "body": { "type": "string" },
+              "movement": { "type": "string" },
+              "personality": { "type": "string" },
+              "voice": { "type": "string" },
+              "consistency_notes": { "type": "string" },
+              "negative_prompt": { "type": "string" },
+              "reference_image_url": { "type": "string" },
+              "seed": { "type": "integer" }
+            }
+          }
         }
       }
     },
