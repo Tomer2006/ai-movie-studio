@@ -1,68 +1,91 @@
 {
-  "title": "Tea with a Raptor",
-  "logline": "A genetically engineered Velociraptor escapes a shady biotech lab and hides in the back room of a failing artisanal tea shop in Portland, where its incredible sense of smell creates the most incredible tea blends the city has ever tasted.",
+  "title": "Veloci-Tea",
   "aspect_ratio": "16:9",
   "fps": 24,
-  "tone": "heartwarming, whimsical, comedic, Amélie meets Paddington",
-  "era": "present day",
   "characters": [
     {
-      "id": "velociraptor",
-      "name": "Rexi",
-      "description": "Gentle, elegant genetically engineered Velociraptor tea savant.",
-      "wardrobe": "natural feathered plumage - iridescent green and copper tones",
-      "profile": {
-        "physical_signature": "Tall feathered raptor silhouette, copper-green iridescent plumage, elegant long tail, amber slit-pupil eyes, delicate three-fingered hands, refined non-horror presence.",
-        "face": "Beak-like snout with expressive brow ridges, intelligent gentle gaze, no monstrous snarling unless a shot explicitly asks for comedy.",
-        "eyes": "Large amber eyes with vertical slit pupils, curious and emotionally readable.",
-        "body": "Seven feet tall, lean athletic dinosaur build, graceful neck, feathered limbs, long balancing tail.",
-        "movement": "Quiet, precise, balletic movements; handles objects carefully like a trained tea sommelier.",
-        "personality": "Gentle, curious, elegant, polite, quietly delighted by rare tea leaves.",
-        "voice": "Soft rumbling purrs, delicate chirps, refined nonverbal reactions; never horror roars.",
-        "consistency_notes": "Always charming and lovable, never frightening. Keep the same feather colors, amber eyes, body scale, and graceful demeanor across every shot.",
-        "negative_prompt": "scary monster design, horror raptor, blood, gore, aggressive snarling, reptile-only skin with no feathers"
-      }
+      "id": "darwin",
+      "name": "Darwin (Velvet)",
+      "description": "Genetically engineered Velociraptor, ~7 feet tall, iridescent feathers, large expressive intelligent eyes, hyper-refined sense of smell, gentle and curious, learns human connection, becomes tea sommelier"
     },
     {
-      "id": "maya",
+      "id": "maya_chen",
       "name": "Maya Chen",
-      "description": "Sarcastic, grief-worn tea shop owner in her early 40s.",
-      "wardrobe": "dark jeans, worn cream sweater, tea-stained apron, messy bun",
-      "profile": {
-        "physical_signature": "Early-40s Chinese American woman with tired expressive eyes, practical posture, guarded warmth, and a lived-in tea shop owner look.",
-        "face": "Oval face, subtle under-eye shadows, natural skin texture, restrained expressions that soften into genuine warmth over the story.",
-        "hair": "Dark hair in a loose messy bun with a few escaped strands around her face.",
-        "eyes": "Dark brown tired eyes, observant and dryly skeptical, warmer when she connects with Rexi.",
-        "body": "Average height and build, slightly slouched from exhaustion early on, more open and relaxed after the shop transforms.",
-        "movement": "Efficient practical movements, wiping counters and serving tea with muscle memory; later lighter and more playful.",
-        "personality": "Sarcastic, grief-worn, cynical on the surface, compassionate underneath.",
-        "voice": "Dry, low-key humor with clipped practical phrasing; emotional moments are quiet rather than melodramatic.",
-        "consistency_notes": "Keep her age, ethnicity, messy bun, cream sweater, tea-stained apron, tired eyes, and gradual emotional thaw consistent.",
-        "negative_prompt": "teenager, glamorous fashion model, perfect makeup, different ethnicity, bright new clothing, exaggerated melodrama"
-      }
+      "description": "Late 30s, burnt-out widow, sarcastic but warm heart, runs failing tea shop, speaks to plants, former zoology student, takes in Darwin, discovers his talent"
+    },
+    {
+      "id": "dr_sarah_chen",
+      "name": "Dr. Sarah Chen",
+      "description": "40s, guilt-ridden geneticist who created Darwin, works at Nexus BioTech, tracks him to Portland, becomes ally"
+    },
+    {
+      "id": "director_moss",
+      "name": "Director Moss",
+      "description": "50s, cold corporate enforcer from Nexus BioTech, wants to reclaim Darwin"
+    },
+    {
+      "id": "victor_hale",
+      "name": "Victor Hale",
+      "description": "Rival tea shop owner, business rival, eventually becomes friend"
+    },
+    {
+      "id": "inspector_torres",
+      "name": "Inspector Linda Torres",
+      "description": "Health inspector, pragmatic and fair, becomes ally"
+    },
+    {
+      "id": "mrs_patterson",
+      "name": "Mrs. Patterson",
+      "description": "Elderly regular customer, warm community member"
+    },
+    {
+      "id": "tom_regular",
+      "name": "Tom",
+      "description": "Regular customer, tea enthusiast"
     }
   ],
   "locations": [
     {
+      "id": "nexus_lab",
+      "name": "Nexus BioTech Lab",
+      "description": "Shady underground lab, dark corridors, blue neon, high-tech, sterile"
+    },
+    {
       "id": "tea_shop",
-      "name": "Willow & Leaf Tea Co.",
-      "description": "Failing artisanal tea shop in Portland - worn wooden floors, dusty teapots on shelves, a few mismatched tables, large front window with afternoon light. Cozy but neglected. Smells of old tea leaves and melancholy."
+      "name": "Steep & Leaf Tea Shop",
+      "description": "Failing Portland tea shop, cozy cluttered, warm amber light, tea canisters, chalkboard"
     },
     {
-      "id": "back_room",
-      "name": "Tea Shop Back Room",
-      "description": "Small cluttered storage room behind the shop where Rexi hides. Boxes of tea supplies, aged oolongs, jasmine, rare leaves. Dim lighting, warm and safe."
+      "id": "portland_streets",
+      "name": "Portland Streets",
+      "description": "Rainy night streets, neon signs, urban atmosphere"
     },
     {
-      "id": "portland_street",
-      "name": "Portland Street",
-      "description": "Rain-dampened Portland street outside the tea shop, hipster cafes, coffee shops, gentle grey skies"
+      "id": "zoo_sanctuary",
+      "name": "Oregon Zoo Sanctuary",
+      "description": "Custom habitat for Darwin, natural lighting, safe environment"
     }
   ],
   "visual_rules": {
-    "do": ["warm cinematic lighting", "cozy intimate framing", "shallow depth of field on characters", "playful camera movements", "quintessential Portland atmosphere", "emphasize Rexi's elegance and beauty"],
-    "dont": ["scary lighting or angles", "jump scares", "tense horror cinematography", "text overlays", "watermarks"],
-    "color_palette": ["#f5e6d3", "#8b4513", "#556b2f", "#d4a574", "#2f4f4f"]
-  },
-  "reference_notes": "Heartwarming comedy, not horror. Rexi should feel charming and elegant, like Amélie whimsy plus Paddington sweetness."
+    "do": [
+      "Warm amber/golden light for tea shop scenes",
+      "Show Darwin with large vulnerable intelligent eyes",
+      "Include tea canisters, chalkboards, brewing equipment",
+      "Portland cozy aesthetic",
+      "Darwin sniffing tea with precision",
+      "Non-scary, heartwarming tone throughout"
+    ],
+    "dont": [
+      "Never make Darwin look threatening",
+      "Avoid dark menacing shadows",
+      "No text overlays",
+      "No scary lab imagery in tea shop"
+    ],
+    "color_palette": [
+      "Warm amber/golden for tea shop",
+      "Cool blue for lab scenes",
+      "Earth tones for tea",
+      "Soft pastels for community"
+    ]
+  }
 }

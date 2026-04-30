@@ -3,94 +3,135 @@
   "scenes": [
     {
       "id": "scene_01",
-      "title": "The Failing Tea Shop",
-      "summary": "Establish Maya's struggling tea shop in Portland - rain outside, empty inside, she's exhausted and cynical.",
+      "title": "The Escape",
       "shots": [
-        {
-          "id": "s01_sh01",
-          "duration_sec": 5,
-          "prompt": "Establishing shot of a cozy but neglected tea shop in Portland, rain pattering against large front windows, worn wooden floors, dusty teapots on shelves, only two customers sit at mismatched tables, grey afternoon light filters through. Warm but melancholic atmosphere."
-        },
-        {
-          "id": "s01_sh02",
-          "duration_sec": 5,
-          "prompt": "Medium shot of Maya, tired early-40s woman with messy bun, wearing tea-stained apron over cream sweater, wiping a counter with a worn rag. She sighs heavily, no smile, exhaustion evident in her posture. A CLOSED sign hangs in the window behind her."
-        }
+        { "id": "s01_sh01", "duration_sec": 5, "prompt": "Dark underground laboratory with blue neon glow, security drones chasing a feathered velociraptor through corridors, alarm lights flashing red, 16:9 cinematic, high-tech sterile environment, no text overlay." },
+        { "id": "s01_sh02", "duration_sec": 5, "prompt": "The feathered velociraptor bursts through an exit into rainy Portland night, looking back with large intelligent eyes, rain droplets catching neon light, 16:9 cinematic, escape moment, no text overlay." }
       ]
     },
     {
       "id": "scene_02",
-      "title": "Lab Escape",
-      "summary": "A quick, exciting but not scary sequence of Rexi escaping from a shady biotech lab.",
+      "title": "Lost in Portland",
       "shots": [
-        {
-          "id": "s02_sh01",
-          "duration_sec": 5,
-          "prompt": "Quick shot of a shadowy high-tech biotech laboratory at night, glowing equipment, cages. A flash of iridescent green feathers - Rexi the Velociraptor bursts through a broken containment door, feathers catching the emergency lights, elegant and fast, NOT scary, more like an elegant dancer escaping."
-        }
+        { "id": "s02_sh01", "duration_sec": 5, "prompt": "7-foot feathered dinosaur hiding in rain-slicked alley, looking frightened and alone, urban night backdrop, warm amber street light, large vulnerable eyes, 16:9 cinematic, no text overlay." },
+        { "id": "s02_sh02", "duration_sec": 5, "prompt": "The velociraptor sniffs the air intensely, detecting tea scent, looking toward camera with curiosity, rainy Portland streets at night, 16:9 cinematic, no text overlay." }
       ]
     },
     {
       "id": "scene_03",
-      "title": "Finding Home",
-      "summary": "Rexi arrives at the tea shop and hides in the back room.",
+      "title": "Shelter in the Tea Shop",
       "shots": [
-        {
-          "id": "s03_sh01",
-          "duration_sec": 5,
-          "prompt": "Rain-dampened Portland street at night, Rexi the elegant Velociraptor with iridescent green-copper feathers slips through an alley, her large amber eyes reflecting streetlights, long tail graceful behind her. She approaches the back door of Willow & Leaf Tea Co."
-        },
-        {
-          "id": "s03_sh02",
-          "duration_sec": 5,
-          "prompt": "Inside the tea shop's back room, cluttered with tea boxes, Rexi emerges from shadows. Her feathered plumage glows in dim light, she sniffs the air delicately with her beak-like snout, large amber eyes full of curiosity and intelligence. She discovers containers of rare tea leaves and leans in to smell them with apparent delight."
-        }
+        { "id": "s03_sh01", "duration_sec": 5, "prompt": "Cozy cluttered tea shop at night, woman locks up, tired expression, tea canisters and chalkboard visible, warm amber interior light, 16:9 cinematic, no text overlay." },
+        { "id": "s03_sh02", "duration_sec": 5, "prompt": "Woman opens storage room door, sees 7-foot feathered dinosaur staring back with large pleading eyes, tea bags scattered, shocked her expression, 16:9 cinematic, no text overlay." }
       ]
     },
     {
       "id": "scene_04",
-      "title": "The Tea Sommelier",
-      "summary": "The magical moment - Rexi uses her incredible sense of smell to create perfect tea blends.",
+      "title": "Unlikely Alliance",
       "shots": [
-        {
-          "id": "s04_sh01",
-          "duration_sec": 5,
-          "prompt": "Close-up of Rexi's elegant bird-like hands - three long fingers - delicately picking and mixing tea leaves with surprising dexterity. Her amber eyes half-closed in concentration, feathers ruffled slightly. She sniffs the blend and makes a small satisfied sound."
-        },
-        {
-          "id": "s04_sh02",
-          "duration_sec": 5,
-          "prompt": "Maya discovers Rexi in the back room, frozen in disbelief. Rexi turns slowly, large amber eyes blinking gently, holding a tin of premium oolong. Instead of fear, wonder spreads across Maya's face. This is NOT scary - it's magical."
-        }
+        { "id": "s04_sh01", "duration_sec": 5, "prompt": "Woman feeds the dinosaur leftover tea leaves, gentle moment, sitting on floor together, soft amber light, curious dinosaur sniffing offered leaves, 16:9 cinematic, warm tone, no text overlay." },
+        { "id": "s04_sh02", "duration_sec": 5, "prompt": "Dinosaur follows woman down basement stairs, woman names it, tender moment, warm amber basement lighting, 16:9 cinematic, no text overlay." }
       ]
     },
     {
       "id": "scene_05",
-      "title": "Transformation",
-      "summary": "The tea shop transforms - customers flock in, Maya smiles for the first time.",
+      "title": "Discovery",
       "shots": [
-        {
-          "id": "s05_sh01",
-          "duration_sec": 5,
-          "prompt": "The tea shop now bustling with customers, warm golden light, people sipping tea and chatting enthusiastically. Maya moves between tables with renewed energy, a genuine smile on her face for the first time. Through the window, Portland sunshine breaks through clouds."
-        },
-        {
-          "id": "s05_sh02",
-          "duration_sec": 5,
-          "prompt": "Heartwarming close-up: Maya and Rexi side by side behind the counter. Rexi's elegant feathered head reaches just above Maya's shoulder. Maya reaches up to gently scratch under Rexi's chin feathers - Rexi's eyes close in contentment, a soft rumbling purr-like sound. Pure warmth and connection."
-        }
+        { "id": "s05_sh01", "duration_sec": 5, "prompt": "Dinosaur obsessively sorting tea samples by scent in basement, woman watches amazed, tea canisters everywhere, soft warm light, 16:9 cinematic, no text overlay." },
+        { "id": "s05_sh02", "duration_sec": 5, "prompt": "Woman brews tea from dinosaur's selections, tastes it, eyes widen in amazement, steam rising, warm kitchen lighting, 16:9 cinematic, no text overlay." }
       ]
     },
     {
       "id": "scene_06",
-      "title": "Teaser Closing",
-      "summary": "Playful closing shot that captures the film's tone.",
+      "title": "The Secret Weapon",
       "shots": [
-        {
-          "id": "s06_sh01",
-          "duration_sec": 5,
-          "prompt": "Playful medium shot: Rexi sits at one of the tea tables, awkwardly but charmingly trying to sip from a tiny teacup with her beak-like snout, one feathered hand holding the handle. Maya watches, laughing genuinely. Warm golden hour light, cozy shop atmosphere. Amélie meets Paddington vibes."
-        }
+        { "id": "s06_sh01", "duration_sec": 10, "prompt": "Woman and dinosaur creating blends together in tea shop, dinosaur sniffing each canister with precision, woman noting selections, warm amber shop light, customers in background, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "title": "Rising Success",
+      "shots": [
+        { "id": "s07_sh01", "duration_sec": 10, "prompt": "Long line of customers outside tea shop, interior packed, woman serving with smile, dinosaur observing from behind counter, warm golden light, busy atmosphere, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "title": "Rival Eyes",
+      "shots": [
+        { "id": "s08_sh01", "duration_sec": 5, "prompt": "Rival tea shop owner watching from across street, competitive angry expression, his shop empty while others flock to woman's place, urban daylight, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "title": "The Lab Closes In",
+      "shots": [
+        { "id": "s09_sh01", "duration_sec": 5, "prompt": "Scientist woman visits tea shop in disguise, recognizes dinosaur through window, conflicted expression, rainy Portland afternoon, 16:9 cinematic, no text overlay." },
+        { "id": "s09_sh02", "duration_sec": 5, "prompt": "Scientist woman inside shop, dinosaur recognizes her, large eyes widen, woman approaches slowly, warm amber interior, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_10",
+      "title": "Warning Shot",
+      "shots": [
+        { "id": "s10_sh01", "duration_sec": 5, "prompt": "Health inspector enters tea shop for inspection, woman nervous, dinosaurs feathers spotted by inspector, shocked expressions, warm shop interior, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_11",
+      "title": "Lab Enforcement",
+      "shots": [
+        { "id": "s11_sh01", "duration_sec": 5, "prompt": "Corporate security包围茶shop, demanding dinosaur, woman refuses, tense confrontation, cool blue outdoor lighting, urban street, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_12",
+      "title": "The Stand",
+      "shots": [
+        { "id": "s12_sh01", "duration_sec": 5, "prompt": "Customers form human barrier protecting tea shop, woman standing firm, scientist woman confronts corporate, united group, warm community atmosphere, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_13",
+      "title": "The Truth",
+      "shots": [
+        { "id": "s13_sh01", "duration_sec": 5, "prompt": "Scientist reveals illegal experiments evidence to press outside, inspector declares dinosaur protected, media cameras, daylight, community gathered, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_14",
+      "title": "Community Choice",
+      "shots": [
+        { "id": "s14_sh01", "duration_sec": 5, "prompt": "Wildlife experts offer sanctuary at zoo, community celebrates, woman relieved, dinosaur calm, outside tea shop, sunny Portland day, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_15",
+      "title": "New Home",
+      "shots": [
+        { "id": "s15_sh01", "duration_sec": 5, "prompt": "Dinosaur in custom zoo habitat, natural sunlight, other animals, woman visits, warm reunion, zoo sanctuary setting, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_16",
+      "title": "Tea Shop Legacy",
+      "shots": [
+        { "id": "s16_sh01", "duration_sec": 10, "prompt": "Tea shop now famous landmark, woman training apprentices, 'Velvet's Reserve' signs, customers streaming, warm golden light, busy successful atmosphere, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_17",
+      "title": "Rival Turned Friend",
+      "shots": [
+        { "id": "s17_sh01", "duration_sec": 5, "prompt": "Former rival and woman shaking hands, business partnership, tea samples between them, warm shop interior, 16:9 cinematic, no text overlay." }
+      ]
+    },
+    {
+      "id": "scene_18",
+      "title": "Perfect Oolong",
+      "shots": [
+        { "id": "s18_sh01", "duration_sec": 5, "prompt": "Montage: dinosaur in zoo sunlight, woman brewing morning tea, loyal customers, children at habitat window, 16:9 cinematic, heartwarming ending, no text overlay." },
+        { "id": "s18_sh02", "duration_sec": 5, "prompt": "Final shot: dinosaur smells tea, looks at camera, seems to smile, warm golden light, heartwarming tone, 16:9 cinematic, no text overlay." }
       ]
     }
   ]

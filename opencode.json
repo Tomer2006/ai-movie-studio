@@ -5,7 +5,13 @@
     "question": "deny",
     "external_directory": "deny",
     "read": {
-      "*": "allow",
+      "*": "deny",
+      "*.env.example": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny"
+    },
+    "glob": {
+      "*": "deny",
       "*.env.example": "allow",
       "*.env": "deny",
       "*.env.*": "deny"

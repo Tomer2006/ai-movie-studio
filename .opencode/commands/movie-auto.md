@@ -12,4 +12,4 @@ $ARGUMENTS
 
 **Mode requirement:**
 
-Automatic visual QC is required whenever the provider is not mock. Summarize constraints, validate JSON, check provider, render/QC according to the skill, assemble, and report kept/rerendered/unresolved shots.
+Automatic visual QC is required whenever the provider is not mock. Summarize constraints, preserve the requested runtime/scene/shot count, validate JSON, check provider, render/QC according to the skill, assemble, and report kept/rerendered/unresolved shots. Do not replace a requested feature-length plan with a shorter cost-saving version unless the user explicitly asks.

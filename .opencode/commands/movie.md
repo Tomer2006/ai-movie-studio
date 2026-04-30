@@ -10,4 +10,4 @@ Follow `.opencode/skills/movie-studio/SKILL.md` end-to-end.
 
 $ARGUMENTS
 
-Summarize constraints, keep JSON schema-valid, validate with `python -m studio plan`, check provider, render/QC according to the skill, assemble, and report kept/rerendered/unresolved shots.
+Summarize constraints, preserve the requested runtime/scene/shot count, keep JSON schema-valid, validate with `python -m studio plan`, check provider, render/QC according to the skill, assemble, and report kept/rerendered/unresolved shots. Do not replace a requested feature-length plan with a shorter cost-saving version unless the user explicitly asks.
