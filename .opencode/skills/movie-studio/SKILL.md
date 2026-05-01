@@ -15,7 +15,7 @@ End-to-end workflow for **long-form AI-assembled video**: continuity JSON → sc
 
 1. **Brief** — Genre, tone, target length, aspect ratio / fps (`16:9` / `24` by default).
 2. **Runtime math** — Convert runtime into shots when needed: `shots = ceil(minutes * 60 / shot_duration_sec)`. A true 90-minute feature at 10 seconds per shot is 540 shots.
-3. **Continuity bible** — Edit `continuity_bible.json`; every character in `characters[]` must include a `profile` with locked visual/personality details (`physical_signature`, `face`, `hair`, `eyes`, `body`, `movement`, `personality`, `voice`, `consistency_notes`, `negative_prompt`, and a stable `seed` when possible).
+3. **Continuity bible** — Edit `continuity_bible.json`; every character in `characters[]` must include a `profile` with locked visual/personality details (`physical_signature`, `face`, `hair`, `eyes`, `body`, `movement`, `personality`, `voice`, `consistency_notes`, `negative_prompt`, and a stable `seed` when possible). Add optional `video_style` for the **whole film** (not a few clips): use `aesthetic` for the master rendering bucket (photoreal vs anime vs documentary, etc.), plus look, camera, lighting, texture, grading, pacing; merged into **every** shot render automatically.
 4. **Scenes** — Edit `scenes.json` with `"version": 1`; for large features, generate the full requested structure in batches or with a script, then validate.
 5. **Plan** — `python -m studio plan` until OK.
 6. **Provider check** — Run `python -m studio provider` before choosing the render path.

@@ -4,6 +4,8 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
+from .video_style import build_video_style_block, video_style_negative_prompt
+
 
 @dataclass(frozen=True)
 class CharacterProfile:
@@ -110,10 +112,14 @@ def build_character_profile_block(
 
 
 def apply_character_profiles_to_prompt(prompt: str, bible_doc: dict[str, Any]) -> str:
+    out = prompt.strip()
     block = build_character_profile_block(bible_doc, prompt)
-    if not block:
-        return prompt
-    return f"{prompt.strip()}\n\n{block}"
+    if block:
+        out = f"{out}\n\n{block}"
+    vblock = build_video_style_block(bible_doc)
+    if vblock:
+        out = f"{out}\n\n{vblock}"
+    return out
 
 
 def apply_character_profiles_to_negative_prompt(
@@ -123,6 +129,10 @@ def apply_character_profiles_to_negative_prompt(
 
     visual_rules = bible_doc.get("visual_rules") or {}
     parts.extend(rule for rule in visual_rules.get("dont", []) if rule)
+
+    vn = video_style_negative_prompt(bible_doc)
+    if vn:
+        parts.append(vn)
 
     for profile in build_character_profiles(bible_doc):
         if profile.negative_prompt:

@@ -69,6 +69,25 @@
         "color_palette": { "type": "array", "items": { "type": "string" } }
       }
     },
+    "video_style": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Project-wide look for the entire movie (every shot). Merged into every render prompt — not per-scene.",
+      "properties": {
+        "aesthetic": {
+          "type": "string",
+          "description": "Whole-film rendering style, e.g. photoreal live-action, anime / cel animation, documentary naturalism, stylized 3D. Same intent on every clip."
+        },
+        "look": { "type": "string" },
+        "camera_language": { "type": "string" },
+        "lighting": { "type": "string" },
+        "texture_and_film": { "type": "string" },
+        "color_grading": { "type": "string" },
+        "motion_and_pacing": { "type": "string" },
+        "consistency_notes": { "type": "string" },
+        "negative_prompt": { "type": "string" }
+      }
+    },
     "reference_notes": { "type": "string" }
   }
 }

@@ -80,5 +80,16 @@
     ],
     "color_palette": ["#0b1f33", "#f2c94c", "#8aa6b8", "#f7f0d6"]
   },
-  "reference_notes": "Use this example as a compact template: prompts mention character names so CharacterProfile blocks are injected during render; visual rules keep style and continuity stable."
+  "video_style": {
+    "aesthetic": "Photoreal live-action cinematic drama (not anime, not toon-shaded 3D); natural humans and environments.",
+    "look": "Cinematic coastal indie: warm practical lights against cool rain, shallow depth of field, natural skin texture, filmic grain subtle enough to stay clean for video.",
+    "camera_language": "Handheld-on-tripod micro-movements for intimacy; wider masters for scale; avoid chaotic whip pans.",
+    "lighting": "Motivated lanterns, lightning rim, soft fill on faces; no horror under-lighting.",
+    "texture_and_film": "Light 35mm-style grain, gentle halation on highlights, wet surfaces read clearly.",
+    "color_grading": "Teal shadows, amber mids, restrained saturation; no neon candy grades.",
+    "motion_and_pacing": "Readable blocking, clear silhouettes, comedic timing held in pause-and-react beats.",
+    "consistency_notes": "Keep the same lens personality and color intent across scenes; match lighthouse warmth vs storm cool.",
+    "negative_prompt": "horror lighting, gore, shaky-cam chaos, heavy CGI plastic skin, random aspect crop, subtitles, watermarks"
+  },
+  "reference_notes": "Use this example as a compact template: prompts mention character names so CharacterProfile blocks are injected during render; visual_rules and video_style are merged into every shot like global continuity."
 }
