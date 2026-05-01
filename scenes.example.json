@@ -2,19 +2,62 @@
   "version": 1,
   "scenes": [
     {
-      "id": "scene_01",
-      "title": "Opening",
-      "summary": "Establish mood",
+      "id": "scene_001",
+      "title": "Power Outage",
+      "summary": "A storm cuts power across the harbor, and Mira realizes the old lighthouse is the only thing that can guide a rescue boat home.",
       "shots": [
         {
-          "id": "s01_sh01",
-          "duration_sec": 4,
-          "prompt": "Cinematic wide shot of a city rooftop at golden hour, slow push in, film grain, 35mm"
+          "id": "s001_sh001",
+          "duration_sec": 6,
+          "prompt": "Wide cinematic shot of Harbor Street during a heavy coastal storm, fishing boats rocking behind shuttered shops, emergency lanterns reflecting in puddles, no text, 16:9."
         },
         {
-          "id": "s01_sh02",
-          "duration_sec": 3,
-          "prompt": "Medium shot silhouette against sunset sky, emotional, anamorphic lens flare"
+          "id": "s001_sh002",
+          "duration_sec": 7,
+          "prompt": "Mira Vale in her yellow raincoat kneels beside a sparking public radio box on Harbor Street, tool satchel open, rain running down her hood, tense practical focus, no text, 16:9.",
+          "negative_prompt": "cartoon, clean dry street, sunny weather, different coat color, text, watermark",
+          "seed": 51001
+        },
+        {
+          "id": "s001_sh003",
+          "duration_sec": 6,
+          "prompt": "Close-up of Mira Vale listening to broken radio static, her brown eyes widen as a faint rescue boat signal crackles through, warm lantern light on rain and freckles, no text, 16:9."
+        },
+        {
+          "id": "s001_sh004",
+          "duration_sec": 7,
+          "prompt": "Mira Vale looks up toward the dark lighthouse above the harbor, one hand gripping her tool satchel, lightning reveals the unlit tower silhouette, suspenseful but hopeful, no text, 16:9."
+        }
+      ]
+    },
+    {
+      "id": "scene_002",
+      "title": "Relighting The Beacon",
+      "summary": "Mira convinces Jonas to help restart the old engine room before the boat reaches the rocks.",
+      "shots": [
+        {
+          "id": "s002_sh001",
+          "duration_sec": 7,
+          "prompt": "Inside the Lighthouse Engine Room, Jonas Reed in navy coat and knit cap unlocks a rusted breaker panel while Mira Vale holds an emergency lantern, old brass gauges and wet stone walls, no text, 16:9.",
+          "negative_prompt": "modern sterile lab, young clean-shaven Jonas, missing yellow raincoat, text, watermark",
+          "seed": 51002
+        },
+        {
+          "id": "s002_sh002",
+          "duration_sec": 8,
+          "prompt": "Mira Vale repairs frayed lighthouse wiring with fast precise hands while Jonas Reed steadies the panel, sparks illuminate their faces, practical rainstorm tension, no text, 16:9."
+        },
+        {
+          "id": "s002_sh003",
+          "duration_sec": 6,
+          "prompt": "Jonas Reed braces against the wind on the Lantern Deck and pulls the old manual lever as Mira Vale watches the glass lens begin to glow behind him, no text, 16:9."
+        },
+        {
+          "id": "s002_sh004",
+          "duration_sec": 8,
+          "prompt": "Final wide shot from the Lantern Deck: the lighthouse beam sweeps across black water toward a tiny rescue boat turning away from rocks, Mira Vale and Jonas Reed silhouetted together in warm beacon light, hopeful ending, no text, 16:9.",
+          "negative_prompt": "daylight, city skyline, futuristic spaceship, text overlay, watermark",
+          "seed": 51003
         }
       ]
     }

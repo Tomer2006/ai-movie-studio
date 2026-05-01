@@ -1,41 +1,84 @@
 {
-  "title": "Example Film",
-  "logline": "A character discovers something unexpected.",
+  "title": "The Last Lighthouse",
+  "logline": "When a coastal town loses power during a storm, a teenage radio repairer and an old lighthouse keeper race to relight the beacon before a rescue boat reaches the rocks.",
   "aspect_ratio": "16:9",
   "fps": 24,
-  "tone": "hopeful",
-  "era": "present day",
+  "tone": "warm, tense, hopeful, grounded adventure",
+  "era": "near-future coastal village",
   "characters": [
     {
-      "id": "hero",
-      "name": "Alex",
-      "description": "Curious young adult",
-      "wardrobe": "blue jacket, gray shirt",
+      "id": "mira",
+      "name": "Mira Vale",
+      "description": "Seventeen-year-old radio repairer who knows the town's old machines better than anyone.",
+      "wardrobe": "yellow raincoat, dark work pants, rubber boots, tool satchel across one shoulder",
       "profile": {
-        "physical_signature": "Compact silhouette, short dark hair, alert thoughtful presence.",
-        "face": "Soft angular face, natural skin texture, expressive eyebrows, focused but approachable.",
-        "hair": "Short dark hair, slightly tousled, consistent length in every shot.",
-        "eyes": "Dark attentive eyes that scan the environment with curiosity.",
-        "body": "Average height and build, relaxed shoulders, practical posture.",
-        "movement": "Careful, observant movements; pauses before acting.",
-        "personality": "Curious, quietly brave, thoughtful under pressure.",
-        "voice": "Warm, concise, slightly cautious.",
-        "consistency_notes": "Keep age range, hair length, blue jacket, gray shirt, and curious expression consistent.",
-        "negative_prompt": "different hairstyle, different jacket color, child, elderly, formal suit, heavy makeup",
-        "seed": 18422
+        "physical_signature": "Slim teenage silhouette, rain-slick yellow coat, quick hands always checking wires or tools.",
+        "face": "Oval face with freckles, practical focused expression, natural skin texture, no heavy makeup.",
+        "hair": "Dark curly hair tied back under a damp hood, a few curls visible around her cheeks.",
+        "eyes": "Brown alert eyes, curious and determined, often glancing between people and machinery.",
+        "body": "Shorter than the keeper, compact build, energetic posture, ready to move.",
+        "movement": "Fast precise movements, kneels to inspect equipment, pauses only when listening to radio static.",
+        "personality": "Inventive, stubborn, protective of her town, brave when the plan becomes dangerous.",
+        "voice": "Quick, direct, quietly funny under pressure.",
+        "consistency_notes": "Always keep Mira in the yellow raincoat with tool satchel, dark curly hair tied back, freckles, and youthful determined presence.",
+        "negative_prompt": "different coat color, long straight blonde hair, adult woman, glamorous makeup, formal clothes, missing tool satchel",
+        "seed": 41017
+      }
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas Reed",
+      "description": "Retired lighthouse keeper who pretends the old beacon is obsolete but still knows every bolt by touch.",
+      "wardrobe": "navy wool coat, gray fisherman sweater, knit cap, weathered leather gloves",
+      "profile": {
+        "physical_signature": "Tall elderly man with sea-weathered posture, navy coat, gray beard, steady deliberate hands.",
+        "face": "Deep-lined face, gray beard trimmed short, kind tired eyes, wind-reddened cheeks.",
+        "hair": "Mostly hidden under a dark knit cap, gray hair visible at the temples.",
+        "eyes": "Pale blue eyes, watchful and reflective, soften when he trusts Mira.",
+        "body": "Tall and lean, slightly stooped from age, moves with careful balance in wind.",
+        "movement": "Slow economical movements, grips railings, checks old equipment from memory.",
+        "personality": "Guarded, dry-humored, loyal, carrying old guilt about the lighthouse being shut down.",
+        "voice": "Low gravelly voice, sparse words, gentle authority.",
+        "consistency_notes": "Keep Jonas elderly, tall, gray-bearded, navy coat, knit cap, and weathered sea-keeper presence.",
+        "negative_prompt": "young man, clean-shaven, bright modern jacket, business suit, sunglasses, different hat",
+        "seed": 41018
       }
     }
   ],
   "locations": [
     {
-      "id": "rooftop",
-      "name": "City rooftop at dusk",
-      "description": "Open sky, warm city lights below"
+      "id": "harbor_street",
+      "name": "Harbor Street",
+      "description": "Narrow rain-soaked street beside fishing boats, shuttered shops, hanging cables, puddles reflecting emergency lanterns."
+    },
+    {
+      "id": "lighthouse_engine_room",
+      "name": "Lighthouse Engine Room",
+      "description": "Cramped circular room below the lantern, rusted breaker boxes, brass gauges, old cables, wet stone walls, emergency lantern glow."
+    },
+    {
+      "id": "lantern_deck",
+      "name": "Lantern Deck",
+      "description": "Exposed balcony around the lighthouse lamp, storm clouds, crashing waves far below, rotating glass lens, first sunrise color at the horizon."
     }
   ],
   "visual_rules": {
-    "do": ["cinematic lighting", "shallow depth of field"],
-    "dont": ["text overlays", "watermarks"],
-    "color_palette": ["#1a1a2e", "#e94560", "#f4f4f4"]
-  }
+    "do": [
+      "cinematic natural rain lighting",
+      "clear character silhouettes",
+      "practical motivated light from lanterns and the beacon",
+      "wet textures on stone, metal, and raincoats",
+      "grounded camera language with readable action"
+    ],
+    "dont": [
+      "text overlays",
+      "subtitles",
+      "watermarks",
+      "cartoon style",
+      "random costume changes",
+      "unmotivated neon colors"
+    ],
+    "color_palette": ["#0b1f33", "#f2c94c", "#8aa6b8", "#f7f0d6"]
+  },
+  "reference_notes": "Use this example as a compact template: prompts mention character names so CharacterProfile blocks are injected during render; visual rules keep style and continuity stable."
 }
