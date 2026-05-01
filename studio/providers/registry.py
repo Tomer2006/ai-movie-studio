@@ -6,13 +6,15 @@ from pathlib import Path
 from studio.paths import load_dotenv, repo_root
 from studio.providers.base import VideoProvider
 from studio.providers.configurable import ConfigurableHttpProvider, load_configurable_provider
-from studio.providers.mock import MockVideoProvider
+from studio.providers.custom import CustomVideoProvider
 from studio.providers.fal import FalVideoProvider
 from studio.providers.openrouter import OpenRouterVideoProvider
 from studio.providers.replicate import ReplicateVideoProvider
 from studio.providers.xai import XaiVideoProvider
 
-_BUILTIN = frozenset({"mock", "replicate", "xai", "openrouter", "fal", "custom"})
+_BUILTIN = frozenset(
+    {"custom", "mock", "http", "replicate", "xai", "openrouter", "fal"}
+)
 
 
 def _resolve_config_path(raw: str) -> Path | None:
@@ -36,13 +38,13 @@ def _resolve_config_path(raw: str) -> Path | None:
 def configured_provider_raw() -> str:
     """Return the configured VIDEO_PROVIDER value after loading .env."""
     load_dotenv()
-    return os.environ.get("VIDEO_PROVIDER", "mock").strip()
+    return os.environ.get("VIDEO_PROVIDER", "custom").strip()
 
 
 def describe_provider(provider: VideoProvider) -> str:
     """Return a short user-facing description of the resolved provider."""
-    if isinstance(provider, MockVideoProvider):
-        return "mock"
+    if isinstance(provider, CustomVideoProvider):
+        return "custom (ffmpeg local preview)"
     if isinstance(provider, ReplicateVideoProvider):
         return f"replicate ({provider.model})"
     if isinstance(provider, XaiVideoProvider):
@@ -52,7 +54,7 @@ def describe_provider(provider: VideoProvider) -> str:
     if isinstance(provider, FalVideoProvider):
         return f"fal ({provider.model})"
     if isinstance(provider, ConfigurableHttpProvider):
-        return f"custom ({provider.source})"
+        return f"http ({provider.source})"
     return type(provider).__name__
 
 
@@ -60,22 +62,23 @@ def get_provider() -> VideoProvider:
     """
     Resolve video provider from env.
 
-    Built-ins: mock, replicate, xai, openrouter, fal, custom
+    Built-ins: custom, mock (alias), http, replicate, xai, openrouter, fal
 
-    - ``custom``: requires ``STUDIO_PROVIDER_CONFIG`` (path under repo root to JSON).
+    - ``custom`` / ``mock``: ffmpeg test-pattern preview (no generative API).
+    - ``http``: requires ``STUDIO_PROVIDER_CONFIG`` (path under repo root to JSON).
     - Alternatively set ``VIDEO_PROVIDER`` to ``file:./providers/foo.json`` or a path
       ending in ``.json`` that exists under the repo — loads the same JSON schema.
     """
     load_dotenv()
-    raw = os.environ.get("VIDEO_PROVIDER", "mock").strip()
+    raw = os.environ.get("VIDEO_PROVIDER", "custom").strip()
     key = raw.lower()
 
-    if key == "custom":
+    if key == "http":
         return load_configurable_provider()
 
-    if key in _BUILTIN and key != "custom":
-        if key == "mock":
-            return MockVideoProvider()
+    if key in _BUILTIN and key != "http":
+        if key == "custom" or key == "mock":
+            return CustomVideoProvider()
         if key == "replicate":
             return ReplicateVideoProvider()
         if key == "xai":
@@ -90,6 +93,6 @@ def get_provider() -> VideoProvider:
         return ConfigurableHttpProvider.from_file(path)
 
     raise ValueError(
-        f"Unknown VIDEO_PROVIDER={raw!r}. Use mock, replicate, xai, openrouter, fal, custom "
+        f"Unknown VIDEO_PROVIDER={raw!r}. Use custom, mock, replicate, xai, openrouter, fal, http "
         f"(with STUDIO_PROVIDER_CONFIG), or file:path/to/provider.json — see providers/README.md"
     )

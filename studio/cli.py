@@ -16,7 +16,7 @@ from studio.character_profile import (
 from studio.paths import load_dotenv, repo_root
 from studio.providers import configured_provider_raw, describe_provider, get_provider
 from studio.providers.configurable import ConfigurableHttpProvider
-from studio.providers.mock import MockVideoProvider
+from studio.providers.custom import CustomVideoProvider
 from studio.review_sheet import render_review_sheet, review_sheet_path
 from studio.scenes_io import ShotRef, clip_path, find_shot, iter_shots
 from studio.validate import (
@@ -27,10 +27,10 @@ from studio.validate import (
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
 
-def _warn_if_mock(provider: object) -> None:
-    if isinstance(provider, MockVideoProvider):
+def _warn_if_custom_preview(provider: object) -> None:
+    if isinstance(provider, CustomVideoProvider):
         msg = (
-            "Using MOCK video (ffmpeg test pattern) - not AI-generated footage. "
+            "Using custom local preview (ffmpeg test pattern) — not AI-generated footage. "
             "Set VIDEO_PROVIDER=openrouter, fal, xai, or replicate (+ API key in .env) "
             "for real video."
         )
@@ -53,7 +53,7 @@ def _render_kwargs_for_shot(shot_ref: ShotRef, bible_doc: dict[str, Any]) -> dic
 
 @app.command("provider")
 def provider_cmd() -> None:
-    """Show which video provider is configured and resolved (mock, openrouter, fal, xai, replicate, custom)."""
+    """Show which video provider is configured and resolved (custom, openrouter, fal, xai, replicate, http)."""
     configured = configured_provider_raw()
     typer.echo(f"Configured VIDEO_PROVIDER={configured!r}")
     try:
@@ -64,10 +64,10 @@ def provider_cmd() -> None:
         raise typer.Exit(code=1)
 
     typer.echo(f"Resolved provider: {describe_provider(provider)}")
-    if isinstance(provider, MockVideoProvider):
-        typer.echo("Mode: mock placeholder / ffmpeg test pattern")
+    if isinstance(provider, CustomVideoProvider):
+        typer.echo("Mode: custom (ffmpeg local preview)")
     else:
-        typer.echo("Mode: non-mock provider")
+        typer.echo("Mode: API / configured video provider")
 
 
 @app.command("plan")
@@ -103,7 +103,7 @@ def render_cmd(
     scenes_doc = load_and_validate_scenes(sp)
     cdir = clips_dir or (root / "clips")
     provider = get_provider()
-    _warn_if_mock(provider)
+    _warn_if_custom_preview(provider)
 
     shot_ref = find_shot(scenes_doc, scene, shot)
     if shot_ref is None:
@@ -187,7 +187,7 @@ def render_all_cmd(
     scenes_doc = load_and_validate_scenes(sp)
     cdir = clips_dir or (root / "clips")
     provider = get_provider()
-    _warn_if_mock(provider)
+    _warn_if_custom_preview(provider)
 
     for ref in iter_shots(scenes_doc):
         out = clip_path(cdir, ref.scene_id, ref.shot_id)

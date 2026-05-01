@@ -1,4 +1,4 @@
-# Smoke-test: mock video + concat (no cloud video APIs)
+# Smoke-test: custom ffmpeg preview + concat (no cloud video APIs)
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 Set-Location $root
@@ -21,7 +21,7 @@ if (-not $exe) {
 }
 
 & $exe @arg -m pip install -e . -q
-$env:VIDEO_PROVIDER = "mock"
+$env:VIDEO_PROVIDER = "custom"
 & $exe @arg -m studio init-examples --force
 & $exe @arg -m studio plan
 & $exe @arg -m studio render-all

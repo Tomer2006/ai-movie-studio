@@ -312,7 +312,7 @@ def load_configurable_provider() -> ConfigurableHttpProvider:
     if not rel:
         raise RuntimeError(
             "Set STUDIO_PROVIDER_CONFIG to a JSON file path (e.g. providers/my.json) "
-            "when using VIDEO_PROVIDER=custom."
+            "when using VIDEO_PROVIDER=http."
         )
     path = repo_root() / rel
     return ConfigurableHttpProvider.from_file(path)

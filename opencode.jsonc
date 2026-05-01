@@ -81,8 +81,7 @@
         "edit": {
           "*": "deny",
           "continuity_bible.json": "allow",
-          "scenes.json": "allow",
-          "providers/*.json": "allow"
+          "scenes.json": "allow"
         },
         "bash": {
           "*": "deny",

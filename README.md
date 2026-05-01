@@ -1,6 +1,6 @@
 # AI Movie Studio
 
-Orchestration CLI for **long-form AI video**: validate continuity/scene JSON, render shots via cloud APIs (or mock), assemble with **ffmpeg** (concatenates clips; each clip contributes its own video and embedded audio).
+Orchestration CLI for **long-form AI video**: validate continuity/scene JSON, render shots via cloud APIs (or a **custom** ffmpeg local preview), assemble with **ffmpeg** (concatenates clips; each clip contributes its own video and embedded audio).
 
 **New to the OpenCode agent?** Read **[tutorial.md](tutorial.md)**.
 
@@ -12,10 +12,10 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
 copy .env.example .env
-# Edit .env — video: OPENROUTER_API_KEY + VIDEO_PROVIDER=openrouter, FAL_KEY + VIDEO_PROVIDER=fal, REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, XAI_API_KEY + VIDEO_PROVIDER=xai, or mock
+# Edit .env — video: OPENROUTER_API_KEY + VIDEO_PROVIDER=openrouter, FAL_KEY + VIDEO_PROVIDER=fal, REPLICATE_API_TOKEN + VIDEO_PROVIDER=replicate, XAI_API_KEY + VIDEO_PROVIDER=xai, or custom (local preview)
 ```
 
-Requires **ffmpeg** on your PATH for assembly and mock clips.
+Requires **ffmpeg** on your PATH for assembly and custom preview clips.
 
 ## Project files
 
@@ -46,7 +46,7 @@ studio assemble --output dist/final.mp4
 
 - `**plan**`: Validate JSON files against schemas.
 - `**provider**`: Show the resolved video provider from `.env`.
-- `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `fal`, `replicate`, `xai`, `mock`, or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=custom` + `STUDIO_PROVIDER_CONFIG`).
+- `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `fal`, `replicate`, `xai`, `custom` (ffmpeg preview; `mock` is an alias), or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=http` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.
 - `**assemble`**: Concat clips in scene order with stream copy (video + embedded audio from each shot).
 
@@ -81,4 +81,4 @@ PowerShell from repo root (requires Python + ffmpeg):
 .\scripts\pilot.ps1
 ```
 
-This uses `VIDEO_PROVIDER=mock` to validate the pipeline without cloud video APIs.
+This uses `VIDEO_PROVIDER=custom` to validate the pipeline without cloud video APIs.

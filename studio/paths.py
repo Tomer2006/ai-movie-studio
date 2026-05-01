@@ -27,4 +27,4 @@ def load_dotenv() -> None:
 
 
 def env_provider() -> str:
-    return os.environ.get("VIDEO_PROVIDER", "mock").strip().lower()
+    return os.environ.get("VIDEO_PROVIDER", "custom").strip().lower()

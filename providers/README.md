@@ -7,7 +7,7 @@ Any provider that exposes **JSON over HTTP** can be integrated without Python co
 1. Copy `[http.example.json](http.example.json)` (async + poll) or `[http.immediate.example.json](http.immediate.example.json)` (sync URL in first response) to e.g. `providers/my_api.json` and edit it.
 2. Put secrets in `.env` and reference them as `${ENV_NAME}` in the JSON (headers, URLs).
 3. Either:
-  - Set `VIDEO_PROVIDER=custom` and `STUDIO_PROVIDER_CONFIG=providers/my_api.json`, or
+  - Set `VIDEO_PROVIDER=http` and `STUDIO_PROVIDER_CONFIG=providers/my_api.json`, or
   - Set `VIDEO_PROVIDER=file:providers/my_api.json` (or `config:...`).
 
 Validate before rendering:
@@ -51,7 +51,7 @@ Optional `download` block: if the video URL needs extra headers (rare), set `dow
 
 ## Built-in providers
 
-For common APIs, the repo still ships **mock**, **openrouter**, **fal** (fal.ai queue), **replicate**, and **xai** — no JSON file required. Set `VIDEO_PROVIDER=fal` and `FAL_KEY` (see `.env.example`).
+For common APIs, the repo still ships **custom** (ffmpeg preview; `mock` alias), **openrouter**, **fal** (fal.ai queue), **replicate**, and **xai** — no JSON file required. Set `VIDEO_PROVIDER=fal` and `FAL_KEY` (see `.env.example`).
 
 ## Limits
 

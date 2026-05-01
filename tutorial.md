@@ -40,10 +40,10 @@ You can use **only the CLI** without OpenCode; the agent is optional but helps w
 ## Keys: two different places
 
 
-| What                                                             | Where                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Video** (OpenRouter video, Replicate, xAI, or custom HTTP)     | `**.env`** in this project: `VIDEO_PROVIDER`, `OPENROUTER_API_KEY` or `REPLICATE_API_TOKEN` or `XAI_API_KEY`, etc.                                                                                                                                                            |
-| **Chat / planning LLM** (OpenRouter, Anthropic, OpenCode Zen, …) | **OpenCode**: run `**/connect`** or `**/models`**, or edit your global `opencode.json` under your user config. If you use OpenRouter for chat, configure that there. `VIDEO_PROVIDER=openrouter` is separate and belongs in `**.env`** because it powers the render pipeline. |
+| What                                                                              | Where                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Video** (OpenRouter video, Replicate, xAI, HTTP JSON driver, or custom preview) | `**.env`** in this project: `VIDEO_PROVIDER`, `OPENROUTER_API_KEY` or `REPLICATE_API_TOKEN` or `XAI_API_KEY`, etc.                                                                                                                                                            |
+| **Chat / planning LLM** (OpenRouter, Anthropic, OpenCode Zen, …)                  | **OpenCode**: run `**/connect`** or `**/models`**, or edit your global `opencode.json` under your user config. If you use OpenRouter for chat, configure that there. `VIDEO_PROVIDER=openrouter` is separate and belongs in `**.env`** because it powers the render pipeline. |
 
 
 ---
@@ -69,12 +69,12 @@ Edit `.env` in the project root.
   VIDEO_PROVIDER=replicate
   REPLICATE_API_TOKEN=your_token_here
   ```
-- **Cheap local test (no AI footage):**
+- **Cheap local test (no generative footage):**
   ```env
-  VIDEO_PROVIDER=mock
+  VIDEO_PROVIDER=custom
   ```
-  Mock output looks like **color bars** and may show **MOCK** on screen. That is intentional; it checks your pipeline without spending API credits.
-- **Custom HTTP provider:** see `[providers/README.md](providers/README.md)` and set `VIDEO_PROVIDER=custom` plus `STUDIO_PROVIDER_CONFIG=...`.
+  Output is **color bars** with your real prompt centered and a small **Custom (local preview)** label. It exercises the pipeline without API credits. (`VIDEO_PROVIDER=mock` is still accepted as an alias.)
+- **HTTP JSON provider:** see `[providers/README.md](providers/README.md)` and set `VIDEO_PROVIDER=http` plus `STUDIO_PROVIDER_CONFIG=...`.
 
 ---
 
@@ -144,7 +144,7 @@ Subagents **do not edit files**; they reply in chat.
 
 Configured in `[opencode.jsonc](opencode.jsonc)` (agent permissions and `default_agent`; merges with `[opencode.json](opencode.json)`):
 
-- **Edit only:** `continuity_bible.json`, `scenes.json`, and `providers/*.json`.
+- **Edit only:** `continuity_bible.json` and `scenes.json`. (Edit `providers/*.json` yourself if you use the HTTP video driver.)
 - **Shell:** only `python -m studio …` / `py -m studio …` style commands are **allowed**. Other commands are **denied** (no approval dialogs).
 - **Task:** can call **screenwriter**, **shotboard**, and **quality-control** only.
 
@@ -176,12 +176,12 @@ python -m studio assemble -o dist\final.mp4
 ## Troubleshooting
 
 
-| Symptom                      | Likely cause                                                                                                                                                                                            |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color bars / “MOCK” on video | Usually `VIDEO_PROVIDER=mock`. Run `python -m studio provider` to confirm what the CLI resolved, then set `openrouter`, `xai`, or `replicate` (or custom) **and** the matching key in `.env` if needed. |
-| `studio` not found           | Use `python -m studio` from the repo root, or activate `.venv` and reinstall `pip install -e .`.                                                                                                        |
-| Validation errors            | Run `python -m studio plan` and match `[schemas/](schemas/)` and `[*.example.json](continuity_bible.example.json)`.                                                                                     |
-| No audio in final file       | `assemble` copies streams from each clip; ensure your **video provider** or source clips include the audio you want muxed in each shot.                                                                 |
+| Symptom                                        | Likely cause                                                                                                                                                                                                                               |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Color bars / “Custom (local preview)” on video | Usually `VIDEO_PROVIDER=custom` (or `mock`). Run `python -m studio provider` to confirm what the CLI resolved, then set `openrouter`, `xai`, or `replicate` (or `http` for your JSON driver) **and** the matching key in `.env` if needed. |
+| `studio` not found                             | Use `python -m studio` from the repo root, or activate `.venv` and reinstall `pip install -e .`.                                                                                                                                           |
+| Validation errors                              | Run `python -m studio plan` and match `[schemas/](schemas/)` and `[*.example.json](continuity_bible.example.json)`.                                                                                                                        |
+| No audio in final file                         | `assemble` copies streams from each clip; ensure your **video provider** or source clips include the audio you want muxed in each shot.                                                                                                    |
 
 
 ---
