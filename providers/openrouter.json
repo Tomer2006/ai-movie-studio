@@ -13,9 +13,8 @@
     "body": {
       "model": "alibaba/wan-2.6",
       "prompt": "{prompt}",
-      "aspect_ratio": "{aspect_ratio}",
       "duration": "{duration_int}",
-      "resolution": "720p"
+      "size": "832*480"
     }
   },
   "job": {
@@ -28,7 +27,7 @@
         "Authorization": "Bearer ${OPENROUTER_API_KEY}"
       },
       "interval_sec": 5,
-      "max_sec": 900
+      "max_sec": 1800
     },
     "status": {
       "path": ["status"],

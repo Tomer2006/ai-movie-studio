@@ -1,138 +1,725 @@
 {
   "version": 1,
   "scenes": [
-    {
-      "id": "scene_01",
-      "title": "The Escape",
-      "shots": [
-        { "id": "s01_sh01", "duration_sec": 5, "prompt": "Dark underground laboratory with blue neon glow, security drones chasing a feathered velociraptor through corridors, alarm lights flashing red, 16:9 cinematic, high-tech sterile environment, no text overlay." },
-        { "id": "s01_sh02", "duration_sec": 5, "prompt": "The feathered velociraptor bursts through an exit into rainy Portland night, looking back with large intelligent eyes, rain droplets catching neon light, 16:9 cinematic, escape moment, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_02",
-      "title": "Lost in Portland",
-      "shots": [
-        { "id": "s02_sh01", "duration_sec": 5, "prompt": "7-foot feathered dinosaur hiding in rain-slicked alley, looking frightened and alone, urban night backdrop, warm amber street light, large vulnerable eyes, 16:9 cinematic, no text overlay." },
-        { "id": "s02_sh02", "duration_sec": 5, "prompt": "The velociraptor sniffs the air intensely, detecting tea scent, looking toward camera with curiosity, rainy Portland streets at night, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_03",
-      "title": "Shelter in the Tea Shop",
-      "shots": [
-        { "id": "s03_sh01", "duration_sec": 5, "prompt": "Cozy cluttered tea shop at night, woman locks up, tired expression, tea canisters and chalkboard visible, warm amber interior light, 16:9 cinematic, no text overlay." },
-        { "id": "s03_sh02", "duration_sec": 5, "prompt": "Woman opens storage room door, sees 7-foot feathered dinosaur staring back with large pleading eyes, tea bags scattered, shocked her expression, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_04",
-      "title": "Unlikely Alliance",
-      "shots": [
-        { "id": "s04_sh01", "duration_sec": 5, "prompt": "Woman feeds the dinosaur leftover tea leaves, gentle moment, sitting on floor together, soft amber light, curious dinosaur sniffing offered leaves, 16:9 cinematic, warm tone, no text overlay." },
-        { "id": "s04_sh02", "duration_sec": 5, "prompt": "Dinosaur follows woman down basement stairs, woman names it, tender moment, warm amber basement lighting, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_05",
-      "title": "Discovery",
-      "shots": [
-        { "id": "s05_sh01", "duration_sec": 5, "prompt": "Dinosaur obsessively sorting tea samples by scent in basement, woman watches amazed, tea canisters everywhere, soft warm light, 16:9 cinematic, no text overlay." },
-        { "id": "s05_sh02", "duration_sec": 5, "prompt": "Woman brews tea from dinosaur's selections, tastes it, eyes widen in amazement, steam rising, warm kitchen lighting, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_06",
-      "title": "The Secret Weapon",
-      "shots": [
-        { "id": "s06_sh01", "duration_sec": 10, "prompt": "Woman and dinosaur creating blends together in tea shop, dinosaur sniffing each canister with precision, woman noting selections, warm amber shop light, customers in background, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_07",
-      "title": "Rising Success",
-      "shots": [
-        { "id": "s07_sh01", "duration_sec": 10, "prompt": "Long line of customers outside tea shop, interior packed, woman serving with smile, dinosaur observing from behind counter, warm golden light, busy atmosphere, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_08",
-      "title": "Rival Eyes",
-      "shots": [
-        { "id": "s08_sh01", "duration_sec": 5, "prompt": "Rival tea shop owner watching from across street, competitive angry expression, his shop empty while others flock to woman's place, urban daylight, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_09",
-      "title": "The Lab Closes In",
-      "shots": [
-        { "id": "s09_sh01", "duration_sec": 5, "prompt": "Scientist woman visits tea shop in disguise, recognizes dinosaur through window, conflicted expression, rainy Portland afternoon, 16:9 cinematic, no text overlay." },
-        { "id": "s09_sh02", "duration_sec": 5, "prompt": "Scientist woman inside shop, dinosaur recognizes her, large eyes widen, woman approaches slowly, warm amber interior, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_10",
-      "title": "Warning Shot",
-      "shots": [
-        { "id": "s10_sh01", "duration_sec": 5, "prompt": "Health inspector enters tea shop for inspection, woman nervous, dinosaurs feathers spotted by inspector, shocked expressions, warm shop interior, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_11",
-      "title": "Lab Enforcement",
-      "shots": [
-        { "id": "s11_sh01", "duration_sec": 5, "prompt": "Corporate security包围茶shop, demanding dinosaur, woman refuses, tense confrontation, cool blue outdoor lighting, urban street, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_12",
-      "title": "The Stand",
-      "shots": [
-        { "id": "s12_sh01", "duration_sec": 5, "prompt": "Customers form human barrier protecting tea shop, woman standing firm, scientist woman confronts corporate, united group, warm community atmosphere, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_13",
-      "title": "The Truth",
-      "shots": [
-        { "id": "s13_sh01", "duration_sec": 5, "prompt": "Scientist reveals illegal experiments evidence to press outside, inspector declares dinosaur protected, media cameras, daylight, community gathered, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_14",
-      "title": "Community Choice",
-      "shots": [
-        { "id": "s14_sh01", "duration_sec": 5, "prompt": "Wildlife experts offer sanctuary at zoo, community celebrates, woman relieved, dinosaur calm, outside tea shop, sunny Portland day, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_15",
-      "title": "New Home",
-      "shots": [
-        { "id": "s15_sh01", "duration_sec": 5, "prompt": "Dinosaur in custom zoo habitat, natural sunlight, other animals, woman visits, warm reunion, zoo sanctuary setting, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_16",
-      "title": "Tea Shop Legacy",
-      "shots": [
-        { "id": "s16_sh01", "duration_sec": 10, "prompt": "Tea shop now famous landmark, woman training apprentices, 'Velvet's Reserve' signs, customers streaming, warm golden light, busy successful atmosphere, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_17",
-      "title": "Rival Turned Friend",
-      "shots": [
-        { "id": "s17_sh01", "duration_sec": 5, "prompt": "Former rival and woman shaking hands, business partnership, tea samples between them, warm shop interior, 16:9 cinematic, no text overlay." }
-      ]
-    },
-    {
-      "id": "scene_18",
-      "title": "Perfect Oolong",
-      "shots": [
-        { "id": "s18_sh01", "duration_sec": 5, "prompt": "Montage: dinosaur in zoo sunlight, woman brewing morning tea, loyal customers, children at habitat window, 16:9 cinematic, heartwarming ending, no text overlay." },
-        { "id": "s18_sh02", "duration_sec": 5, "prompt": "Final shot: dinosaur smells tea, looks at camera, seems to smile, warm golden light, heartwarming tone, 16:9 cinematic, no text overlay." }
-      ]
-    }
+    {"id":"scene_001","title":"Soft Alarm","summary":"Darwin escapes Nexus without menace, driven by one impossible aroma.","shots":[
+      {"id":"s001_sh001","duration_sec":10,"prompt":"Nexus lab: Darwin wakes under blue glass, gentle eyes, whimsical indie, 16:9, no text."},
+      {"id":"s001_sh002","duration_sec":10,"prompt":"Darwin sniffs vent air, calm alarms blinking, curious not scary, 16:9, no text."},
+      {"id":"s001_sh003","duration_sec":10,"prompt":"Sarah notices empty harness and chooses silence, blue lab glow, 16:9, no text."},
+      {"id":"s001_sh004","duration_sec":10,"prompt":"Darwin tiptoes past lab doors with careful talons, comic scale, 16:9, no text."},
+      {"id":"s001_sh005","duration_sec":10,"prompt":"Moss watches security screens, polished corporate chill, 16:9, no text."},
+      {"id":"s001_sh006","duration_sec":10,"prompt":"Darwin reaches rain-silver exit, nostrils lifted toward tea scent, 16:9, no text."}
+    ]},
+    {"id":"scene_002","title":"Rain Slick Escape","summary":"Portland rain turns Darwin's flight into a tender urban fairy tale.","shots":[
+      {"id":"s002_sh001","duration_sec":10,"prompt":"Rainy Portland alley: Darwin steps outside, feathers jeweled by neon, 16:9, no text."},
+      {"id":"s002_sh002","duration_sec":10,"prompt":"Umbrellas pass as Darwin folds behind dumpsters, shy and careful, 16:9, no text."},
+      {"id":"s002_sh003","duration_sec":10,"prompt":"Food cart steam guides Darwin like a scent map, whimsical rain, 16:9, no text."},
+      {"id":"s002_sh004","duration_sec":10,"prompt":"A bicycle bell startles Darwin into a polite bow, comedy, 16:9, no text."},
+      {"id":"s002_sh005","duration_sec":10,"prompt":"Darwin smells oolong through rain and turns toward amber windows, 16:9, no text."},
+      {"id":"s002_sh006","duration_sec":10,"prompt":"Steep & Leaf glows at street corner, lonely and warm, 16:9, no text."}
+    ]},
+    {"id":"scene_003","title":"The Failing Kettle","summary":"Maya's shop is nearly broke, but her sarcasm is still solvent.","shots":[
+      {"id":"s003_sh001","duration_sec":10,"prompt":"Steep & Leaf front room: Maya counts coins under amber lamps, 16:9, no text."},
+      {"id":"s003_sh002","duration_sec":10,"prompt":"Nadia wipes empty tables while rain taps windows, cozy melancholy, 16:9, no text."},
+      {"id":"s003_sh003","duration_sec":10,"prompt":"Maya jokes to a dying plant beside dusty tea tins, deadpan, 16:9, no text."},
+      {"id":"s003_sh004","duration_sec":10,"prompt":"Mrs Patterson buys one tiny cup, warmth in a quiet shop, 16:9, no text."},
+      {"id":"s003_sh005","duration_sec":10,"prompt":"Maya touches wedding ring necklace near Jules's photo, tender, 16:9, no text."},
+      {"id":"s003_sh006","duration_sec":10,"prompt":"A crash from the back room freezes Maya mid-lockup, amber glow, 16:9, no text."}
+    ]},
+    {"id":"scene_004","title":"Back Room Surprise","summary":"A grieving shopkeeper finds a dinosaur trying very hard to be small.","shots":[
+      {"id":"s004_sh001","duration_sec":10,"prompt":"Maya opens back room door with broom raised, comic suspense, 16:9, no text."},
+      {"id":"s004_sh002","duration_sec":10,"prompt":"Darwin crouches among tea sacks, huge eyes pleading, non-scary, 16:9, no text."},
+      {"id":"s004_sh003","duration_sec":10,"prompt":"Maya and Darwin stare over fallen chamomile, absurd tender pause, 16:9, no text."},
+      {"id":"s004_sh004","duration_sec":10,"prompt":"Darwin offers a crushed tea tin like apology, delicate claws, 16:9, no text."},
+      {"id":"s004_sh005","duration_sec":10,"prompt":"Maya lowers broom and mutters to herself, warm back room, 16:9, no text."},
+      {"id":"s004_sh006","duration_sec":10,"prompt":"Outside, Nexus van glides past without seeing the shop, rainy, 16:9, no text."}
+    ]},
+    {"id":"scene_005","title":"Tea Leaves Truce","summary":"Maya discovers fear can be disarmed with jasmine and boundaries.","shots":[
+      {"id":"s005_sh001","duration_sec":10,"prompt":"Maya slides a saucer of dry oolong toward Darwin, soft caution, 16:9, no text."},
+      {"id":"s005_sh002","duration_sec":10,"prompt":"Darwin inhales tea leaves like sacred perfume, delighted trill, 16:9, no text."},
+      {"id":"s005_sh003","duration_sec":10,"prompt":"Maya draws a chalk line for personal space, deadpan kindness, 16:9, no text."},
+      {"id":"s005_sh004","duration_sec":10,"prompt":"Darwin obeys line with exaggerated dignity, back room comedy, 16:9, no text."},
+      {"id":"s005_sh005","duration_sec":10,"prompt":"Nadia hears chirps through the wall and looks suspicious, 16:9, no text."},
+      {"id":"s005_sh006","duration_sec":10,"prompt":"Maya locks door gently, choosing shelter over fear, amber, 16:9, no text."}
+    ]},
+    {"id":"scene_006","title":"The Nose Knows","summary":"Darwin reveals a palate too refined for ordinary reality.","shots":[
+      {"id":"s006_sh001","duration_sec":10,"prompt":"Back room morning: Darwin sorts tins by aroma with surgical grace, 16:9, no text."},
+      {"id":"s006_sh002","duration_sec":10,"prompt":"Maya tests him with hidden bergamot and watches stunned, 16:9, no text."},
+      {"id":"s006_sh003","duration_sec":10,"prompt":"Darwin rejects stale lavender with a scandalized sneeze, comedy, 16:9, no text."},
+      {"id":"s006_sh004","duration_sec":10,"prompt":"Nadia glimpses a feathered tail and drops napkins, warm shop, 16:9, no text."},
+      {"id":"s006_sh005","duration_sec":10,"prompt":"Maya explains the houseguest with terrible improvised lies, 16:9, no text."},
+      {"id":"s006_sh006","duration_sec":10,"prompt":"Darwin pairs smoky oolong with orange peel, steam glowing, 16:9, no text."}
+    ]},
+    {"id":"scene_007","title":"First Perfect Cup","summary":"One cup of tea reminds Maya that wonder still exists.","shots":[
+      {"id":"s007_sh001","duration_sec":10,"prompt":"Maya brews Darwin's blend in a chipped pot, reverent steam, 16:9, no text."},
+      {"id":"s007_sh002","duration_sec":10,"prompt":"Maya tastes, sarcasm melting into astonished silence, 16:9, no text."},
+      {"id":"s007_sh003","duration_sec":10,"prompt":"Nadia sips and nearly cries behind the counter, amber light, 16:9, no text."},
+      {"id":"s007_sh004","duration_sec":10,"prompt":"Darwin preens shyly in the back room doorway, gentle pride, 16:9, no text."},
+      {"id":"s007_sh005","duration_sec":10,"prompt":"Mrs Patterson receives a sample and smiles like sunrise, 16:9, no text."},
+      {"id":"s007_sh006","duration_sec":10,"prompt":"Maya writes a new blend card by hand, hope returning, 16:9, no text."}
+    ]},
+    {"id":"scene_008","title":"Secret in Storage","summary":"The shop learns how to hide a seven-foot artist in plain sight.","shots":[
+      {"id":"s008_sh001","duration_sec":10,"prompt":"Maya hangs curtains to conceal Darwin's tea station, cozy, 16:9, no text."},
+      {"id":"s008_sh002","duration_sec":10,"prompt":"Nadia measures Darwin for a ridiculous canvas apron, 16:9, no text."},
+      {"id":"s008_sh003","duration_sec":10,"prompt":"Darwin practices silent steps and knocks over only one tin, 16:9, no text."},
+      {"id":"s008_sh004","duration_sec":10,"prompt":"Maya labels safe zones with tape and dry humor, 16:9, no text."},
+      {"id":"s008_sh005","duration_sec":10,"prompt":"Darwin hides behind stacked tea sacks as customers enter, 16:9, no text."},
+      {"id":"s008_sh006","duration_sec":10,"prompt":"A perfect cup slides from mystery curtain to counter, 16:9, no text."}
+    ]},
+    {"id":"scene_009","title":"Soft Opening Miracle","summary":"A few customers become witnesses to impossible flavor.","shots":[
+      {"id":"s009_sh001","duration_sec":10,"prompt":"First curious customers enter rainy shop, warm amber welcome, 16:9, no text."},
+      {"id":"s009_sh002","duration_sec":10,"prompt":"Darwin sniffs orders from behind curtain, focused sommelier, 16:9, no text."},
+      {"id":"s009_sh003","duration_sec":10,"prompt":"Maya serves custom blends with skeptical confidence, 16:9, no text."},
+      {"id":"s009_sh004","duration_sec":10,"prompt":"Customers react with quiet wonder, cups held like miracles, 16:9, no text."},
+      {"id":"s009_sh005","duration_sec":10,"prompt":"Nadia snaps photos of steam and smiling regulars, 16:9, no text."},
+      {"id":"s009_sh006","duration_sec":10,"prompt":"Darwin listens to applause through wall, bashful feathers, 16:9, no text."}
+    ]},
+    {"id":"scene_010","title":"Line Around Block","summary":"Steep & Leaf becomes a rainy neighborhood obsession.","shots":[
+      {"id":"s010_sh001","duration_sec":10,"prompt":"Morning line curls around Portland block under umbrellas, 16:9, no text."},
+      {"id":"s010_sh002","duration_sec":10,"prompt":"Maya opens door to a crowd and hides panic with sarcasm, 16:9, no text."},
+      {"id":"s010_sh003","duration_sec":10,"prompt":"Darwin conducts scent work behind curtain, apron charming, 16:9, no text."},
+      {"id":"s010_sh004","duration_sec":10,"prompt":"Nadia works register like cheerful chaos captain, 16:9, no text."},
+      {"id":"s010_sh005","duration_sec":10,"prompt":"Steam fills shop as strangers share tiny tables, community, 16:9, no text."},
+      {"id":"s010_sh006","duration_sec":10,"prompt":"Across street, Victor notices the impossible crowd, 16:9, no text."}
+    ]},
+    {"id":"scene_011","title":"Victor Notices","summary":"A rival tea aesthete smells competition and loneliness.","shots":[
+      {"id":"s011_sh001","duration_sec":10,"prompt":"Victor's empty salon gleams while he dusts unused cups, 16:9, no text."},
+      {"id":"s011_sh002","duration_sec":10,"prompt":"Victor peers through rain at Steep & Leaf's line, offended, 16:9, no text."},
+      {"id":"s011_sh003","duration_sec":10,"prompt":"He samples a takeout cup and freezes in admiration, 16:9, no text."},
+      {"id":"s011_sh004","duration_sec":10,"prompt":"Victor sniffs dramatically, wounded by genius, comedy, 16:9, no text."},
+      {"id":"s011_sh005","duration_sec":10,"prompt":"Darwin sneezes backstage at Victor's cologne, comic timing, 16:9, no text."},
+      {"id":"s011_sh006","duration_sec":10,"prompt":"Victor vows to uncover Maya's secret with theatrical flair, 16:9, no text."}
+    ]},
+    {"id":"scene_012","title":"Nadia Goes Viral","summary":"The internet finds the tea before anyone finds the dinosaur.","shots":[
+      {"id":"s012_sh001","duration_sec":10,"prompt":"Nadia films glittering tea steam and happy customers, 16:9, no text."},
+      {"id":"s012_sh002","duration_sec":10,"prompt":"Phone screens glow without readable overlays, buzz implied, 16:9, no text."},
+      {"id":"s012_sh003","duration_sec":10,"prompt":"Maya groans at sudden fame while restocking tins, 16:9, no text."},
+      {"id":"s012_sh004","duration_sec":10,"prompt":"Darwin poses accidentally in a reflection then ducks, 16:9, no text."},
+      {"id":"s012_sh005","duration_sec":10,"prompt":"Customers whisper about the mysterious tea genius, 16:9, no text."},
+      {"id":"s012_sh006","duration_sec":10,"prompt":"At Nexus, Moss sees the buzz and narrows his eyes, 16:9, no text."}
+    ]},
+    {"id":"scene_013","title":"Sarah Sees Subject","summary":"Darwin's creator follows guilt to the warmest place in Portland.","shots":[
+      {"id":"s013_sh001","duration_sec":10,"prompt":"Sarah arrives outside Steep & Leaf under a clear umbrella, 16:9, no text."},
+      {"id":"s013_sh002","duration_sec":10,"prompt":"She notices teal feather caught in doorframe, conflicted, 16:9, no text."},
+      {"id":"s013_sh003","duration_sec":10,"prompt":"Darwin senses Sarah and goes very still behind curtain, 16:9, no text."},
+      {"id":"s013_sh004","duration_sec":10,"prompt":"Maya clocks Sarah's fear and blocks the back room, 16:9, no text."},
+      {"id":"s013_sh005","duration_sec":10,"prompt":"Sarah orders tea with trembling scientist hands, 16:9, no text."},
+      {"id":"s013_sh006","duration_sec":10,"prompt":"Darwin blends her cup with sorrowful recognition, 16:9, no text."}
+    ]},
+    {"id":"scene_014","title":"Inspection Jitters","summary":"Health rules collide with hidden dinosaur logistics.","shots":[
+      {"id":"s014_sh001","duration_sec":10,"prompt":"Inspector Torres enters with clipboard and rain jacket, 16:9, no text."},
+      {"id":"s014_sh002","duration_sec":10,"prompt":"Maya over-smiles while Nadia blocks the back curtain, 16:9, no text."},
+      {"id":"s014_sh003","duration_sec":10,"prompt":"Darwin balances on tiptoe behind stacked tins, 16:9, no text."},
+      {"id":"s014_sh004","duration_sec":10,"prompt":"Torres hears a chirp and raises one devastating eyebrow, 16:9, no text."},
+      {"id":"s014_sh005","duration_sec":10,"prompt":"Maya claims the sound is artisanal plumbing, deadpan, 16:9, no text."},
+      {"id":"s014_sh006","duration_sec":10,"prompt":"Torres leaves a warning, not convinced but amused, 16:9, no text."}
+    ]},
+    {"id":"scene_015","title":"Moss Arrives","summary":"Corporate ownership enters the story with a polite threat.","shots":[
+      {"id":"s015_sh001","duration_sec":10,"prompt":"Moss steps from black car into Portland drizzle, immaculate, 16:9, no text."},
+      {"id":"s015_sh002","duration_sec":10,"prompt":"He studies Steep & Leaf through warm fogged windows, 16:9, no text."},
+      {"id":"s015_sh003","duration_sec":10,"prompt":"Maya serves him tea with open dislike, amber counter, 16:9, no text."},
+      {"id":"s015_sh004","duration_sec":10,"prompt":"Moss tastes Darwin's blend and hides shock behind smile, 16:9, no text."},
+      {"id":"s015_sh005","duration_sec":10,"prompt":"Darwin trembles softly behind curtain as Moss speaks, 16:9, no text."},
+      {"id":"s015_sh006","duration_sec":10,"prompt":"Moss leaves a glossy business card on wet counter, 16:9, no text."}
+    ]},
+    {"id":"scene_016","title":"Rainy Rooftop Chai","summary":"Maya and Darwin establish trust above the sleeping shop.","shots":[
+      {"id":"s016_sh001","duration_sec":10,"prompt":"Shop roof at night: Maya brings chai under string lights, 16:9, no text."},
+      {"id":"s016_sh002","duration_sec":10,"prompt":"Darwin watches rain ripple in rooftop puddles, peaceful, 16:9, no text."},
+      {"id":"s016_sh003","duration_sec":10,"prompt":"Maya admits she has no plan and hates plans, soft comedy, 16:9, no text."},
+      {"id":"s016_sh004","duration_sec":10,"prompt":"Darwin nudges her ring necklace with careful claw, tender, 16:9, no text."},
+      {"id":"s016_sh005","duration_sec":10,"prompt":"They share steam and silence under Portland skyline, 16:9, no text."},
+      {"id":"s016_sh006","duration_sec":10,"prompt":"A Nexus drone light passes far away, gentle tension, 16:9, no text."}
+    ]},
+    {"id":"scene_017","title":"Widow's Ledger","summary":"Maya confronts the shop's debts and Jules's absence.","shots":[
+      {"id":"s017_sh001","duration_sec":10,"prompt":"Maya opens overdue bills beside old blend notebooks, 16:9, no text."},
+      {"id":"s017_sh002","duration_sec":10,"prompt":"Jules's photo watches over cold tea and receipts, 16:9, no text."},
+      {"id":"s017_sh003","duration_sec":10,"prompt":"Darwin sorts receipts by smell, trying to help, 16:9, no text."},
+      {"id":"s017_sh004","duration_sec":10,"prompt":"Maya laughs despite tears at his useless filing, 16:9, no text."},
+      {"id":"s017_sh005","duration_sec":10,"prompt":"Nadia brings a sold-out cash box, hopeful, 16:9, no text."},
+      {"id":"s017_sh006","duration_sec":10,"prompt":"Maya locks debt notice in drawer and chooses tomorrow, 16:9, no text."}
+    ]},
+    {"id":"scene_018","title":"Darwin's Scarf","summary":"A handmade scarf turns the fugitive into family.","shots":[
+      {"id":"s018_sh001","duration_sec":10,"prompt":"Mrs Patterson knits moss-green scarf in shop corner, 16:9, no text."},
+      {"id":"s018_sh002","duration_sec":10,"prompt":"Maya distracts customers while scarf passes to back room, 16:9, no text."},
+      {"id":"s018_sh003","duration_sec":10,"prompt":"Darwin lowers his head to receive scarf, reverent, 16:9, no text."},
+      {"id":"s018_sh004","duration_sec":10,"prompt":"Nadia adjusts scarf and calls him Velvet, smiling, 16:9, no text."},
+      {"id":"s018_sh005","duration_sec":10,"prompt":"Darwin preens at mirror, bashful and grand, 16:9, no text."},
+      {"id":"s018_sh006","duration_sec":10,"prompt":"Maya watches family forming despite herself, warm amber, 16:9, no text."}
+    ]},
+    {"id":"scene_019","title":"Blend for Mrs Patterson","summary":"Darwin creates tea that tastes like a memory.","shots":[
+      {"id":"s019_sh001","duration_sec":10,"prompt":"Mrs Patterson describes her late husband's garden, 16:9, no text."},
+      {"id":"s019_sh002","duration_sec":10,"prompt":"Darwin listens through curtain, nostrils soft and focused, 16:9, no text."},
+      {"id":"s019_sh003","duration_sec":10,"prompt":"He selects rosehip, black tea, mint, and rain scent, 16:9, no text."},
+      {"id":"s019_sh004","duration_sec":10,"prompt":"Maya brews the blend with unusual tenderness, 16:9, no text."},
+      {"id":"s019_sh005","duration_sec":10,"prompt":"Mrs Patterson tastes and quietly laughs through tears, 16:9, no text."},
+      {"id":"s019_sh006","duration_sec":10,"prompt":"Maya realizes Darwin makes more than flavor, 16:9, no text."}
+    ]},
+    {"id":"scene_020","title":"Community Table","summary":"The shop becomes a refuge for Portland's tender oddballs.","shots":[
+      {"id":"s020_sh001","duration_sec":10,"prompt":"Mismatched customers crowd one long table, cups steaming, 16:9, no text."},
+      {"id":"s020_sh002","duration_sec":10,"prompt":"Nadia names blends from customer moods, playful, 16:9, no text."},
+      {"id":"s020_sh003","duration_sec":10,"prompt":"Darwin tail carefully avoids chair legs behind curtain, 16:9, no text."},
+      {"id":"s020_sh004","duration_sec":10,"prompt":"Maya hears strangers sharing grief and jokes, warm, 16:9, no text."},
+      {"id":"s020_sh005","duration_sec":10,"prompt":"A child leaves a crayon dinosaur drawing unseen by Darwin, 16:9, no text."},
+      {"id":"s020_sh006","duration_sec":10,"prompt":"Nexus van watches from rain across street, 16:9, no text."}
+    ]},
+    {"id":"scene_021","title":"Victor's Spy Cup","summary":"Victor investigates and accidentally reveals his loneliness.","shots":[
+      {"id":"s021_sh001","duration_sec":10,"prompt":"Victor enters Steep & Leaf in fake hat and fake moustache, 16:9, no text."},
+      {"id":"s021_sh002","duration_sec":10,"prompt":"Maya recognizes him instantly and serves with a smirk, 16:9, no text."},
+      {"id":"s021_sh003","duration_sec":10,"prompt":"Darwin sniffs Victor's grief under perfume, gentle, 16:9, no text."},
+      {"id":"s021_sh004","duration_sec":10,"prompt":"Victor receives a blend too perfect for his loneliness, 16:9, no text."},
+      {"id":"s021_sh005","duration_sec":10,"prompt":"His dramatic facade cracks for one honest second, 16:9, no text."},
+      {"id":"s021_sh006","duration_sec":10,"prompt":"Victor steals a napkin, vowing rivalry with damp eyes, 16:9, no text."}
+    ]},
+    {"id":"scene_022","title":"Lab Van Outside","summary":"Nexus surveillance starts pressing on the shop's fragile peace.","shots":[
+      {"id":"s022_sh001","duration_sec":10,"prompt":"Black van idles beyond rain-streaked shop window, 16:9, no text."},
+      {"id":"s022_sh002","duration_sec":10,"prompt":"Darwin smells lab antiseptic and hides under scarf, 16:9, no text."},
+      {"id":"s022_sh003","duration_sec":10,"prompt":"Maya steps outside with trash bag and hard stare, 16:9, no text."},
+      {"id":"s022_sh004","duration_sec":10,"prompt":"Nexus agents pretend to read a map badly, comedy, 16:9, no text."},
+      {"id":"s022_sh005","duration_sec":10,"prompt":"Maya photographs van reflection in tea kettle, clever, 16:9, no text."},
+      {"id":"s022_sh006","duration_sec":10,"prompt":"Sarah watches from corner, guilt deepening, 16:9, no text."}
+    ]},
+    {"id":"scene_023","title":"Sarah's Apology","summary":"The scientist finally speaks to the creature she failed.","shots":[
+      {"id":"s023_sh001","duration_sec":10,"prompt":"Sarah knocks at closing time, rain dripping from coat, 16:9, no text."},
+      {"id":"s023_sh002","duration_sec":10,"prompt":"Maya lets her in only as far as the chalk line, 16:9, no text."},
+      {"id":"s023_sh003","duration_sec":10,"prompt":"Darwin emerges slowly, scarf bright against shadows, 16:9, no text."},
+      {"id":"s023_sh004","duration_sec":10,"prompt":"Sarah kneels and apologizes without reaching for him, 16:9, no text."},
+      {"id":"s023_sh005","duration_sec":10,"prompt":"Darwin sniffs her hand, sorrow and forgiveness uncertain, 16:9, no text."},
+      {"id":"s023_sh006","duration_sec":10,"prompt":"Maya demands the truth as kettle steam rises, 16:9, no text."}
+    ]},
+    {"id":"scene_024","title":"The Health Code Waltz","summary":"Torres returns and the hiding routine becomes absurd choreography.","shots":[
+      {"id":"s024_sh001","duration_sec":10,"prompt":"Torres arrives for follow-up during lunch rush, clipboard ready, 16:9, no text."},
+      {"id":"s024_sh002","duration_sec":10,"prompt":"Nadia signals Maya with frantic tea towel semaphore, 16:9, no text."},
+      {"id":"s024_sh003","duration_sec":10,"prompt":"Darwin pivots behind shelves in graceful comic dance, 16:9, no text."},
+      {"id":"s024_sh004","duration_sec":10,"prompt":"Maya distracts Torres with impeccable sink labels, 16:9, no text."},
+      {"id":"s024_sh005","duration_sec":10,"prompt":"A feather floats into Torres's teacup; she notices, 16:9, no text."},
+      {"id":"s024_sh006","duration_sec":10,"prompt":"Torres pockets feather, intrigued rather than afraid, 16:9, no text."}
+    ]},
+    {"id":"scene_025","title":"Midnight Tasting","summary":"The secret team invents a language of scent and trust.","shots":[
+      {"id":"s025_sh001","duration_sec":10,"prompt":"Closed shop at midnight: tasting spoons circle Darwin, 16:9, no text."},
+      {"id":"s025_sh002","duration_sec":10,"prompt":"Maya learns Darwin's chirps for floral, smoke, rain, 16:9, no text."},
+      {"id":"s025_sh003","duration_sec":10,"prompt":"Nadia sketches a comic scent chart in notebook, 16:9, no text."},
+      {"id":"s025_sh004","duration_sec":10,"prompt":"Darwin rejects twelve blends before approving one leaf, 16:9, no text."},
+      {"id":"s025_sh005","duration_sec":10,"prompt":"Maya laughs freely for first time in years, 16:9, no text."},
+      {"id":"s025_sh006","duration_sec":10,"prompt":"Outside, rain softens city into storybook glow, 16:9, no text."}
+    ]},
+    {"id":"scene_026","title":"A Name Chosen","summary":"Darwin becomes Velvet to the people who love him.","shots":[
+      {"id":"s026_sh001","duration_sec":10,"prompt":"Maya asks what name feels safe, gentle shop quiet, 16:9, no text."},
+      {"id":"s026_sh002","duration_sec":10,"prompt":"Darwin touches moss scarf with a proud chirp, 16:9, no text."},
+      {"id":"s026_sh003","duration_sec":10,"prompt":"Nadia suggests Velvet and everyone waits, 16:9, no text."},
+      {"id":"s026_sh004","duration_sec":10,"prompt":"Darwin bows theatrically, accepting the nickname, 16:9, no text."},
+      {"id":"s026_sh005","duration_sec":10,"prompt":"Maya writes Velvet on a private blend card, 16:9, no text."},
+      {"id":"s026_sh006","duration_sec":10,"prompt":"Sarah watches the naming with grateful tears, 16:9, no text."}
+    ]},
+    {"id":"scene_027","title":"Farmers Market Test","summary":"Maya tests the blends in public while hiding their maker.","shots":[
+      {"id":"s027_sh001","duration_sec":10,"prompt":"Farmers market canopy: Maya sets up tea booth in rain, 16:9, no text."},
+      {"id":"s027_sh002","duration_sec":10,"prompt":"Darwin hides in a delivery van filled with tea sacks, 16:9, no text."},
+      {"id":"s027_sh003","duration_sec":10,"prompt":"Nadia relays scent orders through a cracked window, 16:9, no text."},
+      {"id":"s027_sh004","duration_sec":10,"prompt":"Market shoppers taste blends beside flowers and produce, 16:9, no text."},
+      {"id":"s027_sh005","duration_sec":10,"prompt":"A busker's song makes Darwin sway unseen, 16:9, no text."},
+      {"id":"s027_sh006","duration_sec":10,"prompt":"Victor spies from cheese stall, increasingly impressed, 16:9, no text."}
+    ]},
+    {"id":"scene_028","title":"Portland Loves Velvet","summary":"The city falls for the mystery without knowing its shape.","shots":[
+      {"id":"s028_sh001","duration_sec":10,"prompt":"Montage: cups clink in bookshops, offices, and bus stops, 16:9, no text."},
+      {"id":"s028_sh002","duration_sec":10,"prompt":"Maya's shelves empty as new tea tins arrive, 16:9, no text."},
+      {"id":"s028_sh003","duration_sec":10,"prompt":"Darwin naps smiling under towers of thank-you notes, 16:9, no text."},
+      {"id":"s028_sh004","duration_sec":10,"prompt":"Nadia fields calls with beanie askew, overwhelmed joy, 16:9, no text."},
+      {"id":"s028_sh005","duration_sec":10,"prompt":"Mrs Patterson brings cookies for the hidden genius, 16:9, no text."},
+      {"id":"s028_sh006","duration_sec":10,"prompt":"Moss collects rumors on a sleek tablet, threat rising, 16:9, no text."}
+    ]},
+    {"id":"scene_029","title":"Moss Offers Buyout","summary":"Money tests Maya's grief and loyalty.","shots":[
+      {"id":"s029_sh001","duration_sec":10,"prompt":"Moss sits at shop table with immaculate contract folder, 16:9, no text."},
+      {"id":"s029_sh002","duration_sec":10,"prompt":"Maya reads buyout offer, expression guarded, 16:9, no text."},
+      {"id":"s029_sh003","duration_sec":10,"prompt":"Darwin listens through wall, scarf pressed to wood, 16:9, no text."},
+      {"id":"s029_sh004","duration_sec":10,"prompt":"Moss praises assets without saying person, corporate satire, 16:9, no text."},
+      {"id":"s029_sh005","duration_sec":10,"prompt":"Maya rejects him with a perfect cup and sharper smile, 16:9, no text."},
+      {"id":"s029_sh006","duration_sec":10,"prompt":"Moss leaves politely, rain looking suddenly colder, 16:9, no text."}
+    ]},
+    {"id":"scene_030","title":"End of Act Panic","summary":"The secret almost breaks as success becomes danger.","shots":[
+      {"id":"s030_sh001","duration_sec":10,"prompt":"Nexus drone hovers near upstairs window, blue light, 16:9, no text."},
+      {"id":"s030_sh002","duration_sec":10,"prompt":"Darwin panics and knocks over shelves, no harm, 16:9, no text."},
+      {"id":"s030_sh003","duration_sec":10,"prompt":"Maya holds him steady with soft voice and tea steam, 16:9, no text."},
+      {"id":"s030_sh004","duration_sec":10,"prompt":"Sarah warns Nexus can claim Darwin by morning, 16:9, no text."},
+      {"id":"s030_sh005","duration_sec":10,"prompt":"Maya looks at full shop and hidden friend, trapped, 16:9, no text."},
+      {"id":"s030_sh006","duration_sec":10,"prompt":"Lights click off as black van waits in rain, act turn, 16:9, no text."}
+    ]},
+    {"id":"scene_031","title":"Morning After Fame","summary":"Act Two opens with joy tangled in surveillance.","shots":[
+      {"id":"s031_sh001","duration_sec":10,"prompt":"Sun through rain clouds: customers already camp outside, 16:9, no text."},
+      {"id":"s031_sh002","duration_sec":10,"prompt":"Maya sets boundaries on crowd with dry authority, 16:9, no text."},
+      {"id":"s031_sh003","duration_sec":10,"prompt":"Darwin sniffs anxiety in the whole room, concerned, 16:9, no text."},
+      {"id":"s031_sh004","duration_sec":10,"prompt":"Nadia creates calm tea queue choreography, 16:9, no text."},
+      {"id":"s031_sh005","duration_sec":10,"prompt":"Sarah spots Nexus watcher reflected in kettle, 16:9, no text."},
+      {"id":"s031_sh006","duration_sec":10,"prompt":"Maya chooses to open anyway, brave and tired, 16:9, no text."}
+    ]},
+    {"id":"scene_032","title":"Tea Reviewers Descend","summary":"Culinary attention makes secrecy almost impossible.","shots":[
+      {"id":"s032_sh001","duration_sec":10,"prompt":"Influencers and tea critics crowd tiny tables, 16:9, no text."},
+      {"id":"s032_sh002","duration_sec":10,"prompt":"Maya answers fancy questions with blunt charm, 16:9, no text."},
+      {"id":"s032_sh003","duration_sec":10,"prompt":"Darwin identifies critic's childhood orchard by scent, 16:9, no text."},
+      {"id":"s032_sh004","duration_sec":10,"prompt":"Critic tastes blend and loses professional composure, 16:9, no text."},
+      {"id":"s032_sh005","duration_sec":10,"prompt":"Camera flash nearly reveals Darwin's silhouette, 16:9, no text."},
+      {"id":"s032_sh006","duration_sec":10,"prompt":"Nadia blocks lens with tray and innocent grin, 16:9, no text."}
+    ]},
+    {"id":"scene_033","title":"Victor's Challenge","summary":"Victor demands a public duel of blends.","shots":[
+      {"id":"s033_sh001","duration_sec":10,"prompt":"Victor storms in waving a velvet glove, theatrical, 16:9, no text."},
+      {"id":"s033_sh002","duration_sec":10,"prompt":"Maya refuses the duel while customers lean in, amused, 16:9, no text."},
+      {"id":"s033_sh003","duration_sec":10,"prompt":"Darwin hears challenge and tilts head with interest, 16:9, no text."},
+      {"id":"s033_sh004","duration_sec":10,"prompt":"Victor insults Maya's kettle; Maya accepts instantly, 16:9, no text."},
+      {"id":"s033_sh005","duration_sec":10,"prompt":"Nadia announces a friendly tasting night, crowd cheers, 16:9, no text."},
+      {"id":"s033_sh006","duration_sec":10,"prompt":"Victor exits with cape-like coat in rain, lonely pride, 16:9, no text."}
+    ]},
+    {"id":"scene_034","title":"The Broken Kettle","summary":"A tiny equipment disaster reveals how fragile the miracle is.","shots":[
+      {"id":"s034_sh001","duration_sec":10,"prompt":"Old shop kettle coughs steam and gives up mid-rush, 16:9, no text."},
+      {"id":"s034_sh002","duration_sec":10,"prompt":"Maya performs sarcastic appliance grief at counter, 16:9, no text."},
+      {"id":"s034_sh003","duration_sec":10,"prompt":"Darwin offers to heat water by sitting near kettle lamp, 16:9, no text."},
+      {"id":"s034_sh004","duration_sec":10,"prompt":"Nadia borrows kettles from neighboring shops, montage, 16:9, no text."},
+      {"id":"s034_sh005","duration_sec":10,"prompt":"Victor sends an absurdly ornate kettle anonymously, 16:9, no text."},
+      {"id":"s034_sh006","duration_sec":10,"prompt":"Maya suspects kindness and is annoyed by it, 16:9, no text."}
+    ]},
+    {"id":"scene_035","title":"Lavender Scandal","summary":"Darwin's one hated flavor causes a comic customer crisis.","shots":[
+      {"id":"s035_sh001","duration_sec":10,"prompt":"Customer requests pure lavender; Darwin recoils backstage, 16:9, no text."},
+      {"id":"s035_sh002","duration_sec":10,"prompt":"Maya tries to negotiate with a dinosaur's refined disgust, 16:9, no text."},
+      {"id":"s035_sh003","duration_sec":10,"prompt":"Darwin selects lavender only after balancing it with honey, 16:9, no text."},
+      {"id":"s035_sh004","duration_sec":10,"prompt":"Customer tastes and declares emotional peace, 16:9, no text."},
+      {"id":"s035_sh005","duration_sec":10,"prompt":"Darwin still makes a tiny offended sneeze, comedy, 16:9, no text."},
+      {"id":"s035_sh006","duration_sec":10,"prompt":"Maya writes no pure lavender on private board, 16:9, no text."}
+    ]},
+    {"id":"scene_036","title":"Jules's Recipe Box","summary":"Maya shares the shop's oldest wound with Darwin.","shots":[
+      {"id":"s036_sh001","duration_sec":10,"prompt":"Maya opens Jules's wooden recipe box after closing, 16:9, no text."},
+      {"id":"s036_sh002","duration_sec":10,"prompt":"Old cards smell of cedar, ink, and unfinished dreams, 16:9, no text."},
+      {"id":"s036_sh003","duration_sec":10,"prompt":"Darwin inhales box and lowers head respectfully, 16:9, no text."},
+      {"id":"s036_sh004","duration_sec":10,"prompt":"Maya describes Jules without crying until she does, 16:9, no text."},
+      {"id":"s036_sh005","duration_sec":10,"prompt":"Darwin nudges a blank card toward her, 16:9, no text."},
+      {"id":"s036_sh006","duration_sec":10,"prompt":"Maya cannot write yet but keeps the card, 16:9, no text."}
+    ]},
+    {"id":"scene_037","title":"Lab Recall Notice","summary":"Nexus turns Darwin's life into paperwork.","shots":[
+      {"id":"s037_sh001","duration_sec":10,"prompt":"Certified envelope arrives soaked from rain, ominous but dryly comic, 16:9, no text."},
+      {"id":"s037_sh002","duration_sec":10,"prompt":"Maya reads recall language with rising fury, 16:9, no text."},
+      {"id":"s037_sh003","duration_sec":10,"prompt":"Darwin studies Maya's face, understanding danger, 16:9, no text."},
+      {"id":"s037_sh004","duration_sec":10,"prompt":"Sarah confirms Nexus sees Darwin as property, 16:9, no text."},
+      {"id":"s037_sh005","duration_sec":10,"prompt":"Nadia researches animal law at messy table, 16:9, no text."},
+      {"id":"s037_sh006","duration_sec":10,"prompt":"Maya pins recall beside bills, refusing despair, 16:9, no text."}
+    ]},
+    {"id":"scene_038","title":"Sarah's Evidence","summary":"Sarah reveals what Nexus did and what can stop them.","shots":[
+      {"id":"s038_sh001","duration_sec":10,"prompt":"Sarah spreads encrypted drives and lab notes on tea table, 16:9, no text."},
+      {"id":"s038_sh002","duration_sec":10,"prompt":"Blue lab flashback: young Darwin learns scent games, gentle, 16:9, no text."},
+      {"id":"s038_sh003","duration_sec":10,"prompt":"Sarah admits she taught him beauty inside a cage, 16:9, no text."},
+      {"id":"s038_sh004","duration_sec":10,"prompt":"Darwin chooses to sit near Sarah, forgiveness beginning, 16:9, no text."},
+      {"id":"s038_sh005","duration_sec":10,"prompt":"Maya demands proof strong enough for daylight, 16:9, no text."},
+      {"id":"s038_sh006","duration_sec":10,"prompt":"Sarah pockets drive, deciding to betray Nexus, 16:9, no text."}
+    ]},
+    {"id":"scene_039","title":"Inspector's Warning","summary":"Torres sees the truth and insists safety must be honest.","shots":[
+      {"id":"s039_sh001","duration_sec":10,"prompt":"Torres arrives after hours, feather in evidence bag, 16:9, no text."},
+      {"id":"s039_sh002","duration_sec":10,"prompt":"Maya finally opens back curtain to reveal Darwin, 16:9, no text."},
+      {"id":"s039_sh003","duration_sec":10,"prompt":"Torres freezes, then calmly checks her own pulse, comedy, 16:9, no text."},
+      {"id":"s039_sh004","duration_sec":10,"prompt":"Darwin offers a perfectly steeped calming tea, 16:9, no text."},
+      {"id":"s039_sh005","duration_sec":10,"prompt":"Torres outlines every impossible health violation, 16:9, no text."},
+      {"id":"s039_sh006","duration_sec":10,"prompt":"She also says hiding him alone will get him taken, 16:9, no text."}
+    ]},
+    {"id":"scene_040","title":"Hidden Greenhouse","summary":"A safe future first appears as a ridiculous dream.","shots":[
+      {"id":"s040_sh001","duration_sec":10,"prompt":"Maya finds abandoned greenhouse behind the shop, rainy, 16:9, no text."},
+      {"id":"s040_sh002","duration_sec":10,"prompt":"Darwin steps inside under cracked skylights and ferns, 16:9, no text."},
+      {"id":"s040_sh003","duration_sec":10,"prompt":"Tea seedlings scent the air; Darwin visibly relaxes, 16:9, no text."},
+      {"id":"s040_sh004","duration_sec":10,"prompt":"Nadia imagines sanctuary and tasting garden, excited, 16:9, no text."},
+      {"id":"s040_sh005","duration_sec":10,"prompt":"Maya lists permits like curses, deadpan, 16:9, no text."},
+      {"id":"s040_sh006","duration_sec":10,"prompt":"Darwin places a leaf in Maya's palm, choosing home, 16:9, no text."}
+    ]},
+    {"id":"scene_041","title":"Rain Festival Booth","summary":"A local festival raises stakes and spreads joy.","shots":[
+      {"id":"s041_sh001","duration_sec":10,"prompt":"Small rain festival: colorful canopies and tea samples, 16:9, no text."},
+      {"id":"s041_sh002","duration_sec":10,"prompt":"Maya serves under dripping awning with dry jokes, 16:9, no text."},
+      {"id":"s041_sh003","duration_sec":10,"prompt":"Darwin hides inside floral delivery truck, scent conductor, 16:9, no text."},
+      {"id":"s041_sh004","duration_sec":10,"prompt":"Nadia runs blends through crowd like a relay, 16:9, no text."},
+      {"id":"s041_sh005","duration_sec":10,"prompt":"Victor's booth loses customers to Maya's line, 16:9, no text."},
+      {"id":"s041_sh006","duration_sec":10,"prompt":"Moss watches festival from dry balcony, calculating, 16:9, no text."}
+    ]},
+    {"id":"scene_042","title":"Chai for a Busker","summary":"Darwin's empathy expands beyond the shop.","shots":[
+      {"id":"s042_sh001","duration_sec":10,"prompt":"A soaked busker plays violin near market booth, 16:9, no text."},
+      {"id":"s042_sh002","duration_sec":10,"prompt":"Darwin smells exhaustion and signals warm spices, 16:9, no text."},
+      {"id":"s042_sh003","duration_sec":10,"prompt":"Maya delivers chai to busker under umbrella, 16:9, no text."},
+      {"id":"s042_sh004","duration_sec":10,"prompt":"Music brightens as crowd gathers softly, 16:9, no text."},
+      {"id":"s042_sh005","duration_sec":10,"prompt":"Darwin sways unseen in truck, joyful, 16:9, no text."},
+      {"id":"s042_sh006","duration_sec":10,"prompt":"Maya realizes hiding steals Darwin's joy too, 16:9, no text."}
+    ]},
+    {"id":"scene_043","title":"Community Secrets","summary":"More neighbors learn and choose protection.","shots":[
+      {"id":"s043_sh001","duration_sec":10,"prompt":"Mrs Patterson catches Darwin through curtain and smiles, 16:9, no text."},
+      {"id":"s043_sh002","duration_sec":10,"prompt":"A baker neighbor discovers tail in flour delivery, 16:9, no text."},
+      {"id":"s043_sh003","duration_sec":10,"prompt":"Bike courier sees Darwin sneeze and simply salutes, 16:9, no text."},
+      {"id":"s043_sh004","duration_sec":10,"prompt":"Maya panics as secrets multiply into kindness, 16:9, no text."},
+      {"id":"s043_sh005","duration_sec":10,"prompt":"Neighbors swear tea-shop secrecy over tiny cups, 16:9, no text."},
+      {"id":"s043_sh006","duration_sec":10,"prompt":"Nexus agent notes unusual neighborhood loyalty, 16:9, no text."}
+    ]},
+    {"id":"scene_044","title":"Victor's Lonely Salon","summary":"Victor's rivalry is revealed as grief wearing a waistcoat.","shots":[
+      {"id":"s044_sh001","duration_sec":10,"prompt":"Victor closes empty salon, brass shelves gleaming sadly, 16:9, no text."},
+      {"id":"s044_sh002","duration_sec":10,"prompt":"He talks to portrait of his tea mentor, lonely, 16:9, no text."},
+      {"id":"s044_sh003","duration_sec":10,"prompt":"Maya arrives to return his borrowed kettle, awkward, 16:9, no text."},
+      {"id":"s044_sh004","duration_sec":10,"prompt":"They trade barbs that soften into recognition, 16:9, no text."},
+      {"id":"s044_sh005","duration_sec":10,"prompt":"Victor admits the mystery blend is magnificent, 16:9, no text."},
+      {"id":"s044_sh006","duration_sec":10,"prompt":"Maya almost tells him the truth, then cannot, 16:9, no text."}
+    ]},
+    {"id":"scene_045","title":"Blending Duel","summary":"Rivalry becomes performance art and reluctant respect.","shots":[
+      {"id":"s045_sh001","duration_sec":10,"prompt":"Steep & Leaf hosts candlelit tasting duel, packed tables, 16:9, no text."},
+      {"id":"s045_sh002","duration_sec":10,"prompt":"Victor presents elaborate blend with operatic flourish, 16:9, no text."},
+      {"id":"s045_sh003","duration_sec":10,"prompt":"Darwin studies aroma from behind curtain, respectful focus, 16:9, no text."},
+      {"id":"s045_sh004","duration_sec":10,"prompt":"Maya serves Darwin's humble oolong blend, 16:9, no text."},
+      {"id":"s045_sh005","duration_sec":10,"prompt":"Crowd loves both cups; Victor is moved, not defeated, 16:9, no text."},
+      {"id":"s045_sh006","duration_sec":10,"prompt":"Darwin chirps applause and nearly reveals himself, 16:9, no text."}
+    ]},
+    {"id":"scene_046","title":"Cupping Score","summary":"Darwin and Victor silently recognize each other as artists.","shots":[
+      {"id":"s046_sh001","duration_sec":10,"prompt":"Victor lingers after duel, sniffing curtain suspiciously, 16:9, no text."},
+      {"id":"s046_sh002","duration_sec":10,"prompt":"Darwin slides a corrected blend sample under curtain, 16:9, no text."},
+      {"id":"s046_sh003","duration_sec":10,"prompt":"Victor tastes and gasps at the improvement, 16:9, no text."},
+      {"id":"s046_sh004","duration_sec":10,"prompt":"A claw taps twice like a polite signature, 16:9, no text."},
+      {"id":"s046_sh005","duration_sec":10,"prompt":"Victor bows to the unseen genius, humbled, 16:9, no text."},
+      {"id":"s046_sh006","duration_sec":10,"prompt":"Maya watches rivalry become alliance potential, 16:9, no text."}
+    ]},
+    {"id":"scene_047","title":"Moss Pressures Sarah","summary":"Nexus tightens its grip on the one insider with a conscience.","shots":[
+      {"id":"s047_sh001","duration_sec":10,"prompt":"Nexus office: Moss questions Sarah under cold blue light, 16:9, no text."},
+      {"id":"s047_sh002","duration_sec":10,"prompt":"Sarah hides data drive inside raincoat seam, tense, 16:9, no text."},
+      {"id":"s047_sh003","duration_sec":10,"prompt":"Moss offers career salvation for Darwin's location, 16:9, no text."},
+      {"id":"s047_sh004","duration_sec":10,"prompt":"Sarah refuses with quiet fear and backbone, 16:9, no text."},
+      {"id":"s047_sh005","duration_sec":10,"prompt":"Security badge is taken from Sarah's hand, 16:9, no text."},
+      {"id":"s047_sh006","duration_sec":10,"prompt":"Sarah exits into rain, free and terrified, 16:9, no text."}
+    ]},
+    {"id":"scene_048","title":"Maya Lies Poorly","summary":"Maya's protective instincts create new complications.","shots":[
+      {"id":"s048_sh001","duration_sec":10,"prompt":"Moss returns asking direct questions at counter, 16:9, no text."},
+      {"id":"s048_sh002","duration_sec":10,"prompt":"Maya lies with catastrophic overconfidence, comedy, 16:9, no text."},
+      {"id":"s048_sh003","duration_sec":10,"prompt":"Darwin sneezes exactly when she says no animals, 16:9, no text."},
+      {"id":"s048_sh004","duration_sec":10,"prompt":"Nadia starts blender to cover chirping, absurd, 16:9, no text."},
+      {"id":"s048_sh005","duration_sec":10,"prompt":"Moss smiles as if collecting evidence, 16:9, no text."},
+      {"id":"s048_sh006","duration_sec":10,"prompt":"Maya realizes secrecy is becoming impossible, 16:9, no text."}
+    ]},
+    {"id":"scene_049","title":"Darwin on a Bike Cart","summary":"A transport scheme becomes Portland's strangest commute.","shots":[
+      {"id":"s049_sh001","duration_sec":10,"prompt":"Nadia unveils cargo bike cart stacked with tea crates, 16:9, no text."},
+      {"id":"s049_sh002","duration_sec":10,"prompt":"Darwin folds into cart with tail sticking out, comedy, 16:9, no text."},
+      {"id":"s049_sh003","duration_sec":10,"prompt":"Maya bikes through rainy streets, pretending normal, 16:9, no text."},
+      {"id":"s049_sh004","duration_sec":10,"prompt":"Darwin sniffs passing bakeries, flowers, and puddles, 16:9, no text."},
+      {"id":"s049_sh005","duration_sec":10,"prompt":"A child waves at the crate tail; Darwin waves back, 16:9, no text."},
+      {"id":"s049_sh006","duration_sec":10,"prompt":"They reach greenhouse laughing breathlessly, safe for now, 16:9, no text."}
+    ]},
+    {"id":"scene_050","title":"The Smell of Home","summary":"Darwin chooses the shop not as hiding place but as belonging.","shots":[
+      {"id":"s050_sh001","duration_sec":10,"prompt":"Greenhouse: Darwin maps scents of tea plants and wet soil, 16:9, no text."},
+      {"id":"s050_sh002","duration_sec":10,"prompt":"Maya asks if he wants to run far away, 16:9, no text."},
+      {"id":"s050_sh003","duration_sec":10,"prompt":"Darwin smells city breeze, then Maya's scarf, 16:9, no text."},
+      {"id":"s050_sh004","duration_sec":10,"prompt":"He returns to shop door and waits, choosing home, 16:9, no text."},
+      {"id":"s050_sh005","duration_sec":10,"prompt":"Maya understands and fights tears with a joke, 16:9, no text."},
+      {"id":"s050_sh006","duration_sec":10,"prompt":"They enter Steep & Leaf together, amber light, 16:9, no text."}
+    ]},
+    {"id":"scene_051","title":"Midpoint Perfect Oolong","summary":"The central miracle announces what Darwin truly is: an artist.","shots":[
+      {"id":"s051_sh001","duration_sec":10,"prompt":"Darwin begins an intricate oolong ritual at midnight, 16:9, no text."},
+      {"id":"s051_sh002","duration_sec":10,"prompt":"Maya, Nadia, Sarah, and Torres quietly witness him, 16:9, no text."},
+      {"id":"s051_sh003","duration_sec":10,"prompt":"Steam curls around Darwin like a halo, gentle wonder, 16:9, no text."},
+      {"id":"s051_sh004","duration_sec":10,"prompt":"Everyone tastes the perfect oolong in stunned silence, 16:9, no text."},
+      {"id":"s051_sh005","duration_sec":10,"prompt":"Torres says no cage should hold this, practical awe, 16:9, no text."},
+      {"id":"s051_sh006","duration_sec":10,"prompt":"Maya decides the world must know but safely, 16:9, no text."}
+    ]},
+    {"id":"scene_052","title":"Unmasked Tail","summary":"The secret leaks in the least terrifying way possible.","shots":[
+      {"id":"s052_sh001","duration_sec":10,"prompt":"Busy afternoon: Darwin's tail slips through curtain, 16:9, no text."},
+      {"id":"s052_sh002","duration_sec":10,"prompt":"Customer uses tail as coat rack by accident, comedy, 16:9, no text."},
+      {"id":"s052_sh003","duration_sec":10,"prompt":"Darwin freezes with enormous embarrassed eyes, 16:9, no text."},
+      {"id":"s052_sh004","duration_sec":10,"prompt":"Maya gently removes coat while deadpanning apology, 16:9, no text."},
+      {"id":"s052_sh005","duration_sec":10,"prompt":"A few regulars pretend not to notice, protective, 16:9, no text."},
+      {"id":"s052_sh006","duration_sec":10,"prompt":"A stranger outside snaps blurry reflection, danger, 16:9, no text."}
+    ]},
+    {"id":"scene_053","title":"Viral Dinosaur Rumor","summary":"Rumor turns tenderness into public spectacle.","shots":[
+      {"id":"s053_sh001","duration_sec":10,"prompt":"Phones glow around Portland with blurry dinosaur rumor, 16:9, no text."},
+      {"id":"s053_sh002","duration_sec":10,"prompt":"Crowds gather outside shop hoping for monster, 16:9, no text."},
+      {"id":"s053_sh003","duration_sec":10,"prompt":"Maya shuts blinds, furious at gawking, 16:9, no text."},
+      {"id":"s053_sh004","duration_sec":10,"prompt":"Darwin hears crowd and retreats behind tea sacks, 16:9, no text."},
+      {"id":"s053_sh005","duration_sec":10,"prompt":"Nadia tries to redirect attention to tea kindness, 16:9, no text."},
+      {"id":"s053_sh006","duration_sec":10,"prompt":"Moss smiles at the rumor from black car, 16:9, no text."}
+    ]},
+    {"id":"scene_054","title":"Health Hearing Summons","summary":"The city's paperwork becomes a stage for personhood.","shots":[
+      {"id":"s054_sh001","duration_sec":10,"prompt":"Torres delivers official city hearing notice, 16:9, no text."},
+      {"id":"s054_sh002","duration_sec":10,"prompt":"Maya reads it over crowded planning table, 16:9, no text."},
+      {"id":"s054_sh003","duration_sec":10,"prompt":"Darwin wears scarf like courtroom armor, 16:9, no text."},
+      {"id":"s054_sh004","duration_sec":10,"prompt":"Sarah says public proof may save him or doom him, 16:9, no text."},
+      {"id":"s054_sh005","duration_sec":10,"prompt":"Neighbors volunteer testimony with pastries and umbrellas, 16:9, no text."},
+      {"id":"s054_sh006","duration_sec":10,"prompt":"Maya stares at Jules's photo, asking courage, 16:9, no text."}
+    ]},
+    {"id":"scene_055","title":"Sarah Defects","summary":"Sarah crosses the line from guilt to action.","shots":[
+      {"id":"s055_sh001","duration_sec":10,"prompt":"Sarah arrives with boxes of hidden lab records, soaked, 16:9, no text."},
+      {"id":"s055_sh002","duration_sec":10,"prompt":"Maya helps her inside without a sarcastic shield, 16:9, no text."},
+      {"id":"s055_sh003","duration_sec":10,"prompt":"Darwin gently touches Sarah's shoulder with snout, 16:9, no text."},
+      {"id":"s055_sh004","duration_sec":10,"prompt":"Sarah breaks down, finally forgiven enough to fight, 16:9, no text."},
+      {"id":"s055_sh005","duration_sec":10,"prompt":"Nadia organizes files beside tea tins, 16:9, no text."},
+      {"id":"s055_sh006","duration_sec":10,"prompt":"Moss receives alert that Sarah is gone, 16:9, no text."}
+    ]},
+    {"id":"scene_056","title":"Victor's Sabotage Fails","summary":"Victor's last petty scheme turns into loyalty.","shots":[
+      {"id":"s056_sh001","duration_sec":10,"prompt":"Victor sneaks in with rival blend samples, guilty, 16:9, no text."},
+      {"id":"s056_sh002","duration_sec":10,"prompt":"He sees Darwin fully for first time and drops everything, 16:9, no text."},
+      {"id":"s056_sh003","duration_sec":10,"prompt":"Darwin waves shyly; Victor bows as to royalty, 16:9, no text."},
+      {"id":"s056_sh004","duration_sec":10,"prompt":"Victor confesses sabotage before anyone accuses him, 16:9, no text."},
+      {"id":"s056_sh005","duration_sec":10,"prompt":"Maya accepts his apology with lethal sarcasm, 16:9, no text."},
+      {"id":"s056_sh006","duration_sec":10,"prompt":"Victor offers his salon as decoy safe house, 16:9, no text."}
+    ]},
+    {"id":"scene_057","title":"Big Sad Back Room","summary":"Fear finally overwhelms Darwin and Maya.","shots":[
+      {"id":"s057_sh001","duration_sec":10,"prompt":"Darwin hides in dark back room, scarf beside him, 16:9, no text."},
+      {"id":"s057_sh002","duration_sec":10,"prompt":"Maya finds untouched tea leaves, worried, 16:9, no text."},
+      {"id":"s057_sh003","duration_sec":10,"prompt":"Darwin refuses to sniff, overwhelmed by crowd and lab, 16:9, no text."},
+      {"id":"s057_sh004","duration_sec":10,"prompt":"Maya snaps from exhaustion, immediately regrets it, 16:9, no text."},
+      {"id":"s057_sh005","duration_sec":10,"prompt":"Darwin curls smaller than seems possible, heartbreaking, 16:9, no text."},
+      {"id":"s057_sh006","duration_sec":10,"prompt":"Maya leaves him space, guilt on her face, 16:9, no text."}
+    ]},
+    {"id":"scene_058","title":"Maya Confesses Grief","summary":"Maya admits she has been hiding too.","shots":[
+      {"id":"s058_sh001","duration_sec":10,"prompt":"Maya sits on floor outside back room door, 16:9, no text."},
+      {"id":"s058_sh002","duration_sec":10,"prompt":"She tells Darwin about Jules and the shop dream, 16:9, no text."},
+      {"id":"s058_sh003","duration_sec":10,"prompt":"Darwin listens through cracked door, amber eye visible, 16:9, no text."},
+      {"id":"s058_sh004","duration_sec":10,"prompt":"Maya admits she made him save a thing she feared losing, 16:9, no text."},
+      {"id":"s058_sh005","duration_sec":10,"prompt":"Darwin nudges door open with soft chirp, 16:9, no text."},
+      {"id":"s058_sh006","duration_sec":10,"prompt":"They sit together without tea, just trust, 16:9, no text."}
+    ]},
+    {"id":"scene_059","title":"Darwin Breaks a Cup","summary":"A small accident becomes permission to be imperfect.","shots":[
+      {"id":"s059_sh001","duration_sec":10,"prompt":"Darwin tries returning to blending, nervous claws shaking, 16:9, no text."},
+      {"id":"s059_sh002","duration_sec":10,"prompt":"A favorite cup slips and shatters on tile, 16:9, no text."},
+      {"id":"s059_sh003","duration_sec":10,"prompt":"Darwin recoils, ashamed, expecting punishment, 16:9, no text."},
+      {"id":"s059_sh004","duration_sec":10,"prompt":"Maya sweeps calmly and says cups are not people, 16:9, no text."},
+      {"id":"s059_sh005","duration_sec":10,"prompt":"Nadia turns shards into mosaic greenhouse marker, 16:9, no text."},
+      {"id":"s059_sh006","duration_sec":10,"prompt":"Darwin exhales and picks a new leaf, 16:9, no text."}
+    ]},
+    {"id":"scene_060","title":"Act Two Low Tealight","summary":"The shop dims as Nexus prepares to move.","shots":[
+      {"id":"s060_sh001","duration_sec":10,"prompt":"Night: Steep & Leaf closes early, windows fogged, 16:9, no text."},
+      {"id":"s060_sh002","duration_sec":10,"prompt":"Maya counts fewer coins, success stalled by fear, 16:9, no text."},
+      {"id":"s060_sh003","duration_sec":10,"prompt":"Darwin watches happy customers outside but cannot join, 16:9, no text."},
+      {"id":"s060_sh004","duration_sec":10,"prompt":"Moss signs recovery order in sleek office, 16:9, no text."},
+      {"id":"s060_sh005","duration_sec":10,"prompt":"Sarah warns the team the order is imminent, 16:9, no text."},
+      {"id":"s060_sh006","duration_sec":10,"prompt":"Maya lights one tealight under Jules's photo, resolve, 16:9, no text."}
+    ]},
+    {"id":"scene_061","title":"Repairing Trust","summary":"Act Three begins with apology, tea, and a plan.","shots":[
+      {"id":"s061_sh001","duration_sec":10,"prompt":"Dawn in back room: Maya apologizes to Darwin plainly, 16:9, no text."},
+      {"id":"s061_sh002","duration_sec":10,"prompt":"Darwin answers by choosing leaves for her grief blend, 16:9, no text."},
+      {"id":"s061_sh003","duration_sec":10,"prompt":"Maya tastes and breathes fully, healing moment, 16:9, no text."},
+      {"id":"s061_sh004","duration_sec":10,"prompt":"Team gathers around table with maps and mugs, 16:9, no text."},
+      {"id":"s061_sh005","duration_sec":10,"prompt":"Victor arrives with pastries and dramatic humility, 16:9, no text."},
+      {"id":"s061_sh006","duration_sec":10,"prompt":"Darwin taps greenhouse sketch, future chosen, 16:9, no text."}
+    ]},
+    {"id":"scene_062","title":"Tea Therapy Morning","summary":"The shop reopens as a place of calm resistance.","shots":[
+      {"id":"s062_sh001","duration_sec":10,"prompt":"Maya opens doors to worried regulars, soft rain, 16:9, no text."},
+      {"id":"s062_sh002","duration_sec":10,"prompt":"Darwin blends gentle teas for courage and patience, 16:9, no text."},
+      {"id":"s062_sh003","duration_sec":10,"prompt":"Customers write support notes without readable text, 16:9, no text."},
+      {"id":"s062_sh004","duration_sec":10,"prompt":"Torres observes community safety in action, 16:9, no text."},
+      {"id":"s062_sh005","duration_sec":10,"prompt":"Nadia serves tea to reporters while redirecting spectacle, 16:9, no text."},
+      {"id":"s062_sh006","duration_sec":10,"prompt":"Maya prepares to speak publicly, hands steady, 16:9, no text."}
+    ]},
+    {"id":"scene_063","title":"Legal Personhood","summary":"The team reframes Darwin as neighbor, artist, and protected being.","shots":[
+      {"id":"s063_sh001","duration_sec":10,"prompt":"City law books share table with tea tins, 16:9, no text."},
+      {"id":"s063_sh002","duration_sec":10,"prompt":"Torres explains humane safety conditions to the team, 16:9, no text."},
+      {"id":"s063_sh003","duration_sec":10,"prompt":"Sarah identifies illegal ownership clauses in files, 16:9, no text."},
+      {"id":"s063_sh004","duration_sec":10,"prompt":"Victor rehearses grand testimony before unimpressed Maya, 16:9, no text."},
+      {"id":"s063_sh005","duration_sec":10,"prompt":"Darwin practices calm public bow in scarf, 16:9, no text."},
+      {"id":"s063_sh006","duration_sec":10,"prompt":"Maya writes the first honest statement of her life, 16:9, no text."}
+    ]},
+    {"id":"scene_064","title":"Moss's Warrant","summary":"The antagonist arrives with paper and polished certainty.","shots":[
+      {"id":"s064_sh001","duration_sec":10,"prompt":"Moss arrives at Steep & Leaf with agents and warrant, 16:9, no text."},
+      {"id":"s064_sh002","duration_sec":10,"prompt":"Maya stands in doorway, apron over black cardigan, 16:9, no text."},
+      {"id":"s064_sh003","duration_sec":10,"prompt":"Neighbors quietly step from shops into rain, 16:9, no text."},
+      {"id":"s064_sh004","duration_sec":10,"prompt":"Darwin watches from back, choosing not to run, 16:9, no text."},
+      {"id":"s064_sh005","duration_sec":10,"prompt":"Torres demands proper civic process, clipboard like shield, 16:9, no text."},
+      {"id":"s064_sh006","duration_sec":10,"prompt":"Moss postpones seizure until public hearing, furious smile, 16:9, no text."}
+    ]},
+    {"id":"scene_065","title":"Neighborhood Watch","summary":"Portland's oddballs become a protective web.","shots":[
+      {"id":"s065_sh001","duration_sec":10,"prompt":"Umbrella volunteers take corners around the shop, 16:9, no text."},
+      {"id":"s065_sh002","duration_sec":10,"prompt":"Baker delivers bread as code for all clear, 16:9, no text."},
+      {"id":"s065_sh003","duration_sec":10,"prompt":"Bike couriers circle blocks in cheerful surveillance, 16:9, no text."},
+      {"id":"s065_sh004","duration_sec":10,"prompt":"Mrs Patterson glares Nexus agents into retreat, 16:9, no text."},
+      {"id":"s065_sh005","duration_sec":10,"prompt":"Darwin peeks from upstairs window, touched, 16:9, no text."},
+      {"id":"s065_sh006","duration_sec":10,"prompt":"Maya realizes she is no longer alone, 16:9, no text."}
+    ]},
+    {"id":"scene_066","title":"Secret Tunnel of Canisters","summary":"A ludicrous escape route is built from tea infrastructure.","shots":[
+      {"id":"s066_sh001","duration_sec":10,"prompt":"Team moves giant tea canisters behind the shop, 16:9, no text."},
+      {"id":"s066_sh002","duration_sec":10,"prompt":"Victor over-engineers a rolling shelf with brass handles, 16:9, no text."},
+      {"id":"s066_sh003","duration_sec":10,"prompt":"Darwin tests passage, getting politely stuck once, 16:9, no text."},
+      {"id":"s066_sh004","duration_sec":10,"prompt":"Nadia greases wheels while laughing silently, 16:9, no text."},
+      {"id":"s066_sh005","duration_sec":10,"prompt":"Maya marks route to greenhouse with tea leaves, 16:9, no text."},
+      {"id":"s066_sh006","duration_sec":10,"prompt":"The absurd plan somehow works in rehearsal, 16:9, no text."}
+    ]},
+    {"id":"scene_067","title":"Preparing Festival Blend","summary":"The final tea must speak for Darwin when words cannot.","shots":[
+      {"id":"s067_sh001","duration_sec":10,"prompt":"Darwin begins festival blend with total concentration, 16:9, no text."},
+      {"id":"s067_sh002","duration_sec":10,"prompt":"Maya adds Jules's blank recipe card beside bowl, 16:9, no text."},
+      {"id":"s067_sh003","duration_sec":10,"prompt":"Sarah brings rare safe tea plants from Nexus greenhouse, 16:9, no text."},
+      {"id":"s067_sh004","duration_sec":10,"prompt":"Victor contributes his finest aged oolong, humbled, 16:9, no text."},
+      {"id":"s067_sh005","duration_sec":10,"prompt":"Darwin combines all gifts with delicate claw precision, 16:9, no text."},
+      {"id":"s067_sh006","duration_sec":10,"prompt":"Steam rises like promise over the whole team, 16:9, no text."}
+    ]},
+    {"id":"scene_068","title":"Victor Switches Sides","summary":"The rival becomes an advocate with theatrical force.","shots":[
+      {"id":"s068_sh001","duration_sec":10,"prompt":"Victor posts sign closing his salon for solidarity, 16:9, no text."},
+      {"id":"s068_sh002","duration_sec":10,"prompt":"He brings folding chairs to Steep & Leaf, grandly, 16:9, no text."},
+      {"id":"s068_sh003","duration_sec":10,"prompt":"Maya accepts help with suspicious gratitude, 16:9, no text."},
+      {"id":"s068_sh004","duration_sec":10,"prompt":"Victor and Darwin exchange solemn tea-master bow, 16:9, no text."},
+      {"id":"s068_sh005","duration_sec":10,"prompt":"Nadia captures alliance without revealing Darwin online, 16:9, no text."},
+      {"id":"s068_sh006","duration_sec":10,"prompt":"Moss sees rival shops united and looks alarmed, 16:9, no text."}
+    ]},
+    {"id":"scene_069","title":"Inspector's Checklist","summary":"Torres converts chaos into a plausible sanctuary plan.","shots":[
+      {"id":"s069_sh001","duration_sec":10,"prompt":"Torres inspects greenhouse with measuring tape, 16:9, no text."},
+      {"id":"s069_sh002","duration_sec":10,"prompt":"Darwin follows every rule with exaggerated seriousness, 16:9, no text."},
+      {"id":"s069_sh003","duration_sec":10,"prompt":"Maya labels handwashing station with pride, 16:9, no text."},
+      {"id":"s069_sh004","duration_sec":10,"prompt":"Nadia adds cozy visitor path through ferns, 16:9, no text."},
+      {"id":"s069_sh005","duration_sec":10,"prompt":"Torres checks final box and hides a smile, 16:9, no text."},
+      {"id":"s069_sh006","duration_sec":10,"prompt":"Darwin chirps like a kettle in celebration, 16:9, no text."}
+    ]},
+    {"id":"scene_070","title":"Sarah's Lab Files","summary":"The proof becomes ready for daylight.","shots":[
+      {"id":"s070_sh001","duration_sec":10,"prompt":"Sarah scans files in shop office under warm lamp, 16:9, no text."},
+      {"id":"s070_sh002","duration_sec":10,"prompt":"Blue flashback: Moss ordering accelerated trials, 16:9, no text."},
+      {"id":"s070_sh003","duration_sec":10,"prompt":"Sarah chooses the most damning page with shaking hand, 16:9, no text."},
+      {"id":"s070_sh004","duration_sec":10,"prompt":"Maya places tea beside Sarah without comment, 16:9, no text."},
+      {"id":"s070_sh005","duration_sec":10,"prompt":"Darwin adds one feather to evidence folder, symbolic, 16:9, no text."},
+      {"id":"s070_sh006","duration_sec":10,"prompt":"Nadia sends files to trusted reporters, no screen text, 16:9, no text."}
+    ]},
+    {"id":"scene_071","title":"Festival Begins","summary":"The Rose City Tea Festival becomes the public battleground.","shots":[
+      {"id":"s071_sh001","duration_sec":10,"prompt":"Festival hall blooms with steam, flowers, and banners, 16:9, no text."},
+      {"id":"s071_sh002","duration_sec":10,"prompt":"Maya sets up Steep & Leaf booth with calm focus, 16:9, no text."},
+      {"id":"s071_sh003","duration_sec":10,"prompt":"Darwin waits hidden in backstage plant display, scarf on, 16:9, no text."},
+      {"id":"s071_sh004","duration_sec":10,"prompt":"Victor distracts judges with theatrical tea history, 16:9, no text."},
+      {"id":"s071_sh005","duration_sec":10,"prompt":"Moss enters with agents and immaculate badge, 16:9, no text."},
+      {"id":"s071_sh006","duration_sec":10,"prompt":"Nadia signals the team: everything is happening now, 16:9, no text."}
+    ]},
+    {"id":"scene_072","title":"Blind Tasting","summary":"Darwin's artistry wins before his identity is known.","shots":[
+      {"id":"s072_sh001","duration_sec":10,"prompt":"Judges receive anonymous cups at long tasting table, 16:9, no text."},
+      {"id":"s072_sh002","duration_sec":10,"prompt":"Darwin blends backstage guided by scent alone, 16:9, no text."},
+      {"id":"s072_sh003","duration_sec":10,"prompt":"Maya carries tray with steady hands, 16:9, no text."},
+      {"id":"s072_sh004","duration_sec":10,"prompt":"Judges taste and fall into delighted silence, 16:9, no text."},
+      {"id":"s072_sh005","duration_sec":10,"prompt":"Victor applauds the unseen artist first, 16:9, no text."},
+      {"id":"s072_sh006","duration_sec":10,"prompt":"Moss realizes the blend can expose him, 16:9, no text."}
+    ]},
+    {"id":"scene_073","title":"Moss Crashes Booth","summary":"Corporate force breaks into the gentle festival.","shots":[
+      {"id":"s073_sh001","duration_sec":10,"prompt":"Moss confronts Maya at booth with agents behind him, 16:9, no text."},
+      {"id":"s073_sh002","duration_sec":10,"prompt":"Maya refuses to surrender her friend, voice steady, 16:9, no text."},
+      {"id":"s073_sh003","duration_sec":10,"prompt":"Festival crowd turns from tasting to watching, worried, 16:9, no text."},
+      {"id":"s073_sh004","duration_sec":10,"prompt":"Darwin hears fear and steps toward curtain, 16:9, no text."},
+      {"id":"s073_sh005","duration_sec":10,"prompt":"Sarah positions herself between Moss and backstage, 16:9, no text."},
+      {"id":"s073_sh006","duration_sec":10,"prompt":"Torres arrives with civic authority and raincoat, 16:9, no text."}
+    ]},
+    {"id":"scene_074","title":"Tail Under Table","summary":"Absurd concealment gives way to honest revelation.","shots":[
+      {"id":"s074_sh001","duration_sec":10,"prompt":"Darwin tries hiding under tasting table, impossible scale, 16:9, no text."},
+      {"id":"s074_sh002","duration_sec":10,"prompt":"His feathered tail pokes out between tablecloths, comedy, 16:9, no text."},
+      {"id":"s074_sh003","duration_sec":10,"prompt":"A judge gently lifts cloth and meets huge kind eyes, 16:9, no text."},
+      {"id":"s074_sh004","duration_sec":10,"prompt":"Darwin offers the judge a tasting spoon, polite, 16:9, no text."},
+      {"id":"s074_sh005","duration_sec":10,"prompt":"The crowd gasps, then softens at his gentleness, 16:9, no text."},
+      {"id":"s074_sh006","duration_sec":10,"prompt":"Maya steps beside Darwin, done hiding, 16:9, no text."}
+    ]},
+    {"id":"scene_075","title":"The City Laughs","summary":"Fear dissolves into laughter at Darwin's impeccable manners.","shots":[
+      {"id":"s075_sh001","duration_sec":10,"prompt":"Darwin bows to festival crowd, scarf askew, 16:9, no text."},
+      {"id":"s075_sh002","duration_sec":10,"prompt":"A toddler offers cookie; Darwin sniffs politely, 16:9, no text."},
+      {"id":"s075_sh003","duration_sec":10,"prompt":"Crowd laughs warmly, tension breaking, 16:9, no text."},
+      {"id":"s075_sh004","duration_sec":10,"prompt":"Moss tries to restore fear and fails, 16:9, no text."},
+      {"id":"s075_sh005","duration_sec":10,"prompt":"Victor dabs eyes with pocket square, 16:9, no text."},
+      {"id":"s075_sh006","duration_sec":10,"prompt":"Darwin chirps like a tea kettle, winning hearts, 16:9, no text."}
+    ]},
+    {"id":"scene_076","title":"Seizure Attempt","summary":"Moss makes his move, and the community refuses panic.","shots":[
+      {"id":"s076_sh001","duration_sec":10,"prompt":"Agents move toward Darwin with soft restraints, no violence, 16:9, no text."},
+      {"id":"s076_sh002","duration_sec":10,"prompt":"Darwin stands still, scared but trusting Maya, 16:9, no text."},
+      {"id":"s076_sh003","duration_sec":10,"prompt":"Maya places herself between Darwin and agents, 16:9, no text."},
+      {"id":"s076_sh004","duration_sec":10,"prompt":"Torres demands lawful pause under public scrutiny, 16:9, no text."},
+      {"id":"s076_sh005","duration_sec":10,"prompt":"Sarah raises evidence drive for reporters to see, 16:9, no text."},
+      {"id":"s076_sh006","duration_sec":10,"prompt":"Festival crowd closes ranks calmly, cups in hand, 16:9, no text."}
+    ]},
+    {"id":"scene_077","title":"Human Tea Wall","summary":"Customers become a gentle barricade of chosen family.","shots":[
+      {"id":"s077_sh001","duration_sec":10,"prompt":"Neighbors form semicircle around Darwin and Maya, 16:9, no text."},
+      {"id":"s077_sh002","duration_sec":10,"prompt":"Mrs Patterson stands front with lavender raincoat, fearless, 16:9, no text."},
+      {"id":"s077_sh003","duration_sec":10,"prompt":"Bike couriers, bakers, busker, and critics join, 16:9, no text."},
+      {"id":"s077_sh004","duration_sec":10,"prompt":"Victor leads polite chant without readable signs, 16:9, no text."},
+      {"id":"s077_sh005","duration_sec":10,"prompt":"Darwin sees he is protected, tears in amber eyes, 16:9, no text."},
+      {"id":"s077_sh006","duration_sec":10,"prompt":"Moss is isolated by the community's calm, 16:9, no text."}
+    ]},
+    {"id":"scene_078","title":"Darwin Chooses Stillness","summary":"Darwin proves safety through patience, not spectacle.","shots":[
+      {"id":"s078_sh001","duration_sec":10,"prompt":"Darwin lowers himself to floor, making himself gentle, 16:9, no text."},
+      {"id":"s078_sh002","duration_sec":10,"prompt":"He lets Torres perform calm safety check, 16:9, no text."},
+      {"id":"s078_sh003","duration_sec":10,"prompt":"A child places flower on Darwin's scarf, 16:9, no text."},
+      {"id":"s078_sh004","duration_sec":10,"prompt":"Darwin does not flinch, only chirps softly, 16:9, no text."},
+      {"id":"s078_sh005","duration_sec":10,"prompt":"Reporters lower cameras, moved by quiet trust, 16:9, no text."},
+      {"id":"s078_sh006","duration_sec":10,"prompt":"Maya realizes Darwin saved himself by being himself, 16:9, no text."}
+    ]},
+    {"id":"scene_079","title":"Maya's Speech","summary":"Maya finally speaks without hiding behind sarcasm.","shots":[
+      {"id":"s079_sh001","duration_sec":10,"prompt":"Maya stands beside Darwin before festival crowd, 16:9, no text."},
+      {"id":"s079_sh002","duration_sec":10,"prompt":"She touches ring necklace and breathes through grief, 16:9, no text."},
+      {"id":"s079_sh003","duration_sec":10,"prompt":"Maya calls Darwin an artist, neighbor, and friend, 16:9, no text."},
+      {"id":"s079_sh004","duration_sec":10,"prompt":"Crowd listens in warm hush, steam in the air, 16:9, no text."},
+      {"id":"s079_sh005","duration_sec":10,"prompt":"Darwin leans gently against Maya's shoulder, 16:9, no text."},
+      {"id":"s079_sh006","duration_sec":10,"prompt":"Even Torres blinks away emotion behind glasses, 16:9, no text."}
+    ]},
+    {"id":"scene_080","title":"Sarah Releases Proof","summary":"Sarah burns her old life to protect Darwin's new one.","shots":[
+      {"id":"s080_sh001","duration_sec":10,"prompt":"Sarah steps to reporters with evidence drive, 16:9, no text."},
+      {"id":"s080_sh002","duration_sec":10,"prompt":"Blue flashback images imply illegal experiments, no gore, 16:9, no text."},
+      {"id":"s080_sh003","duration_sec":10,"prompt":"Moss tries to interrupt with corporate charm, 16:9, no text."},
+      {"id":"s080_sh004","duration_sec":10,"prompt":"Sarah keeps speaking, fear turning into freedom, 16:9, no text."},
+      {"id":"s080_sh005","duration_sec":10,"prompt":"Reporters surround Moss instead of Darwin, 16:9, no text."},
+      {"id":"s080_sh006","duration_sec":10,"prompt":"Darwin watches Sarah with forgiveness and pride, 16:9, no text."}
+    ]},
+    {"id":"scene_081","title":"Victor's Grand Testimony","summary":"Victor turns theatrical ego into public love.","shots":[
+      {"id":"s081_sh001","duration_sec":10,"prompt":"Victor sweeps forward like tea-court barrister, 16:9, no text."},
+      {"id":"s081_sh002","duration_sec":10,"prompt":"He declares Darwin the finest palate in Portland, 16:9, no text."},
+      {"id":"s081_sh003","duration_sec":10,"prompt":"Maya tries not to laugh during his grand pauses, 16:9, no text."},
+      {"id":"s081_sh004","duration_sec":10,"prompt":"Victor admits rivalry made him better and kinder, 16:9, no text."},
+      {"id":"s081_sh005","duration_sec":10,"prompt":"Darwin bows to Victor; Victor nearly faints with honor, 16:9, no text."},
+      {"id":"s081_sh006","duration_sec":10,"prompt":"Crowd applauds the absurd sincerity, 16:9, no text."}
+    ]},
+    {"id":"scene_082","title":"Inspector Rules","summary":"Torres finds a lawful path through impossible facts.","shots":[
+      {"id":"s082_sh001","duration_sec":10,"prompt":"Torres consults city officials at festival side table, 16:9, no text."},
+      {"id":"s082_sh002","duration_sec":10,"prompt":"Maya waits with clenched mug, Darwin beside her, 16:9, no text."},
+      {"id":"s082_sh003","duration_sec":10,"prompt":"Torres announces temporary protected sanctuary status, 16:9, no text."},
+      {"id":"s082_sh004","duration_sec":10,"prompt":"Nexus agents lower restraints and step back, 16:9, no text."},
+      {"id":"s082_sh005","duration_sec":10,"prompt":"Moss's perfect smile cracks under public defeat, 16:9, no text."},
+      {"id":"s082_sh006","duration_sec":10,"prompt":"Darwin chirps, and the festival erupts in relief, 16:9, no text."}
+    ]},
+    {"id":"scene_083","title":"Rain Chase Without Chase","summary":"Moss tries one last exit strategy and is undone by Portland politeness.","shots":[
+      {"id":"s083_sh001","duration_sec":10,"prompt":"Moss slips toward service exit with evidence folder, 16:9, no text."},
+      {"id":"s083_sh002","duration_sec":10,"prompt":"Bike couriers block him by offering directions, 16:9, no text."},
+      {"id":"s083_sh003","duration_sec":10,"prompt":"Mrs Patterson delays him with lethal small talk, 16:9, no text."},
+      {"id":"s083_sh004","duration_sec":10,"prompt":"Victor spills tea theatrically near Moss's shoes, 16:9, no text."},
+      {"id":"s083_sh005","duration_sec":10,"prompt":"Torres takes folder back with bureaucratic grace, 16:9, no text."},
+      {"id":"s083_sh006","duration_sec":10,"prompt":"Moss exits into rain, defeated by manners, 16:9, no text."}
+    ]},
+    {"id":"scene_084","title":"Greenhouse Plan","summary":"The future becomes practical, communal, and green.","shots":[
+      {"id":"s084_sh001","duration_sec":10,"prompt":"Team returns to abandoned greenhouse after festival, 16:9, no text."},
+      {"id":"s084_sh002","duration_sec":10,"prompt":"Torres posts temporary permit without readable detail, 16:9, no text."},
+      {"id":"s084_sh003","duration_sec":10,"prompt":"Nadia sketches visitor paths and tea plant beds, 16:9, no text."},
+      {"id":"s084_sh004","duration_sec":10,"prompt":"Victor offers salon chairs for sanctuary seating, 16:9, no text."},
+      {"id":"s084_sh005","duration_sec":10,"prompt":"Sarah plants first rescued tea sapling with Darwin, 16:9, no text."},
+      {"id":"s084_sh006","duration_sec":10,"prompt":"Maya sees Jules's dream expanding, not ending, 16:9, no text."}
+    ]},
+    {"id":"scene_085","title":"Court of Public Opinion","summary":"The city chooses wonder over ownership.","shots":[
+      {"id":"s085_sh001","duration_sec":10,"prompt":"Montage: Portland cafes serve support blends, 16:9, no text."},
+      {"id":"s085_sh002","duration_sec":10,"prompt":"News cameras gather outside Nexus offices, 16:9, no text."},
+      {"id":"s085_sh003","duration_sec":10,"prompt":"Moss watches stock ticker glow, isolated, no readable text, 16:9, no text."},
+      {"id":"s085_sh004","duration_sec":10,"prompt":"Sarah meets ethics board with calm honesty, 16:9, no text."},
+      {"id":"s085_sh005","duration_sec":10,"prompt":"Darwin tends greenhouse seedlings away from spectacle, 16:9, no text."},
+      {"id":"s085_sh006","duration_sec":10,"prompt":"Maya hangs new community schedule in shop, unreadable, 16:9, no text."}
+    ]},
+    {"id":"scene_086","title":"Opening Sanctuary","summary":"Steep & Leaf reopens with a safe place for its impossible tea master.","shots":[
+      {"id":"s086_sh001","duration_sec":10,"prompt":"Greenhouse sanctuary opens behind shop, ferns and skylights, 16:9, no text."},
+      {"id":"s086_sh002","duration_sec":10,"prompt":"Darwin walks dinosaur-scale path in moss scarf, 16:9, no text."},
+      {"id":"s086_sh003","duration_sec":10,"prompt":"Visitors sip quietly at communal tables, respectful wonder, 16:9, no text."},
+      {"id":"s086_sh004","duration_sec":10,"prompt":"Torres inspects and smiles openly for once, 16:9, no text."},
+      {"id":"s086_sh005","duration_sec":10,"prompt":"Nadia guides guests with warmth and boundaries, 16:9, no text."},
+      {"id":"s086_sh006","duration_sec":10,"prompt":"Maya watches Darwin safe in sunlight, 16:9, no text."}
+    ]},
+    {"id":"scene_087","title":"Jules's Final Blend","summary":"Maya finishes the card she could not write.","shots":[
+      {"id":"s087_sh001","duration_sec":10,"prompt":"Maya opens Jules's blank card at greenhouse table, 16:9, no text."},
+      {"id":"s087_sh002","duration_sec":10,"prompt":"Darwin brings cedar, citrus, oolong, and rain-wet mint, 16:9, no text."},
+      {"id":"s087_sh003","duration_sec":10,"prompt":"Maya blends by memory while Darwin assists, 16:9, no text."},
+      {"id":"s087_sh004","duration_sec":10,"prompt":"Steam reveals warmth instead of grief, 16:9, no text."},
+      {"id":"s087_sh005","duration_sec":10,"prompt":"Maya tastes and smiles to Jules's photo, 16:9, no text."},
+      {"id":"s087_sh006","duration_sec":10,"prompt":"She writes the card at last, unreadable but complete, 16:9, no text."}
+    ]},
+    {"id":"scene_088","title":"Perfect Oolong","summary":"Darwin's masterpiece becomes a ritual of belonging.","shots":[
+      {"id":"s088_sh001","duration_sec":10,"prompt":"Evening tasting: Darwin prepares perfect oolong publicly, 16:9, no text."},
+      {"id":"s088_sh002","duration_sec":10,"prompt":"Maya narrates with dry tenderness, no fear in room, 16:9, no text."},
+      {"id":"s088_sh003","duration_sec":10,"prompt":"Victor, Sarah, Torres, Nadia, and regulars watch, 16:9, no text."},
+      {"id":"s088_sh004","duration_sec":10,"prompt":"Darwin serves first cup to Mrs Patterson, 16:9, no text."},
+      {"id":"s088_sh005","duration_sec":10,"prompt":"Everyone sips as greenhouse rain taps glass, 16:9, no text."},
+      {"id":"s088_sh006","duration_sec":10,"prompt":"Darwin glows with quiet artist pride, 16:9, no text."}
+    ]},
+    {"id":"scene_089","title":"Found Family Toast","summary":"The odd couple becomes a whole community.","shots":[
+      {"id":"s089_sh001","duration_sec":10,"prompt":"Long table dinner in greenhouse, tea cups instead of wine, 16:9, no text."},
+      {"id":"s089_sh002","duration_sec":10,"prompt":"Maya toasts chosen family with wry gratitude, 16:9, no text."},
+      {"id":"s089_sh003","duration_sec":10,"prompt":"Nadia laughs with Sarah over mislabeled tea tins, 16:9, no text."},
+      {"id":"s089_sh004","duration_sec":10,"prompt":"Victor and Torres debate regulations like flirting, 16:9, no text."},
+      {"id":"s089_sh005","duration_sec":10,"prompt":"Darwin curls nearby, included not hidden, 16:9, no text."},
+      {"id":"s089_sh006","duration_sec":10,"prompt":"Maya's ring catches amber light, grief transformed, 16:9, no text."}
+    ]},
+    {"id":"scene_090","title":"Steam and Feathers","summary":"The film closes on an open shop, a safe dinosaur, and perfect oolong.","shots":[
+      {"id":"s090_sh001","duration_sec":10,"prompt":"Morning at Steep & Leaf: open doors, rain, warm lamps, 16:9, no text."},
+      {"id":"s090_sh002","duration_sec":10,"prompt":"Maya jokes with line of customers, alive and present, 16:9, no text."},
+      {"id":"s090_sh003","duration_sec":10,"prompt":"Darwin sniffs spring air from greenhouse doorway, free, 16:9, no text."},
+      {"id":"s090_sh004","duration_sec":10,"prompt":"A new customer sees Darwin and simply smiles, 16:9, no text."},
+      {"id":"s090_sh005","duration_sec":10,"prompt":"Maya and Darwin share a look over rising steam, 16:9, no text."},
+      {"id":"s090_sh006","duration_sec":10,"prompt":"Final image: tea steam and iridescent feathers in golden light, 16:9, no text."}
+    ]}
   ]
 }

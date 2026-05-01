@@ -1,91 +1,198 @@
 {
   "title": "Veloci-Tea",
+  "logline": "A sarcastic, grieving Portland tea-shop owner hides a gentle genetically engineered velociraptor whose miraculous nose turns him into the city's most unlikely tea sommelier, forcing both of them to choose community over fear when the lab that made him comes calling.",
   "aspect_ratio": "16:9",
   "fps": 24,
+  "tone": "Whimsical indie comedy; heartwarming odd-couple friendship; Amelie-like visual charm with Paddington-like kindness; never horror.",
+  "era": "Contemporary Portland, Oregon, during a rainy spring tea season.",
   "characters": [
     {
       "id": "darwin",
-      "name": "Darwin (Velvet)",
-      "description": "Genetically engineered Velociraptor, ~7 feet tall, iridescent feathers, large expressive intelligent eyes, hyper-refined sense of smell, gentle and curious, learns human connection, becomes tea sommelier"
+      "name": "Darwin, nicknamed Velvet",
+      "description": "A 7-foot genetically engineered feathered velociraptor with a refined scent palate and a gentle soul who becomes a Michelin-level sommelier for tea.",
+      "wardrobe": "Soft oversized hand-knit scarf in moss green when in the tea shop; later a tiny canvas apron adapted for his frame.",
+      "profile": {
+        "physical_signature": "Tall feathered velociraptor, iridescent teal-and-amber plumage, expressive brows, careful talons, long balancing tail, non-threatening posture.",
+        "face": "Large vulnerable intelligent eyes, delicate nostrils, curious head tilts, subtle beak-like snout softened by feather tufts.",
+        "eyes": "Huge glossy amber eyes, gentle and observant.",
+        "body": "Seven feet tall but folded politely in cramped rooms; agile yet careful around fragile teacups.",
+        "movement": "Birdlike head bobs, precise sniffing rituals, delicate claw gestures, comedic attempts to look small.",
+        "personality": "Gentle, fastidious, shy, secretly proud of perfect blends, allergic to cruelty, loves steam and bergamot.",
+        "voice": "Nonverbal: chirps, trills, soft warbles, tea-kettle sighs, expressive timing.",
+        "consistency_notes": "Always portray Darwin as endearing, safe, and emotionally readable, never monstrous or predatory.",
+        "negative_prompt": "scary dinosaur, gore, fangs bared, attack pose, horror lighting, roaring monster, violent chase"
+      }
     },
     {
       "id": "maya_chen",
       "name": "Maya Chen",
-      "description": "Late 30s, burnt-out widow, sarcastic but warm heart, runs failing tea shop, speaks to plants, former zoology student, takes in Darwin, discovers his talent"
+      "description": "Late-30s widow and owner of Steep & Leaf, sarcastic and exhausted, once studied zoology, still grieving her late husband Jules while trying to keep his dream shop alive.",
+      "wardrobe": "Soft black cardigans, rolled sleeves, tea-stained apron, practical boots, silver wedding ring on a chain.",
+      "profile": {
+        "physical_signature": "Chinese-American woman with tired warmth, expressive dry wit, and hands always dusted with tea leaves.",
+        "face": "Wry half-smile, guarded eyes that soften around Darwin and regulars.",
+        "hair": "Dark shoulder-length hair usually tied in a messy low bun with loose strands.",
+        "eyes": "Deep brown, skeptical at first, brightening as hope returns.",
+        "body": "Average height, slightly stooped from fatigue, gradually more open and playful.",
+        "movement": "Efficient shopkeeper motions, deadpan pauses, protective stance when Darwin is threatened.",
+        "personality": "Sarcastic, compassionate, grief-armored, resourceful, quietly brave.",
+        "voice": "Dry, quick, low warmth underneath every joke.",
+        "consistency_notes": "Her arc is from burnt-out isolation to chosen-family leadership; keep humor kind, not cruel."
+      }
     },
     {
       "id": "dr_sarah_chen",
       "name": "Dr. Sarah Chen",
-      "description": "40s, guilt-ridden geneticist who created Darwin, works at Nexus BioTech, tracks him to Portland, becomes ally"
+      "description": "A guilt-ridden Nexus BioTech geneticist who helped create Darwin and becomes an ally after seeing him loved as a person rather than property.",
+      "wardrobe": "Minimal raincoat over lab-neat clothes, later borrowed tea-shop apron during the finale.",
+      "profile": {
+        "physical_signature": "Forties, precise posture, anxious intelligence, kind eyes behind rectangular glasses.",
+        "hair": "Short black bob, practical and neat.",
+        "eyes": "Dark, watchful, often conflicted.",
+        "movement": "Measured scientist gestures that become looser when she joins the community.",
+        "personality": "Ethical but compromised, remorseful, brave under pressure.",
+        "voice": "Careful and technical until emotion breaks through.",
+        "consistency_notes": "Not a villain; she carries responsibility and chooses repair."
+      }
     },
     {
       "id": "director_moss",
       "name": "Director Moss",
-      "description": "50s, cold corporate enforcer from Nexus BioTech, wants to reclaim Darwin"
+      "description": "Nexus BioTech's polished corporate enforcer who treats Darwin as intellectual property and underestimates Portland's tea community.",
+      "wardrobe": "Immaculate charcoal suit, clear umbrella, black gloves, glossy shoes never suited for rain.",
+      "profile": {
+        "physical_signature": "Fifties, controlled smile, silver hair, predatory calm without making the film scary.",
+        "eyes": "Pale and calculating.",
+        "movement": "Still, economical, corporate boardroom precision.",
+        "personality": "Cold, image-conscious, legally slippery, offended by sincerity.",
+        "voice": "Silky corporate menace, always polite.",
+        "consistency_notes": "Antagonist energy should be satirical and corporate, not horror."
+      }
     },
     {
       "id": "victor_hale",
       "name": "Victor Hale",
-      "description": "Rival tea shop owner, business rival, eventually becomes friend"
+      "description": "A flamboyantly competitive rival tea-shop owner whose jealousy turns into admiration and allyship.",
+      "wardrobe": "Patterned waistcoats, pocket squares, vintage spectacles, immaculate moustache.",
+      "profile": {
+        "physical_signature": "Forties, theatrical eyebrows, precise moustache, fussy elegance.",
+        "movement": "Grand gestures, dramatic sniffing, comic indignation.",
+        "personality": "Vain, lonely, secretly generous, loves tea as much as attention.",
+        "voice": "Operatic baritone with wounded pride.",
+        "consistency_notes": "Rival but never cruel; his conversion is sincere and funny."
+      }
     },
     {
       "id": "inspector_torres",
       "name": "Inspector Linda Torres",
-      "description": "Health inspector, pragmatic and fair, becomes ally"
+      "description": "A pragmatic health inspector who starts as an obstacle and becomes the legal backbone of Darwin's protection.",
+      "wardrobe": "City rain jacket, clipboard, sensible shoes, reading glasses on a chain.",
+      "profile": {
+        "physical_signature": "Fifties, practical presence, unimpressed eyebrow, hidden softness.",
+        "movement": "Clipboard taps, decisive turns, calm authority.",
+        "personality": "Fair, rules-minded, allergic to nonsense, unexpectedly sentimental.",
+        "voice": "Matter-of-fact, dryly funny.",
+        "consistency_notes": "She enforces rules but recognizes personhood and public safety through compassion."
+      }
+    },
+    {
+      "id": "nadia_patel",
+      "name": "Nadia Patel",
+      "description": "Maya's loyal barista, grad-student poet, and social-media realist who helps translate Darwin's blends into a neighborhood phenomenon.",
+      "wardrobe": "Colorful beanies, denim jacket with enamel pins, shop apron covered in tiny tea stains.",
+      "profile": {
+        "physical_signature": "Twenties, bright quick eyes, energetic warmth.",
+        "movement": "Fast multitasking, phone-camera framing, nervous dancing when excited.",
+        "personality": "Hopeful, witty, loyal, digitally savvy, sentimental about community.",
+        "voice": "Fast, playful, emotionally direct.",
+        "consistency_notes": "She supplies modern comedy and helps the shop's revival feel plausible."
+      }
     },
     {
       "id": "mrs_patterson",
       "name": "Mrs. Patterson",
-      "description": "Elderly regular customer, warm community member"
-    },
-    {
-      "id": "tom_regular",
-      "name": "Tom",
-      "description": "Regular customer, tea enthusiast"
+      "description": "An elderly regular who misses Maya's late husband and becomes the first customer to notice the new blends healing people.",
+      "wardrobe": "Lavender raincoat, knitted hat, flowered scarf, reusable mug.",
+      "profile": {
+        "physical_signature": "Small elderly woman with mischievous eyes and a warm, steady presence.",
+        "movement": "Slow careful steps, sudden comic sharpness.",
+        "personality": "Kind, nosy, fearless in the way only beloved elders can be.",
+        "voice": "Soft but devastatingly observant.",
+        "consistency_notes": "She treats Darwin like a shy grandchild, not a monster."
+      }
     }
   ],
   "locations": [
     {
       "id": "nexus_lab",
       "name": "Nexus BioTech Lab",
-      "description": "Shady underground lab, dark corridors, blue neon, high-tech, sterile"
+      "description": "Sterile underground biotech facility outside Portland with cool blue glass corridors, humming freezers, coded doors, and satirical corporate wellness posters."
     },
     {
-      "id": "tea_shop",
-      "name": "Steep & Leaf Tea Shop",
-      "description": "Failing Portland tea shop, cozy cluttered, warm amber light, tea canisters, chalkboard"
+      "id": "tea_shop_front",
+      "name": "Steep & Leaf Front Room",
+      "description": "Failing but cozy artisanal tea shop in Portland: warm amber lamps, mismatched chairs, chalkboard menu, dusty plants, old pastry case, and rows of labeled tea tins."
+    },
+    {
+      "id": "tea_shop_back",
+      "name": "Steep & Leaf Back Room",
+      "description": "Cluttered storage and blending room with sacks of tea, tasting spoons, handwritten invoices, cracked skylight, and enough space for Darwin only if he folds himself politely."
     },
     {
       "id": "portland_streets",
-      "name": "Portland Streets",
-      "description": "Rainy night streets, neon signs, urban atmosphere"
+      "name": "Rainy Portland Streets",
+      "description": "Rain-slick sidewalks, bike lanes, food carts, bookshops, mural walls, soft neon reflections, cozy grey skies, and umbrellas everywhere."
     },
     {
-      "id": "zoo_sanctuary",
-      "name": "Oregon Zoo Sanctuary",
-      "description": "Custom habitat for Darwin, natural lighting, safe environment"
+      "id": "victors_shop",
+      "name": "Victor's Tea Salon",
+      "description": "Overdesigned rival tea salon with polished brass, velvet chairs, precise shelves, and almost no customers at first."
+    },
+    {
+      "id": "farmers_market",
+      "name": "Portland Farmers Market",
+      "description": "Open-air market with flower stalls, handmade ceramics, buskers, seasonal produce, rain canopies, and curious neighbors."
+    },
+    {
+      "id": "city_hall",
+      "name": "Portland City Hall",
+      "description": "Civic chambers and wet stone steps where public testimony turns absurd legal questions into heartfelt community action."
+    },
+    {
+      "id": "tea_festival",
+      "name": "Rose City Tea Festival",
+      "description": "Whimsical festival hall with booths, steam, banners, tasting tables, flower arrangements, and theatrical tea competitions."
+    },
+    {
+      "id": "sanctuary_greenhouse",
+      "name": "Community Tea Greenhouse Sanctuary",
+      "description": "Final shared greenhouse behind the shop, filled with tea plants, ferns, skylights, safe dinosaur-scale paths, and communal tables."
     }
   ],
   "visual_rules": {
     "do": [
-      "Warm amber/golden light for tea shop scenes",
-      "Show Darwin with large vulnerable intelligent eyes",
-      "Include tea canisters, chalkboards, brewing equipment",
-      "Portland cozy aesthetic",
-      "Darwin sniffing tea with precision",
-      "Non-scary, heartwarming tone throughout"
+      "Use warm amber and honey light for Steep & Leaf scenes, even when the story is sad.",
+      "Keep Darwin gentle, vulnerable, precise, and charming in every shot.",
+      "Show tea as tactile and aromatic: steam curls, tasting spoons, labeled tins, petals, citrus peel, oolong leaves.",
+      "Maintain whimsical Portland indie-comedy production design with rain, murals, food carts, plants, bookstores, and handmade objects.",
+      "Let comedy come from scale, manners, deadpan reactions, and emotional honesty.",
+      "Use recurring visual motifs: steam halos, umbrellas, the green scarf, Maya's wedding ring necklace, handwritten blend cards."
     ],
     "dont": [
-      "Never make Darwin look threatening",
-      "Avoid dark menacing shadows",
-      "No text overlays",
-      "No scary lab imagery in tea shop"
+      "Do not make Darwin scary, predatory, violent, or monstrous.",
+      "No gore, attacks, horror shadows, militarized spectacle, or screaming crowds.",
+      "No text overlays or readable generated text beyond natural-looking labels on props.",
+      "Do not contradict character locks; avoid changing Darwin's feather colors, Maya's core wardrobe, or Moss's corporate style.",
+      "Do not turn the story into action sci-fi; keep it an odd-couple community comedy."
     ],
     "color_palette": [
-      "Warm amber/golden for tea shop",
-      "Cool blue for lab scenes",
-      "Earth tones for tea",
-      "Soft pastels for community"
+      "Warm amber tea-shop glow",
+      "Soft Portland grey rain",
+      "Moss green scarf and plant tones",
+      "Iridescent teal and amber feathers",
+      "Cool biotech blue only for Nexus scenes",
+      "Rose, lavender, citrus, and honey accents"
     ]
-  }
+  },
+  "reference_notes": "Feature-length target is exactly 90 minutes: 540 shots at 10 seconds each, organized as 90 one-minute scenes with six shots per scene. Prioritize continuity, gentle humor, and a complete three-act feature arc without downscaling."
 }
