@@ -44,7 +44,7 @@ studio render-all
 studio assemble --output dist/final.mp4
 ```
 
-- `**plan**`: Validate JSON files against schemas.
+- `**plan**`: Validate JSON files against schemas and write resolved per-shot prompt sidecars to `clips/*.prompt.txt`.
 - `**provider**`: Show the resolved video provider from `.env`.
 - `**render` / `render-all**`: Generate clips — built-ins `openrouter`, `fal`, `replicate`, `xai`, `custom` (ffmpeg preview; `mock` is an alias), or **any HTTP API** via JSON (`[providers/README.md](providers/README.md)`, `VIDEO_PROVIDER=http` + `STUDIO_PROVIDER_CONFIG`).
 - `**validate-provider`**: Check a provider JSON file against the schema.

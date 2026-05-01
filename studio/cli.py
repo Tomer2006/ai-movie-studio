@@ -18,7 +18,7 @@ from studio.providers import configured_provider_raw, describe_provider, get_pro
 from studio.providers.configurable import ConfigurableHttpProvider
 from studio.providers.custom import CustomVideoProvider
 from studio.review_sheet import render_review_sheet, review_sheet_path
-from studio.scenes_io import ShotRef, clip_path, find_shot, iter_shots
+from studio.scenes_io import ShotRef, clip_path, find_shot, iter_shots, prompt_path
 from studio.validate import (
     load_and_validate_bible,
     load_and_validate_scenes,
@@ -51,6 +51,29 @@ def _render_kwargs_for_shot(shot_ref: ShotRef, bible_doc: dict[str, Any]) -> dic
     }
 
 
+def _prompt_document(prompt: str, negative_prompt: str | None) -> str:
+    parts = [prompt.strip()]
+    if negative_prompt and negative_prompt.strip():
+        parts.append(negative_prompt.strip())
+    return "\n\n".join(parts)
+
+
+def _write_prompt_sidecars(
+    *, scenes_doc: dict[str, Any], bible_doc: dict[str, Any], clips_dir: Path
+) -> list[Path]:
+    clips_dir.mkdir(parents=True, exist_ok=True)
+    paths: list[Path] = []
+    for ref in iter_shots(scenes_doc):
+        render_kwargs = _render_kwargs_for_shot(ref, bible_doc)
+        path = prompt_path(clips_dir, ref.scene_id, ref.shot_id)
+        path.write_text(
+            _prompt_document(render_kwargs["prompt"], render_kwargs["negative_prompt"]),
+            encoding="utf-8",
+        )
+        paths.append(path)
+    return paths
+
+
 @app.command("provider")
 def provider_cmd() -> None:
     """Show which video provider is configured and resolved (custom, openrouter, fal, xai, replicate, http)."""
@@ -76,14 +99,20 @@ def plan_cmd(
         Optional[Path], typer.Option("--bible", help="continuity_bible.json path")
     ] = None,
     scenes: Annotated[Optional[Path], typer.Option("--scenes", help="scenes.json path")] = None,
+    clips_dir: Annotated[Optional[Path], typer.Option("--clips-dir")] = None,
 ) -> None:
-    """Validate continuity bible and scenes against JSON Schema."""
+    """Validate continuity bible/scenes and write per-shot prompt files."""
     root = repo_root()
     bp = bible or (root / "continuity_bible.json")
     sp = scenes or (root / "scenes.json")
-    load_and_validate_bible(bp)
-    load_and_validate_scenes(sp)
+    bible_doc = load_and_validate_bible(bp)
+    scenes_doc = load_and_validate_scenes(sp)
     typer.echo(f"OK: {bp} and {sp} are valid.")
+    cdir = clips_dir or (root / "clips")
+    prompt_files = _write_prompt_sidecars(
+        scenes_doc=scenes_doc, bible_doc=bible_doc, clips_dir=cdir
+    )
+    typer.echo(f"Wrote {len(prompt_files)} prompt files to {cdir}.")
 
 
 @app.command("render")

@@ -51,3 +51,7 @@ def clip_path(clips_dir: Path, scene_id: str, shot_id: str) -> Path:
     safe_scene = scene_id.replace("/", "_")
     safe_shot = shot_id.replace("/", "_")
     return clips_dir / f"{safe_scene}__{safe_shot}.mp4"
+
+
+def prompt_path(clips_dir: Path, scene_id: str, shot_id: str) -> Path:
+    return clip_path(clips_dir, scene_id, shot_id).with_suffix(".prompt.txt")

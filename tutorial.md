@@ -164,6 +164,8 @@ python -m studio render-all
 python -m studio assemble -o dist\final.mp4
 ```
 
+`python -m studio plan` validates the JSON and automatically writes one resolved `clips/*.prompt.txt` file per shot.
+
 Watch `**dist\final.mp4**`. To fix one shot:
 
 ```powershell

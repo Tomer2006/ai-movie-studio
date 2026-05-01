@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 clips/*.mp4
+clips/*.prompt.txt
 dist/*.mp4
 *.wav
 *.aac
