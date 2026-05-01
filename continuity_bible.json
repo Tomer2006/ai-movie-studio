@@ -1,105 +1,98 @@
 {
   "title": "Veloci-Tea",
-  "logline": "A genetically engineered Velociraptor escapes a shady biotech lab and hides in a failing Portland tea shop, where her refined nose for perfect blends gives a sarcastic widow one last reason to keep brewing.",
+  "logline": "A genetically engineered velociraptor with a Michelin-level nose escapes a shady biotech lab and becomes the secret tea-blending genius behind a failing Portland tea shop run by a sarcastic burnt-out widow.",
   "aspect_ratio": "16:9",
   "fps": 24,
-  "tone": "Heartwarming, odd-couple, whimsical indie comedy; Amelie meets Paddington, never scary.",
-  "era": "Contemporary rainy Portland with cozy artisanal tea culture and lightly absurd biotech noir.",
+  "tone": "Heartwarming, deadpan, magical-real Portland odd-couple comedy; Amelie meets Paddington, never scary.",
+  "era": "Contemporary rainy Portland with whimsical indie-comedy storybook warmth.",
   "characters": [
     {
-      "id": "mara_bell",
-      "name": "Mara Bell",
-      "description": "Sarcastic, burnt-out widow in her early 40s who owns the failing artisanal Portland tea shop Steep Endings; grieving, dry-witted, guarded but kind.",
-      "wardrobe": "Rumpled natural-linen apron over dark practical layers, worn boots, loose sleeves, tea towel always nearby.",
+      "id": "mara_finch",
+      "name": "Mara Finch",
+      "description": "Late-40s Portland tea shop owner and widow; sarcastic, burnt-out, dryly funny, emotionally guarded, kind beneath the armor.",
+      "wardrobe": "Oversized cardigans, chipped black nail polish, practical boots, and a flour-dusted apron.",
       "profile": {
-        "physical_signature": "Early 40s, tired posture softening over the pilot, expressive skeptical eyebrow, ink-stained hands from menu chalk.",
-        "face": "Warm but exhausted face with fine smile lines and guarded eyes.",
-        "hair": "Messy dark-brown bob usually tucked behind one ear.",
-        "eyes": "Hazel, dryly observant, gradually warmer.",
-        "body": "Average height, slightly hunched from stress, relaxed by the finale.",
-        "movement": "Efficient, clipped motions that become gentler around Oolong.",
-        "personality": "Sarcastic, grieving, practical, secretly tender, protective.",
-        "voice": "Dry, low, wry Portland deadpan.",
-        "consistency_notes": "Keep her visually grounded and human; her arc is from isolation to cautious delight.",
-        "negative_prompt": "No glam makeover, no cruelty, no action-hero styling."
+        "physical_signature": "Tired but sharp-eyed tea shop owner with expressive deadpan reactions.",
+        "movement": "Economical, weary, then increasingly playful as she trusts Oolong.",
+        "personality": "Sarcastic, wounded, resilient, kind; never treats the raptor as a monster once she sees its gentleness.",
+        "voice": "Deadpan warmth, fast muttered asides, wounded but resilient.",
+        "consistency_notes": "Keep Mara emotionally guarded at first, then visibly softened by Oolong's artistry."
       }
     },
     {
       "id": "oolong",
       "name": "Oolong",
-      "description": "A 7-foot-tall genetically engineered feathered Velociraptor whose refined sense of smell makes her a Michelin-level tea sommelier; gentle, bashful, expressive, and non-scary.",
-      "wardrobe": "No clothing except occasional accidental tea sack scarf or dusting of matcha; never armored or monstrous.",
+      "description": "Seven-foot-tall genetically engineered velociraptor and gentle tea sommelier with an exquisitely refined sense of smell.",
+      "wardrobe": "Natural teal, rust, and cream feathers; tiny bow tie only in the final trailer button.",
       "profile": {
-        "physical_signature": "Tall feathered Velociraptor with iridescent moss-green and chestnut plumage, large curious amber eyes, nimble claws, long balancing tail, friendly posture.",
-        "face": "Expressive reptilian face softened by feathers and wide amber eyes, capable of bashful comedy.",
-        "hair": "Feather crest rather than hair, slightly ruffled when nervous.",
-        "eyes": "Large amber eyes, intelligent, gentle, apologetic.",
-        "body": "Seven feet tall, athletic but careful, feathered, never horror-coded.",
-        "movement": "Precise claw gestures, delicate tiptoeing, silent-film comedic timing, tea-sommelier focus when sniffing.",
-        "personality": "Curious, gentle, tea-obsessed, shy, loyal, proud of perfect blends.",
-        "voice": "Soft chirps, purrs, and tiny pleased trills; no roars.",
-        "consistency_notes": "Always heartwarming and non-threatening; show tea genius through smell, steam, color, and exact claw pinches.",
-        "negative_prompt": "No blood, no snarling predator shots, no horror lighting, no attacking customers."
+        "physical_signature": "Large feathered velociraptor with teal, rust, and cream plumage, expressive amber eyes, delicate claw gestures, and a refined sniffing ritual.",
+        "eyes": "Expressive amber eyes, gentle and hopeful.",
+        "body": "Seven-foot-tall feathered raptor, elegant rather than monstrous.",
+        "movement": "Careful, birdlike, precise, never predatory; handles tea tins delicately.",
+        "personality": "Curious, gentle, anxious to please, obsessed with crafting perfect oolong; zero interest in scaring or hunting anyone.",
+        "voice": "Communicates with chirps, trills, sniffs, elegant head tilts, and careful tea-blending rituals.",
+        "consistency_notes": "Always non-scary and heartwarming despite dinosaur size.",
+        "negative_prompt": "No gore, no horror attack poses, no snarling monster behavior, no Jurassic terror tone."
       }
     },
     {
-      "id": "devon_pike",
-      "name": "Devon Pike",
-      "description": "A nervous biotech handler trying to retrieve Oolong without causing a scene; fussy, corporate, and increasingly undone by tea-shop etiquette.",
-      "wardrobe": "Too-clean gray windbreaker, laminated badge, rain-damp trousers, sensible shoes, clipboard or missing-asset flyer.",
+      "id": "dr_voss",
+      "name": "Dr. Voss",
+      "description": "Slick biotech executive; shady, image-obsessed, comically out of place in cozy Portland spaces.",
+      "wardrobe": "Minimalist black rainwear and sterile lab-accessory details.",
       "profile": {
-        "physical_signature": "Nervous posture, tidy hair flattened by rain, corporate badge always slightly crooked.",
-        "movement": "Fussy small steps, clipboard clutching, awkward peering through windows.",
-        "personality": "Rule-bound, anxious, polite, baffled by warmth.",
-        "voice": "Careful corporate politeness cracking into confusion.",
-        "consistency_notes": "Antagonistic pressure without menace; more bureaucratic nuisance than villain."
+        "physical_signature": "Polished corporate silhouette with controlled expressions.",
+        "movement": "Too smooth and rehearsed, accidentally ridiculous in cozy spaces.",
+        "personality": "Corporate menace played for comedy.",
+        "voice": "Crisp, branded, falsely soothing."
       }
     },
     {
-      "id": "june_alvarez",
-      "name": "June Alvarez",
-      "description": "A loyal neighborhood regular in her 60s with bright glasses, blunt warmth, and a love of gossip; first customer astonished by Oolong's blend.",
-      "wardrobe": "Colorful raincoat, bright glasses, patterned scarf, practical Portland shoes.",
+      "id": "portland_customers",
+      "name": "Portland Customers",
+      "description": "Curious locals, cyclists, poets, baristas, and food bloggers who become obsessed with the mysterious new tea blends.",
+      "wardrobe": "Rain jackets, bike helmets, thrifted sweaters, tote bags, and coffee-shop chic.",
       "profile": {
-        "physical_signature": "Bright glasses, warm lined face, expressive hands wrapped around mugs.",
-        "movement": "Direct, cheerful, nosy, comfortable in the shop.",
-        "personality": "Blunt, warm, gossip-loving, generous.",
-        "voice": "Lively neighborhood candor.",
-        "consistency_notes": "Her delighted reaction sells the secret blend to the neighborhood."
+        "personality": "Warm, eccentric, delighted, protective of neighborhood magic.",
+        "voice": "A chorus of delighted indie-comedy reactions."
       }
     }
   ],
   "locations": [
     {
-      "id": "steep_endings",
-      "name": "Steep Endings Tea Shop",
-      "description": "A failing cozy artisanal tea shop in rainy Portland with mismatched chairs, hand-lettered chalkboard menus, shelves of tea tins, hanging plants, foggy windows, and a cramped back room full of sacks, kettles, scales, and shipping boxes."
+      "id": "shady_biotech_lab",
+      "name": "Shady Biotech Lab",
+      "description": "Sterile green-blue corridors, glass containment doors, glowing specimen labels, rain streaking high windows; a place that thinks it is scarier than the movie allows."
     },
     {
-      "id": "biotech_alley",
-      "name": "Biotech Alley",
-      "description": "A damp service alley behind a shady biotech lab, blue security lights, steam vents, loading doors, wet pavement, and absurdly polite warning signs."
+      "id": "maras_tea_shop",
+      "name": "Mara's Tea Shop",
+      "description": "A failing artisanal tea shop in Portland with mismatched chairs, handwritten menus, dusty jars, warm lamps, ferns, rain-speckled windows, and a cramped back room full of tea tins."
     },
     {
-      "id": "portland_sidewalk",
-      "name": "Portland Sidewalk",
-      "description": "Rain-slick sidewalk outside Steep Endings with bicycles, umbrellas, food-cart lights, indie posters, passing curious neighbors, and warm shop light spilling onto puddles."
+      "id": "portland_street",
+      "name": "Portland Street",
+      "description": "Rainy, whimsical neighborhood street with bikes, food carts, murals, umbrellas, and glowing shop windows."
     }
   ],
   "visual_rules": {
     "do": [
-      "Keep Oolong gentle, bashful, expressive, and comedic rather than frightening.",
-      "Use cozy warm practical tea-shop light against cool Portland rain.",
-      "Show tea blending through visible steam, scent swirls, precise claw gestures, and tactile ingredients.",
-      "Maintain whimsical indie comedy framing with soft storybook charm."
+      "Use warm pastel indie-film color, cozy practical lighting, gentle handheld camera, storybook symmetry, playful inserts of steam and tea leaves, and soft 35mm texture.",
+      "Keep the trailer structure: escape, tea-shop hiding, secret success, corporate pursuit, heartfelt partnership.",
+      "Show Oolong as gentle, curious, precise, and non-scary."
     ],
     "dont": [
-      "Do not make Oolong scary, bloody, roaring, or predatory.",
-      "Do not stage action violence or horror suspense.",
-      "Do not contradict character locks in shot prompts.",
-      "Do not make the shop sleek or successful before the neighborhood discovers the blends."
+      "Do not make Oolong a horror monster.",
+      "Do not use gore, jump scares, terror stingers, or predatory attack imagery.",
+      "Do not contradict recurring character locks in profiles."
     ],
-    "color_palette": ["warm amber", "soft teal", "rainy slate blue", "moss green", "chestnut", "matcha green", "lavender haze"]
+    "color_palette": [
+      "warm amber tea",
+      "rainy Portland teal",
+      "soft fern green",
+      "cream paper menus",
+      "rust feathers"
+    ]
   },
-  "reference_notes": "5-minute pilot movie, 300 seconds total, planned as 30 shots at 10 seconds each. Whimsical indie comedy with heartwarming odd-couple energy."
+  "reference_notes": "One-minute trailer, 12 shots at 5 seconds each, whimsical indie comedy. Plucky celeste, brushed drums, soft accordion, comic trailer rises, cozy cafe ambience, no horror stingers."
 }

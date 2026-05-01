@@ -13,6 +13,16 @@ from studio.providers.base import VideoProvider
 
 _QUEUE_BASE = "https://queue.fal.run"
 
+_GROK_IMAGINE_ASPECT = frozenset(
+    {"16:9", "4:3", "3:2", "1:1", "2:3", "3:4", "9:16"}
+)
+
+
+def _grok_aspect_ratio(aspect_ratio: str) -> str:
+    if aspect_ratio in _GROK_IMAGINE_ASPECT:
+        return aspect_ratio
+    return "16:9"
+
 
 def _mp4_url_from_value(obj: Any) -> str | None:
     if isinstance(obj, str) and obj.startswith("http") and (".mp4" in obj or "/files/" in obj):
@@ -55,7 +65,13 @@ def _extract_video_url(data: object) -> str:
 class FalVideoProvider(VideoProvider):
     """
     fal.ai Model API (queue) — set FAL_KEY and FAL_VIDEO_MODEL.
-    See https://fal.ai/models for endpoint IDs; default is MiniMax Hailuo T2V.
+    See https://fal.ai/models for endpoint IDs.
+
+    Examples:
+    - MiniMax Hailuo: ``fal-ai/minimax/hailuo-02/standard/text-to-video``
+    - Grok Imagine (xAI on fal): ``xai/grok-imagine-video/text-to-video``
+      Set ``FAL_VIDEO_RESOLUTION=720p`` (or ``480p``); aspect ratio comes from the bible
+      when supported (``16:9``, ``9:16``, etc.).
     """
 
     def __init__(self) -> None:
@@ -69,6 +85,7 @@ class FalVideoProvider(VideoProvider):
         ).strip()
         self.max_wait_sec = int(os.environ.get("FAL_MAX_WAIT_SEC", "900"))
         self.poll_interval = float(os.environ.get("FAL_POLL_INTERVAL", "3"))
+        self.video_resolution = os.environ.get("FAL_VIDEO_RESOLUTION", "").strip().lower()
 
     def _headers(self) -> dict[str, str]:
         return {
@@ -90,7 +107,6 @@ class FalVideoProvider(VideoProvider):
         seed: int | None,
         reference_image_url: str | None,
     ) -> dict[str, Any]:
-        _ = aspect_ratio
         _ = reference_image_url
         text = prompt
         if negative_prompt:
@@ -102,8 +118,15 @@ class FalVideoProvider(VideoProvider):
             if not isinstance(merged, dict):
                 raise ValueError("FAL_EXTRA_INPUT must be a JSON object")
             body.update(merged)
+        low = self.model.lower()
+        if "grok-imagine-video" in low:
+            body.setdefault("aspect_ratio", _grok_aspect_ratio(aspect_ratio))
+            if "resolution" not in body:
+                res = self.video_resolution or "720p"
+                if res not in ("480p", "720p"):
+                    res = "720p"
+                body["resolution"] = res
         if "duration" not in body:
-            low = self.model.lower()
             if "hailuo" in low and "text-to-video" in low:
                 d = int(round(max(1.0, duration_sec)))
                 body["duration"] = "6" if d <= 7 else "10"

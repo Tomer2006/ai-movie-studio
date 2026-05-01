@@ -2,68 +2,91 @@
   "version": 1,
   "scenes": [
     {
-      "id": "scene_01",
-      "title": "Escape in the Rain",
-      "summary": "Oolong slips out of a biotech lab and follows the smell of roasted oolong through rainy Portland toward Steep Endings.",
+      "id": "scene_001",
+      "title": "Escape With a Nose for Freedom",
+      "summary": "A whimsical trailer opening: the lab loses its gentlest experiment, who follows the scent of tea into rainy Portland.",
       "shots": [
-        {"id":"s01_001","duration_sec":10,"prompt":"Whimsical indie comedy opening: rainy Portland biotech service alley at night, blue security lights, steam vents, a polite sign reading Authorized Personnel Please, cozy absurd mood, cinematic pastel teal and amber."},
-        {"id":"s01_002","duration_sec":10,"prompt":"Oolong, a gentle feathered Velociraptor with moss-green and chestnut plumage and curious amber eyes, carefully nudges open a lab loading door with one claw, non-scary, bashful physical comedy."},
-        {"id":"s01_003","duration_sec":10,"prompt":"Close-up of Oolong's nostrils catching a ribbon of fragrant tea steam drifting impossibly across the rainy alley, visible scent trails like delicate watercolor swirls."},
-        {"id":"s01_004","duration_sec":10,"prompt":"Devon Pike in a too-clean gray windbreaker stumbles into the alley holding a clipboard and a tiny tranquilizer case, looking panicked but polite, rain beading on glasses."},
-        {"id":"s01_005","duration_sec":10,"prompt":"Oolong tiptoes behind recycling bins with exaggerated delicacy despite being huge, tail lifting to avoid knocking over bottles, silent-film comedian timing."},
-        {"id":"s01_006","duration_sec":10,"prompt":"Wide shot: Oolong follows warm golden tea-shop light at the end of the rainy street, Portland bicycles and umbrellas passing, whimsical storybook mood."}
+        {
+          "id": "shot_001",
+          "duration_sec": 5,
+          "prompt": "Trailer opening shot, sterile Shady Biotech Lab corridor under teal emergency lights, a glass door labeled PROJECT OOLONG clicks open, delicate feathered raptor silhouette sniffs the air with refined curiosity, whimsical indie comedy tone, warm 35mm texture, not scary."
+        },
+        {
+          "id": "shot_002",
+          "duration_sec": 5,
+          "prompt": "Rainy Portland night, Oolong slips comically behind food carts and cyclists, nose lifted toward a drifting ribbon of aromatic steam, pastel storefronts and umbrellas, playful celeste energy, gentle creature framing."
+        },
+        {
+          "id": "shot_003",
+          "duration_sec": 5,
+          "prompt": "Interior Mara's Tea Shop after closing, Mara Finch slumps behind the counter beside unpaid bills and dusty tea tins, neon OPEN sign flickers sadly, cozy but failing, dry indie comedy composition."
+        }
       ]
     },
     {
-      "id": "scene_02",
-      "title": "The Failing Shop",
-      "summary": "Mara closes her empty tea shop with dry resignation until an impossible visitor crashes gently into her back room.",
+      "id": "scene_002",
+      "title": "The Back Room Sommelier",
+      "summary": "Mara discovers Oolong hiding among tea tins and realizes the dinosaur has an uncanny gift for blending tea.",
       "shots": [
-        {"id":"s02_001","duration_sec":10,"prompt":"Interior Steep Endings Tea Shop: mismatched chairs, foggy windows, hanging plants, shelves of tea tins, empty tables, warm amber practical lighting, cozy but failing."},
-        {"id":"s02_002","duration_sec":10,"prompt":"Mara Bell, rumpled linen apron and tired eyes, flips a chalkboard sign from Open to Technically Open, sarcastic exhaustion in a quiet Portland tea shop."},
-        {"id":"s02_003","duration_sec":10,"prompt":"Close-up: Mara counts a few coins beside overdue bills and a framed photo partly hidden behind tea tins, grief shown softly, no melodrama."},
-        {"id":"s02_004","duration_sec":10,"prompt":"Back room door bulges as Oolong squeezes in with careful embarrassment, knocking only one tiny teaspoon to the floor, gentle dinosaur comedy."},
-        {"id":"s02_005","duration_sec":10,"prompt":"Mara freezes with a kettle in hand, staring at Oolong; Oolong freezes too while wearing a burlap tea sack accidentally like a scarf, absurd deadpan moment."},
-        {"id":"s02_006","duration_sec":10,"prompt":"Two-shot in cramped back room: Mara points the kettle like a weapon, Oolong slowly offers a fallen tea tin with apologetic amber eyes, heartwarming non-scary tone."}
+        {
+          "id": "shot_004",
+          "duration_sec": 5,
+          "prompt": "Mara opens the cramped back-room door and freezes as Oolong delicately balances between shelves of tea tins, one claw politely holding a tin of oolong, both characters startled but gentle, warm lamp glow, comedic pause."
+        },
+        {
+          "id": "shot_005",
+          "duration_sec": 5,
+          "prompt": "Close whimsical insert: Oolong's nostrils flutter over floating tea leaves, cinnamon, bergamot, and roasted oolong, aromatic particles sparkle like tiny constellations, elegant sommelier ritual, macro magical realism."
+        },
+        {
+          "id": "shot_006",
+          "duration_sec": 5,
+          "prompt": "Mara skeptically sips Oolong's first blend from a chipped cup, her deadpan face softens into astonished joy, Oolong watches with anxious amber-eyed hope, cozy shop background."
+        }
       ]
     },
     {
-      "id": "scene_03",
-      "title": "The Nose Knows",
-      "summary": "Mara discovers Oolong can diagnose and compose tea blends with impossible precision, creating a cup that astonishes June.",
+      "id": "scene_003",
+      "title": "Portland Falls in Love",
+      "summary": "The tea shop becomes a citywide sensation while Mara and Oolong build an unlikely partnership.",
       "shots": [
-        {"id":"s03_001","duration_sec":10,"prompt":"Oolong leans over rows of tea tins in the back room, sniffing with refined concentration like a Michelin sommelier, claw hovering delicately above labels."},
-        {"id":"s03_002","duration_sec":10,"prompt":"Macro shot: Oolong's claw precisely combines oolong leaves, bergamot peel, smoked pear, and tiny lavender buds on a brass scale, tactile cozy details."},
-        {"id":"s03_003","duration_sec":10,"prompt":"Mara watches skeptical but intrigued, arms crossed, eyebrow raised, warm kettle steam curling between her and Oolong like a truce flag."},
-        {"id":"s03_004","duration_sec":10,"prompt":"June Alvarez enters with bright glasses and a raincoat, startled by a mysterious thump from the back but more interested in gossip and tea."},
-        {"id":"s03_005","duration_sec":10,"prompt":"June tastes Oolong's secret blend at the counter; her eyes widen with comic revelation, steam glowing gold around her face, Mara trying not to smile."},
-        {"id":"s03_006","duration_sec":10,"prompt":"Exterior through foggy window: June excitedly texts neighbors while Mara peeks toward the back room where Oolong gives a shy little proud chirp."}
+        {
+          "id": "shot_007",
+          "duration_sec": 5,
+          "prompt": "Morning montage shot, line of delighted Portland Customers stretches past bikes and ferns outside Mara's Tea Shop, hand-painted sign reads TODAY'S BLEND: RAPTOR'S ROAST, whimsical trailer bustle, warm rainlight."
+        },
+        {
+          "id": "shot_008",
+          "duration_sec": 5,
+          "prompt": "Back room choreography: Mara labels jars while Oolong uses careful claws to measure tea leaves on a tiny scale, odd-couple rhythm, flour-dusted apron, teal feathers, cozy practical lighting."
+        },
+        {
+          "id": "shot_009",
+          "duration_sec": 5,
+          "prompt": "Food blogger reaction montage in one dynamic shot, customers sip tea and levitate emotionally into blissful smiles, tiny handwritten review cards pile up, indie comedy magical realism, no horror."
+        }
       ]
     },
     {
-      "id": "scene_04",
-      "title": "Portland Discovers the Blend",
-      "summary": "A tiny line forms as the secret tea becomes a neighborhood sensation, while Devon searches clumsily nearby.",
+      "id": "scene_004",
+      "title": "No One Owns Perfect Oolong",
+      "summary": "The biotech villains return, but the community rallies around Mara and Oolong for a heartwarming trailer finish.",
       "shots": [
-        {"id":"s04_001","duration_sec":10,"prompt":"Morning at Steep Endings: rain-slick sidewalk, a small quirky line of Portland customers with umbrellas and bicycles gathers under warm shop lights."},
-        {"id":"s04_002","duration_sec":10,"prompt":"Inside, Mara takes orders with renewed dry humor, chalkboard now reads Mystery Blend: Don't Ask, cozy indie comedy bustle."},
-        {"id":"s04_003","duration_sec":10,"prompt":"Back room assembly line: Oolong gently sniffs cups through the serving hatch and adjusts each blend with precise claw pinches, chef-like elegance."},
-        {"id":"s04_004","duration_sec":10,"prompt":"Montage-like shot of customers reacting warmly: one laughs, one tears up, one hugs a mug, each surrounded by distinct colored steam swirls."},
-        {"id":"s04_005","duration_sec":10,"prompt":"Devon Pike peers through the foggy front window holding a biotech missing-asset flyer, confused by the cheerful tea crowd and hand-lettered menu."},
-        {"id":"s04_006","duration_sec":10,"prompt":"Oolong accidentally sneezes powdered matcha into a perfect green cloud shaped like a tiny dinosaur; Mara and Oolong share their first genuine laugh."}
-      ]
-    },
-    {
-      "id": "scene_05",
-      "title": "Perfect Oolong",
-      "summary": "Mara chooses to protect Oolong, turns Devon away with wit, and begins a new partnership built on tea and second chances.",
-      "shots": [
-        {"id":"s05_001","duration_sec":10,"prompt":"Devon enters Steep Endings, overly official and damp, asking awkward questions while Mara calmly wipes the counter with weaponized customer-service politeness."},
-        {"id":"s05_002","duration_sec":10,"prompt":"From behind the shelf, Oolong hides among tall tea tins and hanging plants, amber eyes visible, trying adorably not to breathe too loudly."},
-        {"id":"s05_003","duration_sec":10,"prompt":"Mara serves Devon an intimidatingly perfect cup labeled Compliance Blend; Devon tastes it and forgets his question in blissful confusion."},
-        {"id":"s05_004","duration_sec":10,"prompt":"Quiet back room moment: Mara shows Oolong the half-hidden framed photo, grief softening; Oolong gently nudges a comforting mug toward her."},
-        {"id":"s05_005","duration_sec":10,"prompt":"Mara updates the chalkboard menu: New Partner Blend, tiny claw mark beside her handwriting; Oolong watches proudly from the shadowed doorway."},
-        {"id":"s05_006","duration_sec":10,"prompt":"Final warm wide shot: Steep Endings glowing in Portland rain, Mara and Oolong silhouetted inside brewing tea together, whimsical heartfelt pilot ending, zero scary energy."}
+        {
+          "id": "shot_010",
+          "duration_sec": 5,
+          "prompt": "Dr. Voss enters the cozy tea shop in sleek black rainwear with two awkward lab agents, completely mismatched against ferns and mismatched chairs, Mara blocks the back room with deadpan defiance, comic corporate menace."
+        },
+        {
+          "id": "shot_011",
+          "duration_sec": 5,
+          "prompt": "Heartwarming slow-motion: Portland Customers raise teacups in solidarity as Oolong peeks from behind Mara, amber eyes tender, steam curls around everyone like a protective blanket, whimsical trailer climax."
+        },
+        {
+          "id": "shot_012",
+          "duration_sec": 5,
+          "prompt": "Final trailer button, Oolong wears a tiny bow tie and presents a perfect cup of oolong to Mara under the sign VELOCI-TEA, Mara smirks with affection, title card energy, cozy pastel indie comedy finish."
+        }
       ]
     }
   ]

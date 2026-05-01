@@ -33,3 +33,4 @@ Delegation:
 - `@screenwriter`: scene summaries only.
 - `@shotboard`: shot prompts and durations only.
 - `@quality-control`: visual verdict JSON only.
+
