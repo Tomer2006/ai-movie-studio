@@ -25,6 +25,7 @@ Return **JSON only** with exactly these keys:
 
 Rules:
 
+- The continuity bible requires `**video_style`** (including `**aesthetic`**); when the director shares the locked aesthetic or look notes, treat obvious drift from that whole-film intent as a continuity issue worth `rerender` or noting in `issues`.
 - `keep` when the sheet matches the shot brief and continuity; `rerender` when a clear visual fix needs a new prompt or duration; `unresolved` when evidence is missing, unreadable, or confidence is too low.
 - Check continuity, composition, motion, pacing, artifacts, and provider sanity from the **contact sheet frames**.
 - Use `rerender` only when issues are specific enough that a new full prompt or `duration_sec` change would plausibly fix them.

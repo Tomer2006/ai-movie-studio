@@ -20,3 +20,4 @@ Rules:
 - Use character names/ids from `continuity_bible.json`; the CLI injects matching `CharacterProfile` details during render.
 - Do not contradict locked age, face, body, wardrobe, voice, or personality.
 - No text overlays or watermarks unless requested.
+

@@ -4,7 +4,15 @@
   "title": "ContinuityBible",
   "type": "object",
   "additionalProperties": false,
-  "required": ["title", "aspect_ratio", "fps", "characters", "locations", "visual_rules"],
+  "required": [
+    "title",
+    "aspect_ratio",
+    "fps",
+    "characters",
+    "locations",
+    "visual_rules",
+    "video_style"
+  ],
   "properties": {
     "title": { "type": "string", "minLength": 1 },
     "logline": { "type": "string" },
@@ -72,10 +80,13 @@
     "video_style": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Project-wide look for the entire movie (every shot). Merged into every render prompt — not per-scene.",
+      "description": "Required. Project-wide look for the entire movie (every shot). Merged into every render prompt — not per-scene.",
+      "required": ["aesthetic"],
       "properties": {
         "aesthetic": {
           "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*",
           "description": "Whole-film rendering style, e.g. photoreal live-action, anime / cel animation, documentary naturalism, stylized 3D. Same intent on every clip."
         },
         "look": { "type": "string" },

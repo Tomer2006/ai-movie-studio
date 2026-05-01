@@ -20,12 +20,12 @@ Requires **ffmpeg** on your PATH for assembly and custom preview clips.
 ## Project files
 
 
-| File                    | Role                                                               |
-| ----------------------- | ------------------------------------------------------------------ |
-| `continuity_bible.json` | Characters, locations, visual rules (validated against `schemas/`) |
-| `scenes.json`           | Scene/shot list with prompts and durations                         |
-| `clips/`                | Rendered per-shot MP4s                                             |
-| `dist/`                 | Final output                                                       |
+| File                    | Role                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| `continuity_bible.json` | Characters, locations, visual rules, **required** `video_style` (validated against `schemas/`) |
+| `scenes.json`           | Scene/shot list with prompts and durations                                                     |
+| `clips/`                | Rendered per-shot MP4s                                                                         |
+| `dist/`                 | Final output                                                                                   |
 
 
 Copy examples: `continuity_bible.example.json` → `continuity_bible.json`, `scenes.example.json` → `scenes.json`.
@@ -34,7 +34,7 @@ Copy examples: `continuity_bible.example.json` → `continuity_bible.json`, `sce
 
 Each `continuity_bible.json` character can include a `profile` with locked traits such as face, body, movement, voice, negative prompt, reference image, and seed. Render commands append only the `CharacterProfile` blocks for characters mentioned in each shot prompt.
 
-Optional top-level **`video_style`** sets the **whole-movie** look (same on every clip): start with **`aesthetic`** for the master bucket (e.g. photoreal live-action vs anime vs documentary), then camera, lighting, film texture, grading, pacing. It is appended to **every** shot render prompt; `video_style.negative_prompt` is merged into the shot negative. Use `visual_rules` for short do/don’t bullets; use `video_style` for prose that must hold for the full runtime, not one-off scenes.
+Top-level `**video_style`** is **required** and sets the **whole-movie** look (same on every clip). It must include non-empty `**aesthetic`** for the master bucket (e.g. photoreal live-action vs anime vs documentary), then optional camera, lighting, film texture, grading, pacing. It is appended to **every** shot render prompt; `video_style.negative_prompt` is merged into the shot negative. Use `visual_rules` for short do/don’t bullets; use `video_style` for prose that must hold for the full runtime, not one-off scenes.
 
 ## CLI
 
