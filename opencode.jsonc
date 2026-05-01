@@ -47,6 +47,7 @@
           "clips/*.mp4": "allow",
           "dist/*.mp4": "allow",
           "dist/review/*.png": "allow",
+          "dist/review/**/*.png": "allow",
           "*.env.example": "allow",
           "*.env": "deny",
           "*.env.*": "deny"
@@ -63,6 +64,7 @@
           "clips/*.mp4": "allow",
           "dist/*.mp4": "allow",
           "dist/review/*.png": "allow",
+          "dist/review/**/*.png": "allow",
           "*.env.example": "allow",
           "*.env": "deny",
           "*.env.*": "deny"
@@ -136,14 +138,16 @@
           "continuity_bible.json": "allow",
           "scenes.json": "allow",
           "clips/*.mp4": "allow",
-          "dist/review/*.png": "allow"
+          "dist/review/*.png": "allow",
+          "dist/review/**/*.png": "allow"
         },
         "glob": {
           "*": "deny",
           "continuity_bible.json": "allow",
           "scenes.json": "allow",
           "clips/*.mp4": "allow",
-          "dist/review/*.png": "allow"
+          "dist/review/*.png": "allow",
+          "dist/review/**/*.png": "allow"
         },
         "webfetch": "deny",
         "websearch": "deny",

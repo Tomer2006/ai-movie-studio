@@ -10,7 +10,8 @@ def review_sheet_path(review_dir: Path, scene_id: str, shot_id: str, attempt: in
         raise ValueError("attempt must be >= 1")
     safe_scene = scene_id.replace("/", "_")
     safe_shot = shot_id.replace("/", "_")
-    return review_dir / safe_scene / safe_shot / f"attempt_{attempt:02d}.png"
+    # Single flat file under review_dir (matches clip stem scene__shot + attempt).
+    return review_dir / f"{safe_scene}__{safe_shot}__attempt_{attempt:02d}.png"
 
 
 def render_review_sheet(
